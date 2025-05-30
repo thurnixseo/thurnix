@@ -1,6 +1,6 @@
-baseURL = "https://saasify-demo.chaoming.li/"
+baseURL = "https://thurnix.com"
 languageCode = "en-us"
-title = "Saasify"
+title = "Thurnix"
 
 # Theme Config
 theme = "../.."
