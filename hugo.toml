@@ -27,7 +27,7 @@ paginatePath = "page"
 [params]
   description = ""
   author = "Chaoming Li"
-  logo = "/images/logo.svg"
+  logo = "/images/thurnix.webp"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
   
@@ -48,12 +48,12 @@ paginatePath = "page"
   
   # Social Media Links
   [params.social]
-    linkedin = "https://linkedin.com/in/chaomingli"
-    twitter = "https://twitter.com/lichaoming"
-    youtube = "https://youtube.com/@chaomingli"
-    facebook = "https://facebook.com/lichaoming"
-    instagram = "https://instagram.com/lichaoming"
-    github = "https://github.com/chaoming"
+    linkedin = "https://linkedin.com/in/thurnixseo"
+    twitter = "https://twitter.com/thurnixseo"
+    youtube = "https://youtube.com/@thurnixseo"
+    facebook = "https://facebook.com/thurnixseo"
+    instagram = "https://instagram.com/thurnixseo"
+    github = "https://github.com/thurnixseo"
   
   # Footer Configuration
   [params.footer]
@@ -68,7 +68,7 @@ paginatePath = "page"
     
     # Logo configuration
     [params.header.logo]
-      src = "/images/logo.svg"
+      src = "/images/thurnix.webp"
     
     # Menu configuration
     [params.header.menu]
@@ -91,13 +91,13 @@ paginatePath = "page"
     [params.header.buttons]
       # Sign In button
       [params.header.buttons.signIn]
-        text = "Sign in"
-        url = "/signin"
+        text = "BÁO GIÁ"
+        url = "/bao-gia-seo"
       
       # Get Started button
       [params.header.buttons.getStarted]
-        text = "Get Started"
-        url = "/get-started"
+        text = "GỌI THURNIX"
+        url = "tel:+84925604604"
 
   # Blog configuration
   [params.blog]
