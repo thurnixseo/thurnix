@@ -25,8 +25,8 @@ paginate = 6
 paginatePath = "page"
 
 [params]
-  description = ""
-  author = "Chaoming Li"
+  description = "Thurnix SEO"
+  author = "Thurnix"
   logo = "/images/thurnix.webp"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
@@ -170,31 +170,31 @@ paginatePath = "page"
 # Navigation Menu
 [menu]
   [[menu.main]]
-    name = "Features"
+    name = "Dịch vụ"
     weight = 1
     [menu.main.params]
       has_submenu = true
       submenu = [
-        { name = "Performance", url = "/features/performance/" },
-        { name = "Design System", url = "/features/design-system/" },
-        { name = "Developer Experience", url = "/features/developer-experience/" }
+        { name = "Dịch vụ SEO", url = "/dich-vu-seo" },
+        { name = "Dịch vụ AEO", url = "/dich-vu-aeo" },
+        { name = "Thiết kế web chuẩn SEO", url = "/thiet-ke-web-chuan-seo" }
       ]
   [[menu.main]]
-    name = "Pricing"
-    url = "/pricing"
+    name = "Bảng giá dịch vụ"
+    url = "/bang-gia"
     weight = 2
   [[menu.main]]
     name = "Blog"
     url = "/blog"
     weight = 3
   [[menu.main]]
-    name = "Company"
+    name = "Thurnix"
     weight = 4
     [menu.main.params]
       has_submenu = true
       submenu = [
-        { name = "About Us", url = "/company/" },
-        { name = "Careers", url = "/careers/" }
+        { name = "About Us", url = "/gioi-thieu/" },
+        { name = "Careers", url = "/tuyen-dung/" }
       ]
 
   # Footer Column 1 Menu
