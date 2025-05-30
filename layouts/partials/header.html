@@ -5,15 +5,10 @@
     <header class="fixed w-full top-0 z-50 {{ with $headerConfig.background }}{{ . }}{{ else }}bg-white/80 backdrop-blur-sm{{ end }} {{ with $headerConfig.border }}{{ . }}{{ else }}border-b border-gray-100{{ end }}">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <nav class="flex items-center justify-between h-20">
-                <!-- Logo and Title -->
-                <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-4">
+                <!-- Logo Only -->
+                <a href="{{ .Site.BaseURL }}" class="flex items-center">
                     {{ with $headerConfig.logo }}
                         <img src="{{ .src | relURL }}" alt="{{ $.Site.Title }}" class="{{ with .class }}{{ . }}{{ else }}h-12{{ end }}">
-                    {{ else }}
-                        <span class="text-3xl font-bold text-gray-900">{{ .Site.Title }}</span>
-                    {{ end }}
-                    {{ if .Site.Title }}
-                        <span class="text-3xl font-semibold text-gray-800">{{ .Site.Title }}</span>
                     {{ end }}
                 </a>
 
