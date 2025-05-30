@@ -1,38 +1,35 @@
 {{ define "main" }}
-{{ $css := resources.Get "css/seo-service.css" | resources.Minify }}
-{{ $js := resources.Get "js/seo-service.js" | resources.Minify }}
-
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="/css/seo-service.css">
 
 <article class="seo-service-page">
     <!-- Hero Section -->
-    <section class="hero-section relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 lg:py-32">
+    <section class="hero-section relative overflow-hidden text-white py-20 lg:py-32" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3730a3 100%);">
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(37, 99, 235, 0.2), rgba(147, 51, 234, 0.2));"></div>
         
         <!-- Animated background elements -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <div class="floating-element absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
-            <div class="floating-element absolute top-40 right-20 w-32 h-32 bg-blue-400/20 rounded-full animate-float-delayed"></div>
-            <div class="floating-element absolute bottom-20 left-1/4 w-16 h-16 bg-purple-400/15 rounded-full animate-float-slow"></div>
+            <div class="floating-element absolute top-20 left-10 w-20 h-20 rounded-full" style="background: rgba(255, 255, 255, 0.1);"></div>
+            <div class="floating-element absolute top-40 right-20 w-32 h-32 rounded-full" style="background: rgba(96, 165, 250, 0.2);"></div>
+            <div class="floating-element absolute bottom-20 left-1/4 w-16 h-16 rounded-full" style="background: rgba(196, 181, 253, 0.15);"></div>
         </div>
         
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
                     Dịch Vụ SEO 
-                    <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    <span class="gradient-text">
                         Chuyên Nghiệp
                     </span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-in-up-delayed">
+                <p class="text-xl md:text-2xl mb-8 animate-fade-in-up-delayed" style="color: #dbeafe;">
                     Đưa website của bạn lên TOP Google với chiến lược SEO hiệu quả và bền vững
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-slow">
-                    <a href="#contact" class="btn-primary px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <a href="#contact" class="btn-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                         Nhận Tư Vấn Miễn Phí
                     </a>
-                    <a href="#services" class="btn-secondary px-8 py-4 border-2 border-white/30 hover:border-white hover:bg-white/10 rounded-lg font-semibold transition-all duration-300">
+                    <a href="#services" class="btn-secondary px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                         Xem Dịch Vụ
                     </a>
                 </div>
@@ -45,19 +42,19 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="stat-item text-center animate-on-scroll">
-                    <div class="text-4xl font-bold text-blue-600 mb-2 counter" data-target="500">0</div>
+                    <div class="text-4xl font-bold mb-2 counter" data-target="500" style="color: #2563eb;">0</div>
                     <div class="text-gray-600">Từ Khóa Top 10</div>
                 </div>
                 <div class="stat-item text-center animate-on-scroll">
-                    <div class="text-4xl font-bold text-green-600 mb-2 counter" data-target="200">0</div>
+                    <div class="text-4xl font-bold mb-2 counter" data-target="200" style="color: #059669;">0</div>
                     <div class="text-gray-600">Dự Án Thành Công</div>
                 </div>
                 <div class="stat-item text-center animate-on-scroll">
-                    <div class="text-4xl font-bold text-purple-600 mb-2 counter" data-target="98">0</div>
+                    <div class="text-4xl font-bold mb-2 counter" data-target="98" style="color: #7c3aed;">0</div>
                     <div class="text-gray-600">% Khách Hài Lòng</div>
                 </div>
                 <div class="stat-item text-center animate-on-scroll">
-                    <div class="text-4xl font-bold text-orange-600 mb-2 counter" data-target="5">0</div>
+                    <div class="text-4xl font-bold mb-2 counter" data-target="5" style="color: #ea580c;">0</div>
                     <div class="text-gray-600">Năm Kinh Nghiệm</div>
                 </div>
             </div>
@@ -77,8 +74,8 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll">
-                    <div class="service-icon w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-500 animate-on-scroll">
+                    <div class="service-icon w-16 h-16 rounded-lg flex items-center justify-center mb-6" style="background: linear-gradient(to right, #3b82f6, #2563eb);">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
@@ -92,8 +89,8 @@
                     </ul>
                 </div>
 
-                <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll">
-                    <div class="service-icon w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-500 animate-on-scroll">
+                    <div class="service-icon w-16 h-16 rounded-lg flex items-center justify-center mb-6" style="background: linear-gradient(to right, #10b981, #059669);">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                         </svg>
@@ -107,8 +104,8 @@
                     </ul>
                 </div>
 
-                <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-on-scroll">
-                    <div class="service-icon w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-500 animate-on-scroll">
+                    <div class="service-icon w-16 h-16 rounded-lg flex items-center justify-center mb-6" style="background: linear-gradient(to right, #8b5cf6, #7c3aed);">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
@@ -139,25 +136,25 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="process-step text-center animate-on-scroll">
-                    <div class="step-number w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">1</div>
+                    <div class="step-number w-16 h-16 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6" style="background: linear-gradient(to right, #3b82f6, #2563eb);">1</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Phân Tích Website</h3>
                     <p class="text-gray-600">Đánh giá toàn diện website hiện tại và xác định các vấn đề cần cải thiện</p>
                 </div>
                 
                 <div class="process-step text-center animate-on-scroll">
-                    <div class="step-number w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">2</div>
+                    <div class="step-number w-16 h-16 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6" style="background: linear-gradient(to right, #10b981, #059669);">2</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Nghiên Cứu Từ Khóa</h3>
                     <p class="text-gray-600">Tìm kiếm và phân tích từ khóa tiềm năng cho ngành nghề của bạn</p>
                 </div>
                 
                 <div class="process-step text-center animate-on-scroll">
-                    <div class="step-number w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">3</div>
+                    <div class="step-number w-16 h-16 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6" style="background: linear-gradient(to right, #8b5cf6, #7c3aed);">3</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Tối Ưu & Triển Khai</h3>
                     <p class="text-gray-600">Thực hiện các tối ưu On-page, Off-page và kỹ thuật theo kế hoạch</p>
                 </div>
                 
                 <div class="process-step text-center animate-on-scroll">
-                    <div class="step-number w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">4</div>
+                    <div class="step-number w-16 h-16 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6" style="background: linear-gradient(to right, #f97316, #ea580c);">4</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Theo Dõi & Báo Cáo</h3>
                     <p class="text-gray-600">Giám sát kết quả liên tục và báo cáo tiến độ định kỳ</p>
                 </div>
@@ -166,19 +163,19 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="cta-section py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+    <section id="contact" class="cta-section py-20 text-white" style="background: linear-gradient(to right, #1e3a8a, #581c87);">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-6 animate-on-scroll">
                 Sẵn Sàng Đưa Website Lên TOP Google?
             </h2>
-            <p class="text-xl mb-8 text-blue-100 animate-on-scroll">
+            <p class="text-xl mb-8 animate-on-scroll" style="color: #dbeafe;">
                 Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
-                <a href="tel:+84123456789" class="btn-primary px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                <a href="tel:+84123456789" class="btn-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                     📞 Gọi Ngay: 0123 456 789
                 </a>
-                <a href="mailto:info@example.com" class="btn-secondary px-8 py-4 border-2 border-white/30 hover:border-white hover:bg-white/10 rounded-lg font-semibold transition-all duration-300">
+                <a href="mailto:info@example.com" class="btn-secondary px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                     ✉️ Email: info@example.com
                 </a>
             </div>
@@ -195,5 +192,5 @@
     </div>
 </article>
 
-<script src="{{ $js.RelPermalink }}"></script>
+<script src="/js/seo-service.js"></script>
 {{ end }}
