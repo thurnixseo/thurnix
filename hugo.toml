@@ -25,8 +25,8 @@ paginate = 6
 paginatePath = "page"
 
 [params]
-  description = "Thurnix SEO"
-  author = "Thurnix"
+  description = "Thurnix là công ty SEO uy tín tại Việt Nam, cung cấp các giải pháp tối ưu công cụ tìm kiếm chuyên nghiệp, giúp website doanh nghiệp tăng traffic nhanh."
+  author = "Thurnix SEO"
   logo = "/images/thurnix.webp"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
@@ -120,12 +120,12 @@ paginatePath = "page"
       # Categories section
       [params.blog.sidebar.categories]
         enable = true
-        title = "Categories"
+        title = "Danh mục"
       
       # Tags section
       [params.blog.sidebar.tags]
         enable = true
-        title = "Popular Tags"
+        title = "Phổ biến"
         count = 20
 
       # Subscribe form section
@@ -231,6 +231,6 @@ paginatePath = "page"
     url = "/license"
     weight = 1
   [[menu.footer_column_3]]
-    name = "Privacy Policy"
-    url = "/privacy"
+    name = "Chính sách bảo mật"
+    url = "/chinh-sach-bao-mat"
     weight = 2
