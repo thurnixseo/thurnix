@@ -13,7 +13,7 @@
     <!-- Title -->
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
-    <link rel="stylesheet" href="{{ "css/thurnix.css" | relURL }}">
+   
 
     <!-- Meta Tags -->
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
