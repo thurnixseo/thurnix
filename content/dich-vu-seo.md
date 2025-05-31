@@ -8,14 +8,34 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
 {{< hero 
     headline="<span class='text-white'><strong>Dịch vụ SEO</strong> Chuyên nghiệp</span><br><span class='text-white'>Đưa Website Lên TOP Google</span>"
     sub_headline="<span class='text-white/90'>Thurnix cung cấp <strong>dịch vụ SEO</strong> hiệu quả với phương pháp độc quyền, giúp website tăng thứ hạng Google, tăng traffic chất lượng và tối ưu hóa ROI cho doanh nghiệp.</span>"
-    primary_button_text="Tư vấn miễn phí ngay"
-    primary_button_url="#lien-he"
-    secondary_button_text="Xem báo giá chi tiết"
+    primary_button_text="🔥 Gọi ngay: 0925 604 604"
+    primary_button_url="tel:0925604604"
+    secondary_button_text="💰 Yêu cầu báo giá"
     secondary_button_url="#bang-gia"
     hero_image="/images/seo-hero-dashboard.webp"
     gradient-from="#1e40af"
     gradient-to="#3b82f6"
 >}}
+
+<style>
+.btn-primary {
+    background-color: #10b981 !important; /* Green */
+    border-color: #10b981 !important;
+}
+.btn-primary:hover {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+}
+.btn-outline {
+    background-color: #ffffff !important; /* White background */
+    color: #1e40af !important; /* Blue text */
+    border: 2px solid #ffffff !important;
+}
+.btn-outline:hover {
+    background-color: #f3f4f6 !important;
+    color: #1e40af !important;
+}
+</style>
 
 {{< section-container class="py-16 bg-white" >}}
     <div class="max-w-6xl mx-auto">
