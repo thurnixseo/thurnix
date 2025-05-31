@@ -1,155 +1,41 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Dịch vụ SEO",
-  "description": "Dịch vụ SEO chuyên nghiệp của Thurnix giúp tăng thứ hạng Google, tăng traffic organic và tối ưu hóa ROI cho doanh nghiệp.",
-  "url": "{{ .Page.Permalink }}",
-  "image": "{{ .Site.BaseURL }}/images/seo-service-cover.webp",
-  "provider": {
-    "@type": "Organization",
-    "name": "Thurnix",
-    "url": "{{ .Site.BaseURL }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
-      "addressLocality": "Phường Gò Vấp",
-      "addressRegion": "Thành phố Hồ Chí Minh",
-      "postalCode": "700000",
-      "addressCountry": "VN"
-    },
-    "telephone": "+84925604604",
-    "email": "seo@thurnix.com"
-  },
-  "serviceType": "Search Engine Optimization",
-  "priceRange": "$$-$$$",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Vietnam"
-  },
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "SEO Startup",
-      "description": "Gói SEO cơ bản cho doanh nghiệp nhỏ",
-      "price": "15000000",
-      "priceCurrency": "VND"
-    },
-    {
-      "@type": "Offer", 
-      "name": "SEO Professional",
-      "description": "Gói SEO chuyên nghiệp cho doanh nghiệp",
-      "price": "30000000",
-      "priceCurrency": "VND"
-    },
-    {
-      "@type": "Offer",
-      "name": "SEO Enterprise", 
-      "description": "Gói SEO cao cấp cho tập đoàn",
-      "price": "60000000",
-      "priceCurrency": "VND"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "itemReviewed": {
-      "@type": "LocalBusiness",
-      "name": "Thurnix",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
-        "addressLocality": "Phường Gò Vấp",
-        "addressRegion": "Thành phố Hồ Chí Minh",
-        "postalCode": "700000",
-        "addressCountry": "VN"
-      }
-    },
-    "ratingValue": 4.8,
-    "reviewCount": 89,
-    "bestRating": 5,
-    "worstRating": 4
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Lê Minh Tuấn"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": 5,
-        "bestRating": 5
-      },
-      "reviewBody": "Dịch vụ SEO của Thurnix rất chuyên nghiệp. Website của tôi đã lên top 3 Google sau 4 tháng.",
-      "datePublished": "2024-03-15"
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Nguyễn Thị Hương"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": 5,
-        "bestRating": 5
-      },
-      "reviewBody": "Kết quả SEO vượt mong đợi. Lead từ organic search tăng 300%.",
-      "datePublished": "2024-02-28"
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Thurnix SEO Agency",
-  "description": "Công ty cung cấp dịch vụ SEO chuyên nghiệp tại Việt Nam, chuyên tối ưu hóa website cho doanh nghiệp với công nghệ AI tiên tiến.",
+  "@type": "LocalBusiness",
+  "name": "Thurnix",
+  "description": "Công ty cung cấp dịch vụ SEO chuyên nghiệp tại Việt Nam",
   "url": "{{ .Site.BaseURL }}",
-  "image": "{{ .Site.BaseURL }}/images/thurnix-cover.webp",
-  "priceRange": "$$-$$$",
   "telephone": "+84925604604",
   "email": "seo@thurnix.com",
+  "image": "{{ .Site.BaseURL }}/images/thurnix.webp",
+  "priceRange": "$$-$$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
-    "addressLocality": "Phường Gò Vấp", 
+    "addressLocality": "Phường Gò Vấp",
     "addressRegion": "Thành phố Hồ Chí Minh",
     "postalCode": "700000",
     "addressCountry": "VN"
   },
   "geo": {
-    "@type": "GeoCoordinates",
+    "@type": "GeoCoordinates", 
     "latitude": "10.8231",
     "longitude": "106.6297"
   },
-  "serviceArea": {
-    "@type": "Country",
-    "name": "Vietnam"
-  },
-  "knowsAbout": [
-    "Search Engine Optimization",
-    "Technical SEO",
-    "Content SEO", 
-    "Local SEO",
-    "E-commerce SEO",
-    "Link Building",
-    "SEO Analytics"
-  ],
-  "makesOffer": [
+  "openingHoursSpecification": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "SEO Consulting"
-      },
-      "price": "0",
-      "priceCurrency": "VND",
-      "description": "Tư vấn SEO miễn phí"
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
     }
-  ]
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.8,
+    "reviewCount": 89,
+    "bestRating": 5,
+    "worstRating": 4
+  }
 }
 </script>
