@@ -17,25 +17,6 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
     gradient-to="#3b82f6"
 >}}
 
-<style>
-.btn-primary {
-    background-color: #10b981 !important; /* Green */
-    border-color: #10b981 !important;
-}
-.btn-primary:hover {
-    background-color: #059669 !important;
-    border-color: #059669 !important;
-}
-.btn-outline {
-    background-color: #ffffff !important; /* White background */
-    color: #1e40af !important; /* Blue text */
-    border: 2px solid #ffffff !important;
-}
-.btn-outline:hover {
-    background-color: #f3f4f6 !important;
-    color: #1e40af !important;
-}
-</style>
 
 {{< section-container class="py-16 bg-white" >}}
     <div class="max-w-6xl mx-auto">

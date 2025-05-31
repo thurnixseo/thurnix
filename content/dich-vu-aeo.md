@@ -17,26 +17,6 @@ keywords: ["dịch vụ AEO", "Answer Engine Optimization", "tối ưu AI search
     gradient-to="#a855f7"
 >}}
 
-<style>
-.btn-primary {
-    background-color: #8b5cf6 !important; /* Purple */
-    border-color: #8b5cf6 !important;
-}
-.btn-primary:hover {
-    background-color: #7c3aed !important;
-    border-color: #7c3aed !important;
-}
-.btn-outline {
-    background-color: #ffffff !important; /* White background */
-    color: #7c3aed !important; /* Purple text */
-    border: 2px solid #ffffff !important;
-}
-.btn-outline:hover {
-    background-color: #f3f4f6 !important;
-    color: #7c3aed !important;
-}
-</style>
-
 {{< section-container class="py-16 bg-white" >}}
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">

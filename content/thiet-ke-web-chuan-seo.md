@@ -17,25 +17,6 @@ keywords: ["thiết kế web chuẩn SEO", "thiết kế website", "web design S
     gradient-to="#1e293b"
 >}}
 
-<style>
-.btn-primary {
-    background-color: #10b981 !important; /* Green */
-    border-color: #10b981 !important;
-}
-.btn-primary:hover {
-    background-color: #059669 !important;
-    border-color: #059669 !important;
-}
-.btn-outline {
-    background-color: #ffffff !important; /* White background */
-    color: #0f172a !important; /* Dark text */
-    border: 2px solid #ffffff !important;
-}
-.btn-outline:hover {
-    background-color: #f3f4f6 !important;
-    color: #0f172a !important;
-}
-</style>
 
 {{< section-container class="py-16 bg-white" >}}
     <div class="max-w-6xl mx-auto">
