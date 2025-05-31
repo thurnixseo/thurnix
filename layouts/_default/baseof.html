@@ -53,13 +53,12 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
  
-    <!-- SIMPLIFIED SCHEMA STRATEGY - NO CONFLICTS -->
+   <!-- FIXED: NO DUPLICATE SCHEMAS -->
     {{ if .IsHome }}
-        <!-- Homepage: Only Organization + LocalBusiness with Reviews -->
-        {{ partial "schema/organization.html" . }}
+        <!-- Homepage: ONLY LocalBusiness (contains all company info + reviews) -->
         {{ partial "schema/local-business.html" . }}
     {{ else if .Params.schema }}
-        <!-- Service Pages: Only specific schemas, NO Organization to avoid conflicts -->
+        <!-- Service Pages: Only specific schemas -->
         {{ if eq .Params.schema "seo" }}
             {{ partial "schema/seo-service.html" . }}
             {{ partial "schema/seo-faq.html" . }}
