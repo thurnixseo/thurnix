@@ -1,0 +1,319 @@
+/* ===== THURNIX HERO SECTION CSS ===== */
+
+/* Font chữ màu trắng cho hero section */
+section.relative h1,
+section.relative .text-4xl,
+section.relative .text-5xl,
+section.relative .text-6xl,
+section.relative .font-bold,
+section[style*="background"] h1,
+section[style*="gradient"] h1 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+section.relative p,
+section.relative .text-xl,
+section.relative .text-lg,
+section[style*="background"] p,
+section[style*="gradient"] p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    font-weight: 400 !important;
+}
+
+/* Strong text trong hero */
+section.relative strong,
+section.relative b,
+section[style*="background"] strong,
+section[style*="gradient"] strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* WhatsApp Button - Primary CTA */
+a[href*="whatsapp"],
+a[href*="wa.me"],
+.btn-primary {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 16px 32px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        0 4px 14px rgba(37, 211, 102, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    transform: translateY(0) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+a[href*="whatsapp"]:hover,
+a[href*="wa.me"]:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 
+        0 6px 20px rgba(37, 211, 102, 0.6),
+        0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Phone Button - Secondary CTA */
+a[href^="tel:"],
+.btn-secondary,
+.btn-outline {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #1e40af !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    padding: 16px 32px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        0 4px 14px rgba(255, 255, 255, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    transform: translateY(0) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+a[href^="tel:"]:hover,
+.btn-secondary:hover,
+.btn-outline:hover {
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 
+        0 6px 20px rgba(255, 255, 255, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    color: #1e40af !important;
+}
+
+/* Shine effect cho WhatsApp button */
+a[href*="whatsapp"]::after,
+a[href*="wa.me"]::after,
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+a[href*="whatsapp"]:hover::after,
+a[href*="wa.me"]:hover::after,
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Emoji animation trong button */
+a[href*="whatsapp"] span:first-child,
+a[href*="wa.me"] span:first-child,
+a[href^="tel:"] span:first-child {
+    font-size: 18px !important;
+    display: inline-block !important;
+    transition: transform 0.3s ease !important;
+}
+
+a[href*="whatsapp"]:hover span:first-child,
+a[href*="wa.me"]:hover span:first-child,
+a[href^="tel:"]:hover span:first-child {
+    transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* Button container spacing */
+section.relative .flex,
+section.relative .grid,
+.button-group {
+    gap: 16px !important;
+    margin-top: 32px !important;
+}
+
+/* Ripple effect khi click */
+a[href*="whatsapp"]:active::before,
+a[href*="wa.me"]:active::before,
+a[href^="tel:"]:active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* Override Tailwind gray colors trong hero */
+section.relative .text-gray-600,
+section.relative .text-gray-500,
+section.relative .text-gray-700,
+section.relative .text-gray-800,
+section[style*="background"] .text-gray-600,
+section[style*="gradient"] .text-gray-600 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    section.relative h1,
+    section.relative .text-4xl,
+    section.relative .text-5xl {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    section.relative p,
+    section.relative .text-xl {
+        font-size: 1.125rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    a[href*="whatsapp"],
+    a[href*="wa.me"],
+    a[href^="tel:"],
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 24px !important;
+        font-size: 15px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        margin-bottom: 12px !important;
+    }
+    
+    section.relative .flex,
+    section.relative .grid {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    section.relative h1,
+    section.relative .text-4xl {
+        font-size: 2rem !important;
+    }
+    
+    a[href*="whatsapp"] span:first-child,
+    a[href*="wa.me"] span:first-child,
+    a[href^="tel:"] span:first-child {
+        font-size: 16px !important;
+    }
+}
+
+/* Focus states for accessibility */
+a[href*="whatsapp"]:focus,
+a[href*="wa.me"]:focus,
+a[href^="tel:"]:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.8) !important;
+    outline-offset: 2px !important;
+}
+
+/* Additional button styling for better visibility */
+a[class*="btn"],
+section a[href*="wa.me"],
+section a[href^="tel:"] {
+    font-family: inherit !important;
+    letter-spacing: 0.3px !important;
+    text-transform: none !important;
+    min-height: 48px !important;
+    cursor: pointer !important;
+}
+
+/* Prevent text selection on buttons */
+a[href*="whatsapp"],
+a[href*="wa.me"],
+a[href^="tel:"] {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+}
+
+/* Loading state */
+.btn-loading {
+    pointer-events: none !important;
+    opacity: 0.7 !important;
+}
+
+.btn-loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Gradient animation for WhatsApp button */
+a[href*="whatsapp"],
+a[href*="wa.me"] {
+    background-size: 200% 200% !important;
+    animation: gradientShift 3s ease infinite !important;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fix for Hugo template issues */
+section[class*="section"],
+section[class*="relative"],
+section[class*="hero"] {
+    color: inherit !important;
+}
+
+/* Ensure all nested elements inherit white color */
+section.relative *,
+section[style*="background"] *,
+section[style*="gradient"] * {
+    color: inherit;
+}
+
+/* Final override for stubborn elements */
+section.relative div,
+section.relative span,
+section[style*="background"] div,
+section[style*="gradient"] div {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
