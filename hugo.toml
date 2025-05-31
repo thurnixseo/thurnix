@@ -193,8 +193,8 @@ paginatePath = "page"
     [menu.main.params]
       has_submenu = true
       submenu = [
-        { name = "About Us", url = "/gioi-thieu/" },
-        { name = "Careers", url = "/tuyen-dung/" }
+        { name = "Về Thurnix", url = "/gioi-thieu/" },
+        { name = "Tuyển dụng", url = "/tuyen-dung/" }
       ]
 
   # Footer Column 1 Menu
@@ -217,8 +217,8 @@ paginatePath = "page"
     url = "/blog"
     weight = 1
   [[menu.footer_column_2]]
-    name = "About Us"
-    url = "/company"
+    name = "Về Thurnix"
+    url = "/gioi-thieu"
     weight = 2
   [[menu.footer_column_2]]
     name = "Careers"
