@@ -9,7 +9,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
     headline="<span class='text-white'><strong>Dịch vụ SEO</strong> Chuyên nghiệp</span><br><span class='text-white'>Đưa Website Lên TOP Google</span>"
     sub_headline="<span class='text-white/90'>Thurnix cung cấp <strong>dịch vụ SEO</strong> hiệu quả với phương pháp độc quyền, giúp website tăng thứ hạng Google, tăng traffic chất lượng và tối ưu hóa ROI cho doanh nghiệp.</span>"
     primary_button_text="🔥 Gọi ngay: 0925 604 604"
-    primary_button_url="tel:0925604604"
+    primary_button_url="javascript:window.location.href='tel:+84925604604';"
     secondary_button_text="💰 Yêu cầu báo giá"
     secondary_button_url="#bang-gia"
     hero_image="/images/seo-hero-dashboard.webp"
@@ -36,6 +36,29 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
     color: #1e40af !important;
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the call button and add click handler
+    const callButton = document.querySelector('a[href*="javascript:window.location.href"]');
+    if (callButton) {
+        callButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Try multiple methods for better compatibility
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {
+                window.location.href = 'tel:+84925604604';
+            } else {
+                // For desktop, try to open phone app or show alert
+                try {
+                    window.location.href = 'tel:+84925604604';
+                } catch(err) {
+                    alert('Số điện thoại: 0925 604 604\nHãy gọi để được tư vấn miễn phí!');
+                }
+            }
+        });
+    }
+});
+</script>
 
 {{< section-container class="py-16 bg-white" >}}
     <div class="max-w-6xl mx-auto">
