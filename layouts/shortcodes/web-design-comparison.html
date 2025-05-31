@@ -1,0 +1,61 @@
+ {{ $beforeTitle := .Get "before-title" | default "Website cũ" }}
+{{ $afterTitle := .Get "after-title" | default "Website mới" }}
+{{ $beforeImage := .Get "before-image" }}
+{{ $afterImage := .Get "after-image" }}
+{{ $beforeFeatures := split (.Get "before-features") "|" }}
+{{ $afterFeatures := split (.Get "after-features") "|" }}
+
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div class="bg-gradient-to-r from-gray-100 to-gray-200 p-6 text-center">
+        <h3 class="text-2xl font-bold text-gray-800">So sánh Before & After</h3>
+        <p class="text-gray-600 mt-2">Sự khác biệt rõ rệt khi thiết kế web chuẩn SEO</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <!-- Before -->
+        <div class="p-8 bg-red-50 border-r border-gray-200">
+            <div class="text-center mb-6">
+                <div class="inline-block px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-semibold mb-4">
+                    ❌ {{ $beforeTitle }}
+                </div>
+                {{ if $beforeImage }}
+                <img src="{{ $beforeImage }}" alt="{{ $beforeTitle }}" class="w-full rounded-lg shadow-md mb-4">
+                {{ end }}
+            </div>
+            
+            <div class="space-y-3">
+                {{ range $beforeFeatures }}
+                <div class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                    <span class="text-gray-700">{{ . }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        
+        <!-- After -->
+        <div class="p-8 bg-green-50">
+            <div class="text-center mb-6">
+                <div class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">
+                    ✅ {{ $afterTitle }}
+                </div>
+                {{ if $afterImage }}
+                <img src="{{ $afterImage }}" alt="{{ $afterTitle }}" class="w-full rounded-lg shadow-md mb-4">
+                {{ end }}
+            </div>
+            
+            <div class="space-y-3">
+                {{ range $afterFeatures }}
+                <div class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">{{ . }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

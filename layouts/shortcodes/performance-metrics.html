@@ -1,0 +1,40 @@
+{{ $metrics := split (.Inner | trim) "," }}
+<div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
+    <h3 class="text-2xl font-bold text-center mb-8">⚡ Performance Metrics Chuẩn Thurnix</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {{ range $index, $metric := $metrics }}
+            {{ $parts := split $metric "|" }}
+            {{ if ge (len $parts) 3 }}
+                {{ $value := index $parts 0 | trim }}
+                {{ $label := index $parts 1 | trim }}
+                {{ $color := index $parts 2 | trim }}
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold mb-2" style="color: {{ $color }};">{{ $value }}</div>
+                    <div class="text-gray-600 text-sm">{{ $label }}</div>
+                    
+                    <!-- Progress bar -->
+                    <div class="mt-3 bg-gray-200 rounded-full h-2">
+                        <div class="h-2 rounded-full" style="background-color: {{ $color }}; width: {{ if eq $index 0 }}95%{{ else if eq $index 1 }}90%{{ else if eq $index 2 }}98%{{ else }}92%{{ end }};"></div>
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+    
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+        <div class="bg-white p-4 rounded-lg">
+            <div class="text-green-600 font-bold">✅ Core Web Vitals</div>
+            <div class="text-sm text-gray-600">Đạt chuẩn Google</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+            <div class="text-blue-600 font-bold">📱 Mobile Optimized</div>
+            <div class="text-sm text-gray-600">100% responsive design</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+            <div class="text-purple-600 font-bold">🚀 SEO Ready</div>
+            <div class="text-sm text-gray-600">Tối ưu cho search engines</div>
+        </div>
+    </div>
+</div>
