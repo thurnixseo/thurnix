@@ -1,4 +1,4 @@
-{{ $metrics := split (.Inner | trim) "," }}
+{{ $metrics := split (.Inner | strings.TrimSpace) "," }}
 <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
     <h3 class="text-2xl font-bold text-center mb-8">⚡ Performance Metrics Chuẩn Thurnix</h3>
     
@@ -6,9 +6,9 @@
         {{ range $index, $metric := $metrics }}
             {{ $parts := split $metric "|" }}
             {{ if ge (len $parts) 3 }}
-                {{ $value := index $parts 0 | trim }}
-                {{ $label := index $parts 1 | trim }}
-                {{ $color := index $parts 2 | trim }}
+                {{ $value := index $parts 0 | strings.TrimSpace }}
+                {{ $label := index $parts 1 | strings.TrimSpace }}
+                {{ $color := index $parts 2 | strings.TrimSpace }}
                 
                 <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="text-4xl font-bold mb-2" style="color: {{ $color }};">{{ $value }}</div>
