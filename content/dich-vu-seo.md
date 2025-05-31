@@ -1037,7 +1037,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 description="Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới bắt đầu."
                 features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup"
                 link="/lien-he/"
-                cta="Bắt đầu ngay"
+                cta="Liên hệ Thurnix"
             >}}
 
             {{< seo-package
@@ -1047,7 +1047,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 description="Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn, bao gồm link building."
                 features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup|Link building|Core Web Vitals optimization|Competitor analysis|Conversion tracking setup"
                 link="/lien-he/"
-                cta="Chọn gói này"
+                cta="Liên hệ Thurnix"
                 featured="true"
             >}}
 
@@ -1058,7 +1058,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 description="Gói SEO cao cấp cho tập đoàn và thương mại điện tử với AI-powered optimization."
                 features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup|Link building|Core Web Vitals optimization|Competitor analysis|Conversion tracking setup|AI-powered optimization|Dedicated SEO manager|E-commerce SEO|International SEO|Competitor monitoring|Advanced analytics dashboard|Video SEO optimization|Voice search optimization"
                 link="/lien-he/"
-                cta="Liên hệ tư vấn"
+                cta="Liên hệ Thurnix"
             >}}
         </div>
 
@@ -1181,7 +1181,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                     <span class="text-white text-2xl">⚡</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Page Speed Test</h3>
-                <p class="text-gray-700 mb-6">Kiểm tra tốc độ tải trang và Core Web Vitals với đề xuất tối ưu cụ thể.</p>
+                <p class="text-gray-700 mb-6">Kiểm tra tốc độ tải trang và Core Web Vitals với đề xuất tối ưu cụ thể cho từng trang riêng biệt hoặc toàn bộ website.</p>
                 <div class="space-y-2 mb-6">
                     <div class="flex items-center text-sm">
                         <span class="text-green-500 mr-2">✓</span>
