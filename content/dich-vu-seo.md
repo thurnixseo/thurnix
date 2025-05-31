@@ -1,18 +1,18 @@
 ---
-title: "Dịch vụ SEO uy tín 2025 từ Thurnix"
+title: "Dịch vụ SEO Chuyên nghiệp - Thurnix | Tăng thứ hạng Google hiệu quả"
 layout: "dich-vu"
-description: "Dịch vụ SEO chuyên nghiệp của Thurnix. Tăng thứ hạng Google, tăng traffic và doanh số với giải pháp SEO hiệu quả"
+description: "Dịch vụ SEO chuyên nghiệp của Thurnix. Tăng thứ hạng Google, tăng traffic và doanh số với giải pháp SEO hiệu quả. Liên hệ 0925 604 604 tư vấn miễn phí"
 keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google", "SEO website", "Thurnix"]
 ---
 
 {{< hero 
-    headline="<strong>Dịch vụ SEO</strong> Chuyên nghiệp<br><span class='text-blue-600'>Đưa Website Lên TOP Google</span>"
-    sub_headline="Thurnix cung cấp <strong>dịch vụ SEO</strong> hiệu quả với phương pháp độc quyền, giúp website tăng thứ hạng Google, tăng traffic chất lượng và tối ưu hóa ROI cho doanh nghiệp."
+    headline="<span class='text-white'><strong>Dịch vụ SEO</strong> Chuyên nghiệp</span><br><span class='text-white'>Đưa Website Lên TOP Google</span>"
+    sub_headline="<span class='text-white/90'>Thurnix cung cấp <strong>dịch vụ SEO</strong> hiệu quả với phương pháp độc quyền, giúp website tăng thứ hạng Google, tăng traffic chất lượng và tối ưu hóa ROI cho doanh nghiệp.</span>"
     primary_button_text="Tư vấn miễn phí ngay"
     primary_button_url="#lien-he"
     secondary_button_text="Xem báo giá chi tiết"
     secondary_button_url="#bang-gia"
-    hero_image="/static/images/seo-hero-dashboard.webp"
+    hero_image="/images/seo-hero-dashboard.webp"
     gradient-from="#1e40af"
     gradient-to="#3b82f6"
 >}}
@@ -234,7 +234,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {{< seo-package 
                 name="SEO Startup"
-                price="15.000.000"
+                price="15tr"
                 period="tháng"
                 description="Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới"
                 features="Tối ưu 20 từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO cơ bản|5 bài viết SEO/tháng|Báo cáo hàng tháng|Hỗ trợ email|Google Analytics setup|1 landing page tối ưu"
@@ -244,7 +244,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
 
             {{< seo-package 
                 name="SEO Professional"
-                price="30.000.000"
+                price="30tr"
                 period="tháng"
                 description="Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn"
                 features="Tối ưu 50 từ khóa chính|Advanced On-page SEO|Technical SEO nâng cao|15 bài viết SEO/tháng|Link building chất lượng cao|Báo cáo chi tiết 2 lần/tháng|Hỗ trợ phone & email|Local SEO optimization|3 landing pages tối ưu|Core Web Vitals optimization"
@@ -255,7 +255,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
 
             {{< seo-package 
                 name="SEO Enterprise"
-                price="40.000.000"
+                price="60tr"
                 period="tháng"
                 description="Gói SEO cao cấp cho tập đoàn và thương mại điện tử"
                 features="Tối ưu không giới hạn từ khóa|AI-powered SEO optimization|Advanced Technical SEO|25 bài viết SEO/tháng|Premium link building|Dedicated SEO manager|Báo cáo custom hàng tuần|24/7 priority support|5 landing pages tối ưu|E-commerce SEO|International SEO|Competitor monitoring"
@@ -285,7 +285,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
             "Website thương mại điện tử tăng từ 50K lượt truy cập/tháng lên 240K lượt truy cập, doanh thu tăng 380% trong 8 tháng." 
             "Xem chi tiết" 
             "/case-studies/ecommerce-seo/" 
-            "/static/images/case-study-ecommerce.webp" 
+            "/images/case-study-ecommerce.webp" 
             "E-commerce SEO Success"
         >}}
 
@@ -298,7 +298,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
             "Startup công nghệ đạt top 3 Google cho 95% từ khóa chính, leads tăng 450% và đóng được deal triệu đô." 
             "Xem chi tiết" 
             "/case-studies/saas-seo/" 
-            "/static/images/case-study-saas.webp" 
+            "/images/case-study-saas.webp" 
             "B2B SaaS SEO Success"
         >}}
     </div>
