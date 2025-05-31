@@ -23,12 +23,15 @@
     {{ if .Get "features" }}
     <ul class="space-y-3 mb-8">
         {{ range split (.Get "features") "|" }}
+        {{ $feature := trim . " " }}
+        {{ if $feature }}
         <li class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span>{{ . | trim }}</span>
+            <span>{{ $feature }}</span>
         </li>
+        {{ end }}
         {{ end }}
     </ul>
     {{ end }}
