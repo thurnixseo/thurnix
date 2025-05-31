@@ -1031,8 +1031,6 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
 
         {{< pricing-table-1 >}}
         {
-            "title": "Gói dịch vụ SEO chuyên nghiệp",
-            "description": "Thurnix cam kết mang lại kết quả SEO tốt nhất với phương pháp AI độc quyền và đội ngũ chuyên gia giàu kinh nghiệm.",
             "plans": [
                 {
                     "name": "SEO Startup",
