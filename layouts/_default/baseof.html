@@ -52,7 +52,11 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
-    
+ 
+    <!--Schema Organization-->
+    {{ partial "schema-organization.html" . }}
+    {{ if eq .Type "contact" }}{{ partial "schema-local-business.html" . }}{{ end }}
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
