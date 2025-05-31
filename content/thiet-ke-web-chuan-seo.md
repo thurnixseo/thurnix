@@ -992,81 +992,123 @@ keywords: ["thiết kế web chuẩn SEO", "thiết kế website", "web design S
         </div>
         
         <div class="overflow-x-auto">
-            <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-                <thead class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                    <tr>
-                        <th class="px-6 py-4 text-left">Tiêu chí so sánh</th>
-                        <th class="px-6 py-4 text-center">Website thông thường</th>
-                        <th class="px-6 py-4 text-center">Thiết kế web chuẩn SEO</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">PageSpeed Score</td>
-                        <td class="px-6 py-4 text-center">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">60-75 điểm</span>
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">95+ điểm</span>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Thời gian tải trang</td>
-                        <td class="px-6 py-4 text-center text-red-600">3-8 giây</td>
-                        <td class="px-6 py-4 text-center text-green-600">&lt;1 giây</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Mobile responsiveness</td>
-                        <td class="px-6 py-4 text-center text-orange-600">Cơ bản, chưa tối ưu</td>
-                        <td class="px-6 py-4 text-center text-green-600">Mobile-first design</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">SEO Foundation</td>
-                        <td class="px-6 py-4 text-center text-red-600">Cần SEO lại từ đầu</td>
-                        <td class="px-6 py-4 text-center text-green-600">Ready-to-rank ngay</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Structured Data</td>
-                        <td class="px-6 py-4 text-center">❌ Không có</td>
-                        <td class="px-6 py-4 text-center">✅ Schema markup đầy đủ</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Core Web Vitals</td>
-                        <td class="px-6 py-4 text-center text-red-600">Fail hầu hết chỉ số</td>
-                        <td class="px-6 py-4 text-center text-green-600">Pass 100% metrics</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Security & SSL</td>
-                        <td class="px-6 py-4 text-center text-orange-600">SSL cơ bản</td>
-                        <td class="px-6 py-4 text-center text-green-600">SSL + Security headers</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Analytics & Tracking</td>
-                        <td class="px-6 py-4 text-center text-orange-600">Google Analytics cơ bản</td>
-                        <td class="px-6 py-4 text-center text-green-600">GA4 + GSC + Advanced tracking</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Chi phí SEO sau này</td>
-                        <td class="px-6 py-4 text-center text-red-600">50-100 triệu để fix</td>
-                        <td class="px-6 py-4 text-center text-green-600">Chỉ cần content marketing</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">Thời gian lên top Google</td>
-                        <td class="px-6 py-4 text-center text-red-600">12-18 tháng</td>
-                        <td class="px-6 py-4 text-center text-green-600">3-6 tháng</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50 bg-blue-50">
-                        <td class="px-6 py-4 font-bold">ROI sau 1 năm</td>
-                        <td class="px-6 py-4 text-center">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full font-semibold">2-3x</span>
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full font-semibold">8-12x</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+        <thead class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <tr>
+                <th class="px-3 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-medium">Tiêu chí so sánh</th>
+                <th class="px-3 md:px-6 py-3 md:py-4 text-center text-xs md:text-sm font-medium">Website thông thường</th>
+                <th class="px-3 md:px-6 py-3 md:py-4 text-center text-xs md:text-sm font-medium">Thiết kế web chuẩn SEO</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">PageSpeed Score</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center">
+                    <span class="px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">60-75 điểm</span>
+                </td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center">
+                    <span class="px-2 md:px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">95+ điểm</span>
+                </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Thời gian tải trang</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-red-600 text-xs md:text-sm">3-8 giây</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">&lt;1 giây</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Mobile responsiveness</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-orange-600 text-xs md:text-sm">Cơ bản, chưa tối ưu</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">Mobile-first design</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">SEO Foundation</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-red-600 text-xs md:text-sm">Cần SEO lại từ đầu</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">Ready-to-rank ngay</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Structured Data</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-xs md:text-sm">❌ Không có</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-xs md:text-sm">✅ Schema markup đầy đủ</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Core Web Vitals</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-red-600 text-xs md:text-sm">Fail hầu hết chỉ số</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">Pass 100% metrics</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Security & SSL</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-orange-600 text-xs md:text-sm">SSL cơ bản</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">SSL + Security headers</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Analytics & Tracking</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-orange-600 text-xs md:text-sm">Google Analytics cơ bản</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">GA4 + GSC + Advanced tracking</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Chi phí SEO sau này</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-red-600 text-xs md:text-sm">50-100 triệu để fix</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">Chỉ cần content marketing</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-semibold text-xs md:text-sm">Thời gian lên top Google</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-red-600 text-xs md:text-sm">12-18 tháng</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center text-green-600 text-xs md:text-sm">3-6 tháng</td>
+            </tr>
+            <tr class="hover:bg-gray-50 bg-blue-50">
+                <td class="px-3 md:px-6 py-3 md:py-4 font-bold text-xs md:text-sm">ROI sau 1 năm</td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center">
+                    <span class="px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full font-semibold text-xs">2-3x</span>
+                </td>
+                <td class="px-3 md:px-6 py-3 md:py-4 text-center">
+                    <span class="px-2 md:px-3 py-1 bg-green-100 text-green-800 rounded-full font-semibold text-xs">8-12x</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+/* Mobile optimizations for comparison table */
+@media (max-width: 768px) {
+    .overflow-x-auto table {
+        font-size: 11px;
+        min-width: 100%;
+    }
+    
+    .overflow-x-auto th,
+    .overflow-x-auto td {
+        padding: 8px 6px !important;
+        line-height: 1.3;
+    }
+    
+    .overflow-x-auto .text-xs {
+        font-size: 10px !important;
+    }
+    
+    .overflow-x-auto .rounded-full {
+        padding: 2px 6px !important;
+        font-size: 9px !important;
+    }
+}
+
+/* Ensure table doesn't overflow on very small screens */
+@media (max-width: 480px) {
+    .overflow-x-auto {
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+    
+    .overflow-x-auto table {
+        font-size: 10px;
+    }
+    
+    .overflow-x-auto th,
+    .overflow-x-auto td {
+        padding: 6px 4px !important;
+    }
+}
+</style>
         
         <div class="mt-12 bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">
             <h3 class="text-2xl font-bold mb-6 text-center">💡 Tại sao nên chọn <strong>thiết kế web chuẩn SEO</strong>?</h3>
