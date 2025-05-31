@@ -53,30 +53,6 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
  
-<!-- EMERGENCY: MINIMAL SCHEMA ONLY -->
-    {{ if .IsHome }}
-        <!-- Homepage: MINIMAL LocalBusiness - NO REVIEWS, NO EXTRAS -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Thurnix",
-          "url": "{{ .Site.BaseURL }}",
-          "telephone": "+84925604604",
-          "email": "seo@thurnix.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
-            "addressLocality": "Phường Gò Vấp",
-            "addressRegion": "Thành phố Hồ Chí Minh",
-            "postalCode": "700000",
-            "addressCountry": "VN"
-          }
-        }
-        </script>
-    {{ else }}
-        <!-- NO SCHEMAS on other pages for now -->
-    {{ end }}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
