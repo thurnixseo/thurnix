@@ -53,11 +53,12 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
  
-    <!-- Schema Organization - Always include on all pages -->
-    {{ partial "schema/organization.html" . }}
-    
-    <!-- Smart Schema based on front matter and page type -->
-    {{ if .Params.schema }}
+            <!-- Homepage: Only Organization + LocalBusiness -->
+        {{ partial "schema/organization.html" . }}
+        {{ partial "schema/local-business.html" . }}
+    {{ else if .Params.schema }}
+        <!-- Service Pages: Only Organization + Specific Service + FAQ -->
+        {{ partial "schema/organization.html" . }}
         {{ if eq .Params.schema "seo" }}
             {{ partial "schema/seo-service.html" . }}
             {{ partial "schema/seo-faq.html" . }}
@@ -71,17 +72,9 @@
             {{ partial "schema/person.html" . }}
         {{ end }}
     {{ else }}
-        <!-- Fallback schema based on page type -->
-        {{ if .IsHome }}
-            {{ partial "schema/local-business.html" . }}
-        {{ else if eq .Type "page" }}
-            {{ if in .RelPermalink "lien-he" }}
-                {{ partial "schema/local-business.html" . }}
-            {{ end }}
-        {{ end }}
+        <!-- Other Pages: Only Organization -->
+        {{ partial "schema/organization.html" . }}
     {{ end }}
-    
-    {{ block "head" . }}{{ end }}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
