@@ -53,11 +53,13 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
  
-    <!-- Schema Organization - Always include on all pages -->
-    {{ partial "schema/organization.html" . }}
-    
-    <!-- Smart Schema based on front matter and page type -->
-    {{ if .Params.schema }}
+    <!-- SIMPLIFIED SCHEMA STRATEGY - NO CONFLICTS -->
+    {{ if .IsHome }}
+        <!-- Homepage: Only Organization + LocalBusiness with Reviews -->
+        {{ partial "schema/organization.html" . }}
+        {{ partial "schema/local-business.html" . }}
+    {{ else if .Params.schema }}
+        <!-- Service Pages: Only specific schemas, NO Organization to avoid conflicts -->
         {{ if eq .Params.schema "seo" }}
             {{ partial "schema/seo-service.html" . }}
             {{ partial "schema/seo-faq.html" . }}
@@ -68,20 +70,16 @@
             {{ partial "schema/web-design-service.html" . }}
             {{ partial "schema/web-design-faq.html" . }}
         {{ else if eq .Params.schema "about" }}
+            {{ partial "schema/organization.html" . }}
             {{ partial "schema/person.html" . }}
         {{ end }}
     {{ else }}
-        <!-- Fallback schema based on page type -->
-        {{ if .IsHome }}
+        <!-- Other Pages: Only Organization -->
+        {{ partial "schema/organization.html" . }}
+        {{ if in .RelPermalink "lien-he" }}
             {{ partial "schema/local-business.html" . }}
-        {{ else if eq .Type "page" }}
-            {{ if in .RelPermalink "lien-he" }}
-                {{ partial "schema/local-business.html" . }}
-            {{ end }}
         {{ end }}
     {{ end }}
-    
-    {{ block "head" . }}{{ end }}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
