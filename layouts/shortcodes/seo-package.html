@@ -1,0 +1,40 @@
+<div class="bg-white rounded-xl shadow-lg p-8 relative {{ if .Get "featured" }}ring-2 ring-blue-500{{ end }}">
+    {{ if .Get "featured" }}
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+            Phổ biến nhất
+        </span>
+    </div>
+    {{ end }}
+    
+    <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ .Get "name" }}</h3>
+        <div class="text-4xl font-bold text-blue-600 mb-2">
+            ${{ .Get "price" }}
+            {{ if .Get "period" }}
+            <span class="text-lg text-gray-500 font-normal">/{{ .Get "period" }}</span>
+            {{ end }}
+        </div>
+        <p class="text-gray-600">{{ .Get "description" }}</p>
+    </div>
+    
+    {{ if .Get "features" }}
+    <ul class="space-y-3 mb-8">
+        {{ range split (.Get "features") "|" }}
+        <li class="flex items-center text-gray-600">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            {{ . | trim }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+    
+    <div class="text-center">
+        <a href="{{ .Get "link" | default "#" }}" 
+           class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 inline-block">
+            {{ .Get "cta" | default "Chọn gói này" }}
+        </a>
+    </div>
+</div>

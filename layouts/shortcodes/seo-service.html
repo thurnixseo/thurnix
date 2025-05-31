@@ -1,0 +1,45 @@
+<div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+    <div class="flex items-center mb-4">
+        {{ if .Get "icon" }}
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {{ if eq (.Get "icon") "search" }}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    {{ else if eq (.Get "icon") "chart" }}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    {{ else if eq (.Get "icon") "link" }}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    {{ else if eq (.Get "icon") "content" }}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    {{ end }}
+                </svg>
+            </div>
+        {{ end }}
+        <h3 class="text-xl font-bold text-gray-900">{{ .Get "title" }}</h3>
+    </div>
+    <p class="text-gray-600 mb-6">{{ .Get "description" }}</p>
+    
+    {{ if .Get "features" }}
+    <ul class="space-y-2 mb-6">
+        {{ range split (.Get "features") "," }}
+        <li class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            {{ . | trim }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+    
+    {{ if .Get "price" }}
+    <div class="border-t pt-4">
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-blue-600">${{ .Get "price" }}</span>
+            {{ if .Get "period" }}
+            <span class="text-gray-500">{{ .Get "period" }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

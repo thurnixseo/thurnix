@@ -1,0 +1,16 @@
+<div class="flex items-start mb-8">
+    <div class="flex-shrink-0">
+        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+            {{ .Get "step" }}
+        </div>
+    </div>
+    <div class="ml-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">{{ .Get "title" }}</h3>
+        <p class="text-gray-600">{{ .Get "description" }}</p>
+        {{ if .Get "duration" }}
+        <div class="mt-2 text-sm text-blue-600 font-medium">
+            Thời gian: {{ .Get "duration" }}
+        </div>
+        {{ end }}
+    </div>
+</div>

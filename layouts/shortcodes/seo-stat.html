@@ -1,0 +1,7 @@
+<div class="text-center p-6 bg-white rounded-lg shadow-sm">
+    <div class="text-3xl font-bold text-blue-600 mb-2">{{ .Get "number" }}</div>
+    <div class="text-gray-600 font-medium">{{ .Get "label" }}</div>
+    {{ if .Get "description" }}
+    <div class="text-sm text-gray-500 mt-2">{{ .Get "description" }}</div>
+    {{ end }}
+</div>
