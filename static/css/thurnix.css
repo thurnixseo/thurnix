@@ -317,3 +317,290 @@ section[style*="background"] div,
 section[style*="gradient"] div {
     color: rgba(255, 255, 255, 0.95) !important;
 }
+/* ===== COMPLETE HOMEPAGE TEXT COLOR FIX ===== */
+
+/* Reset all text shadows except hero */
+section:not([style*="gradient"]):not(.hero) * {
+    text-shadow: none !important;
+}
+
+/* ===== 1. HERO SECTION - Keep white text ===== */
+section.relative[style*="gradient"] h1,
+section.relative[style*="gradient"] p,
+section[style*="background:linear-gradient"] h1,
+section[style*="background:linear-gradient"] p {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ===== 2. STATS COUNTER SECTION ===== */
+section.py-20.bg-gradient-to-br,
+section[class*="from-blue-50"] {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    color: #1f2937 !important;
+}
+
+section.py-20.bg-gradient-to-br h2,
+section.py-20.bg-gradient-to-br .text-3xl,
+section.py-20.bg-gradient-to-br .text-4xl {
+    color: #111827 !important;
+    font-weight: 700 !important;
+}
+
+section.py-20.bg-gradient-to-br p.text-xl {
+    color: #4b5563 !important;
+}
+
+section.py-20.bg-gradient-to-br .bg-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 32px 24px !important;
+}
+
+section.py-20.bg-gradient-to-br .text-4xl.font-bold,
+section.py-20.bg-gradient-to-br .text-5xl.font-bold {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+}
+
+section.py-20.bg-gradient-to-br .text-lg.font-semibold {
+    color: #111827 !important;
+    font-weight: 600 !important;
+}
+
+section.py-20.bg-gradient-to-br .text-sm {
+    color: #6b7280 !important;
+}
+
+/* ===== 3. CLIENT LOGOS SECTION ===== */
+section.border-y {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+section.border-y h2,
+section.border-y p {
+    color: #111827 !important;
+}
+
+/* ===== 4. SERVICE HIGHLIGHTS SECTION ===== */
+section.py-20.bg-gray-50 {
+    background: #f9fafb !important;
+    color: #1f2937 !important;
+}
+
+section.py-20.bg-gray-50 h2,
+section.py-20.bg-gray-50 .text-3xl,
+section.py-20.bg-gray-50 .text-4xl {
+    color: #111827 !important;
+}
+
+section.py-20.bg-gray-50 p.text-xl {
+    color: #4b5563 !important;
+}
+
+section.py-20.bg-gray-50 .bg-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+section.py-20.bg-gray-50 .bg-white h3 {
+    color: #111827 !important;
+}
+
+section.py-20.bg-gray-50 .bg-white p {
+    color: #4b5563 !important;
+}
+
+/* ===== 5. FEATURES SECTION ===== */
+section.section {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+section.section h2,
+section.section h3 {
+    color: #111827 !important;
+}
+
+section.section p {
+    color: #4b5563 !important;
+}
+
+/* ===== 6. COMPANY HIGHLIGHTS SECTION ===== */
+section.relative.overflow-hidden {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9) !important;
+    color: #1f2937 !important;
+}
+
+section.relative.overflow-hidden h2,
+section.relative.overflow-hidden h3,
+section.relative.overflow-hidden h4 {
+    color: #111827 !important;
+}
+
+section.relative.overflow-hidden p {
+    color: #4b5563 !important;
+}
+
+section.relative.overflow-hidden .bg-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+section.relative.overflow-hidden .bg-white h3,
+section.relative.overflow-hidden .bg-white h4,
+section.relative.overflow-hidden .bg-white p {
+    color: #1f2937 !important;
+}
+
+/* Keep gradient cards white text */
+section.relative.overflow-hidden .bg-gradient-to-br {
+    color: white !important;
+}
+
+section.relative.overflow-hidden .bg-gradient-to-br * {
+    color: white !important;
+}
+
+/* ===== 7. CASE STUDIES SECTION ===== */
+section.py-20.bg-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+section.py-20.bg-white h2,
+section.py-20.bg-white h3 {
+    color: #111827 !important;
+}
+
+section.py-20.bg-white p {
+    color: #4b5563 !important;
+}
+
+/* ===== 8. TESTIMONIALS SECTION ===== */
+section[style*="background-color:#f8fafc"] {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+section[style*="background-color:#f8fafc"] h2 {
+    color: #111827 !important;
+}
+
+section[style*="background-color:#f8fafc"] p {
+    color: #4b5563 !important;
+}
+
+/* ===== 9. TOOLS SECTION ===== */
+section.py-20.bg-gray-50:last-of-type {
+    background: #f9fafb !important;
+    color: #1f2937 !important;
+}
+
+/* ===== 10. FINAL CTA SECTION ===== */
+section.py-20.bg-white:last-child {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* ===== GENERAL OVERRIDES ===== */
+
+/* All white background elements */
+.bg-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6 {
+    color: #111827 !important;
+}
+
+.bg-white p, .bg-white div:not(.bg-gradient-to-br), .bg-white span {
+    color: #4b5563 !important;
+}
+
+/* All gray background elements */
+.bg-gray-50 {
+    background: #f9fafb !important;
+    color: #1f2937 !important;
+}
+
+/* Tailwind color classes */
+.text-gray-600 { color: #4b5563 !important; }
+.text-gray-500 { color: #6b7280 !important; }
+.text-gray-700 { color: #374151 !important; }
+.text-gray-800 { color: #1f2937 !important; }
+.text-gray-900 { color: #111827 !important; }
+
+/* Strong/bold elements */
+strong, b {
+    color: inherit !important;
+    font-weight: 700 !important;
+}
+
+/* Links (except buttons) */
+a:not([class*="btn"]):not([href*="wa.me"]):not([href^="tel:"]) {
+    color: #2563eb !important;
+}
+
+a:not([class*="btn"]):not([href*="wa.me"]):not([href^="tel:"]):hover {
+    color: #1d4ed8 !important;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    section h1, section h2 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    section p.text-xl {
+        font-size: 1.125rem !important;
+    }
+    
+    section.py-20 {
+        padding: 60px 0 !important;
+    }
+    
+    section.py-16 {
+        padding: 48px 0 !important;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+.bg-white {
+    transition: all 0.3s ease !important;
+}
+
+.bg-white:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== FINAL FORCE OVERRIDES ===== */
+/* Remove any remaining white text issues */
+section:not([style*="gradient"]):not(.hero) {
+    color: #1f2937 !important;
+}
+
+section:not([style*="gradient"]):not(.hero) h1,
+section:not([style*="gradient"]):not(.hero) h2,
+section:not([style*="gradient"]):not(.hero) h3,
+section:not([style*="gradient"]):not(.hero) h4 {
+    color: #111827 !important;
+}
+
+section:not([style*="gradient"]):not(.hero) p,
+section:not([style*="gradient"]):not(.hero) div:not(.bg-gradient-to-br),
+section:not([style*="gradient"]):not(.hero) span {
+    color: #4b5563 !important;
+}
