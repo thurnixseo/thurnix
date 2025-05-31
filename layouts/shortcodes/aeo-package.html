@@ -1,74 +1,102 @@
-{{< section-container class="py-20 bg-white" id="bang-gia" >}}
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Bảng giá <strong>dịch vụ AEO</strong> Thurnix</h2>
-            <p class="text-xl text-gray-600">Đầu tư vào tương lai với Answer Engine Optimization packages</p>
-        </div>
+{{- $allFeatures := slice 
+    "AI content optimization"
+    "Conversational AI setup" 
+    "Multi-platform AI optimization"
+    "Voice search optimization"
+    "AI mention tracking"
+    "Knowledge graph building"
+    "Real-time AI monitoring"
+    "Dedicated AEO manager"
+    "Custom AI strategies"
+    "Enterprise AI integration"
+    "Competitive AI analysis"
+    "Advanced analytics dashboard"
+    "AI agent optimization"
+    "Future AI preparation"
+    "Semantic markup enhancement"
+    "Entity relationship mapping"
+    "AI response quality optimization"
+    "Cross-platform consistency"
+    "AI citation building"
+    "Conversational flow optimization"
+    "Voice commerce optimization"
+    "AI personality development"
+    "Smart speaker integration"
+    "AI hallucination prevention"
+    "Multimodal AI preparation"
+    "AI ethics compliance"
+    "Natural language processing"
+    "Intent pattern analysis"
+    "AI behavior modeling"
+    "Predictive AI optimization"
+-}}
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {{< aeo-package
-                name="AEO Starter"
-                price="25 triệu"
-                period="tháng"
-                description="Gói AEO cơ bản cho doanh nghiệp muốn bắt đầu với AI search optimization."
-                badge="Khởi đầu AI search"
-                features="AI content optimization|Conversational AI setup|Voice search optimization|AI mention tracking|Knowledge graph building|Semantic markup enhancement|Entity relationship mapping|AI response quality optimization|Natural language processing|Intent pattern analysis"
-                link="/lien-he/"
-                cta="Bắt đầu AEO"
-            >}}
+{{- $packageFeatures := split (.Get "features") "|" -}}
+{{- $featuresMap := dict -}}
+{{- range $packageFeatures -}}
+    {{- $feature := trim . " " -}}
+    {{- $featuresMap = merge $featuresMap (dict $feature true) -}}
+{{- end -}}
 
-            {{< aeo-package
-                name="AEO Professional"
-                price="45 triệu"
-                period="tháng"
-                description="Gói AEO chuyên nghiệp với multi-platform AI optimization và voice search."
-                badge="Dành cho doanh nghiệp"
-                features="AI content optimization|Conversational AI setup|Multi-platform AI optimization|Voice search optimization|AI mention tracking|Knowledge graph building|Real-time AI monitoring|Competitive AI analysis|Advanced analytics dashboard|Cross-platform consistency|AI citation building|Conversational flow optimization|Voice commerce optimization|Smart speaker integration|AI hallucination prevention|Semantic markup enhancement|Entity relationship mapping|AI response quality optimization|Natural language processing|Intent pattern analysis"
-                link="/lien-he/"
-                cta="Chọn Professional"
-                featured="true"
-                popular="true"
-            >}}
-
-            {{< aeo-package
-                name="AEO Enterprise"
-                price="80 triệu"
-                period="tháng"
-                description="Gói AEO cao cấp với AI-native strategies và real-time monitoring cho enterprise."
-                badge="Giải pháp toàn diện"
-                features="AI content optimization|Conversational AI setup|Multi-platform AI optimization|Voice search optimization|AI mention tracking|Knowledge graph building|Real-time AI monitoring|Dedicated AEO manager|Custom AI strategies|Enterprise AI integration|Competitive AI analysis|Advanced analytics dashboard|AI agent optimization|Future AI preparation|Cross-platform consistency|AI citation building|Conversational flow optimization|Voice commerce optimization|AI personality development|Smart speaker integration|AI hallucination prevention|Multimodal AI preparation|AI ethics compliance|Semantic markup enhancement|Entity relationship mapping|AI response quality optimization|Natural language processing|Intent pattern analysis|AI behavior modeling|Predictive AI optimization"
-                link="/lien-he/"
-                cta="Chọn Enterprise"
-            >}}
-        </div>
-
-        <div class="text-center mt-12">
-            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-xl">
-                <h3 class="text-2xl font-bold mb-4">🎯 Cam kết độc quyền từ Thurnix AEO</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="flex items-center space-x-3">
-                        <span class="text-purple-500 text-2xl">✓</span>
-                        <span><strong>Tăng AI visibility ít nhất 200%</strong> trong 6 tháng đầu</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-purple-500 text-2xl">✓</span>
-                        <span><strong>First-mover advantage</strong> trong ngành của bạn</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-purple-500 text-2xl">✓</span>
-                        <span><strong>Future-proof strategy</strong> cho AI evolution</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-purple-500 text-2xl">✓</span>
-                        <span><strong>24/7 AI monitoring</strong> và optimization support</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-8">
-                <p class="text-gray-600 mb-2">🤖 <strong>Tư vấn AEO miễn phí:</strong> Nhận AI audit và strategy consultation</p>
-                <p class="text-gray-600">📞 <strong>Hotline 24/7:</strong> 0925 604 604 | 📧 <strong>Email:</strong> aeo@thurnix.com</p>
-            </div>
-        </div>
+<div class="bg-white rounded-xl shadow-lg p-8 relative {{ if .Get "featured" }}ring-2 ring-purple-500{{ end }} h-full flex flex-col">
+    {{ if .Get "featured" }}
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+        <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+            Phổ biến nhất
+        </span>
     </div>
-{{< /section-container >}}
+    {{ end }}
+    
+    <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ .Get "name" }}</h3>
+        <div class="text-4xl font-bold text-purple-600 mb-2">
+            {{ .Get "price" }}
+            {{ if .Get "period" }}
+            <span class="text-lg text-gray-500 font-normal">/{{ .Get "period" }}</span>
+            {{ end }}
+        </div>
+        {{ if .Get "description" }}
+        <p class="text-gray-600">{{ .Get "description" }}</p>
+        {{ end }}
+        
+        {{ if .Get "badge" }}
+        <div class="mt-3">
+            <span class="inline-block px-3 py-1 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 rounded-full text-sm font-semibold">
+                {{ .Get "badge" }}
+            </span>
+        </div>
+        {{ end }}
+    </div>
+    
+    <div class="flex-grow mb-8">
+        <ul class="space-y-3">
+            {{ range $allFeatures }}
+            {{- $hasFeature := index $featuresMap . -}}
+            <li class="flex items-center text-gray-600">
+                {{ if $hasFeature }}
+                <svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-900">{{ . }}</span>
+                {{ else }}
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <span class="text-gray-400 line-through">{{ . }}</span>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    
+    <div class="text-center mt-auto">
+        <a href="{{ .Get "link" | default "#lien-he" }}" 
+           class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 inline-block transform hover:scale-105">
+            {{ .Get "cta" | default "Liên hệ Thurnix" }}
+        </a>
+        
+        {{ if .Get "popular" }}
+        <p class="text-xs text-purple-600 mt-2 font-medium">⭐ Được chọn nhiều nhất</p>
+        {{ end }}
+    </div>
+</div>
