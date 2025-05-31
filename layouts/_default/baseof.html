@@ -53,31 +53,29 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
  
-   <!-- FIXED: NO DUPLICATE SCHEMAS -->
+<!-- EMERGENCY: MINIMAL SCHEMA ONLY -->
     {{ if .IsHome }}
-        <!-- Homepage: ONLY LocalBusiness (contains all company info + reviews) -->
-        {{ partial "schema/local-business.html" . }}
-    {{ else if .Params.schema }}
-        <!-- Service Pages: Only specific schemas -->
-        {{ if eq .Params.schema "seo" }}
-            {{ partial "schema/seo-service.html" . }}
-            {{ partial "schema/seo-faq.html" . }}
-        {{ else if eq .Params.schema "aeo" }}
-            {{ partial "schema/aeo-service.html" . }}
-            {{ partial "schema/aeo-faq.html" . }}
-        {{ else if eq .Params.schema "web-design" }}
-            {{ partial "schema/web-design-service.html" . }}
-            {{ partial "schema/web-design-faq.html" . }}
-        {{ else if eq .Params.schema "about" }}
-            {{ partial "schema/organization.html" . }}
-            {{ partial "schema/person.html" . }}
-        {{ end }}
+        <!-- Homepage: MINIMAL LocalBusiness - NO REVIEWS, NO EXTRAS -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Thurnix",
+          "url": "{{ .Site.BaseURL }}",
+          "telephone": "+84925604604",
+          "email": "seo@thurnix.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
+            "addressLocality": "Phường Gò Vấp",
+            "addressRegion": "Thành phố Hồ Chí Minh",
+            "postalCode": "700000",
+            "addressCountry": "VN"
+          }
+        }
+        </script>
     {{ else }}
-        <!-- Other Pages: Only Organization -->
-        {{ partial "schema/organization.html" . }}
-        {{ if in .RelPermalink "lien-he" }}
-            {{ partial "schema/local-business.html" . }}
-        {{ end }}
+        <!-- NO SCHEMAS on other pages for now -->
     {{ end }}
 
     <!-- Fonts -->
