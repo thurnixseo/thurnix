@@ -248,41 +248,81 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Bảng giá <strong>dịch vụ SEO</strong> Thurnix</h2>
-            <p class="text-xl text-gray-600">Lựa chọn gói <strong>dịch vụ SEO</strong> phù hợp với nhu cầu và ngân sách</p>
+            <p class="text-xl text-gray-600">Lựa chọn gói <strong>dịch vụ SEO</strong> phù hợp với nhu cầu và ngân sách của doanh nghiệp</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {{< seo-package 
-                name="SEO Startup"
-                price="15tr"
-                period="tháng"
-                description="Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới"
-                features="Tối ưu 20 từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO cơ bản|5 bài viết SEO/tháng|Báo cáo hàng tháng|Hỗ trợ email|Google Analytics setup|1 landing page tối ưu"
-                cta="Chọn gói Startup"
-                link="#lien-he"
-            >}}
-
-            {{< seo-package 
-                name="SEO Professional"
-                price="30tr"
-                period="tháng"
-                description="Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn"
-                features="Tối ưu 50 từ khóa chính|Advanced On-page SEO|Technical SEO nâng cao|15 bài viết SEO/tháng|Link building chất lượng cao|Báo cáo chi tiết 2 lần/tháng|Hỗ trợ phone & email|Local SEO optimization|3 landing pages tối ưu|Core Web Vitals optimization"
-                featured="true"
-                cta="Chọn gói Professional"
-                link="#lien-he"
-            >}}
-
-            {{< seo-package 
-                name="SEO Enterprise"
-                price="60tr"
-                period="tháng"
-                description="Gói SEO cao cấp cho tập đoàn và thương mại điện tử"
-                features="Tối ưu không giới hạn từ khóa|AI-powered SEO optimization|Advanced Technical SEO|25 bài viết SEO/tháng|Premium link building|Dedicated SEO manager|Báo cáo custom hàng tuần|24/7 priority support|5 landing pages tối ưu|E-commerce SEO|International SEO|Competitor monitoring"
-                cta="Chọn gói Enterprise"
-                link="#lien-he"
-            >}}
-        </div>
+        {{< pricing-table-1 >}}
+        {
+            "title": "Gói dịch vụ SEO chuyên nghiệp",
+            "description": "Thurnix cam kết mang lại kết quả SEO tốt nhất với phương pháp AI độc quyền và đội ngũ chuyên gia giàu kinh nghiệm.",
+            "plans": [
+                {
+                    "name": "SEO Startup",
+                    "price": "15tr",
+                    "description": "Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới bắt đầu.",
+                    "features": [
+                        "Tối ưu 20 từ khóa chính",
+                        "On-page SEO hoàn chỉnh", 
+                        "Technical SEO cơ bản",
+                        "5 bài viết SEO/tháng",
+                        "Báo cáo hàng tháng",
+                        "Hỗ trợ email",
+                        "Google Analytics setup",
+                        "1 landing page tối ưu"
+                    ],
+                    "button": {
+                        "text": "Liên hệ Thurnix",
+                        "url": "/lien-he/"
+                    }
+                },
+                {
+                    "name": "SEO Professional", 
+                    "price": "30tr",
+                    "description": "Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn, bao gồm link building.",
+                    "featured": true,
+                    "features": [
+                        "Tối ưu 50 từ khóa chính",
+                        "Advanced On-page SEO",
+                        "Technical SEO nâng cao", 
+                        "15 bài viết SEO/tháng",
+                        "Link building chất lượng cao",
+                        "Báo cáo chi tiết 2 lần/tháng",
+                        "Hỗ trợ phone & email",
+                        "Local SEO optimization",
+                        "3 landing pages tối ưu",
+                        "Core Web Vitals optimization"
+                    ],
+                    "button": {
+                        "text": "Liên hệ Thurnix",
+                        "url": "/lien-he/"
+                    }
+                },
+                {
+                    "name": "SEO Enterprise",
+                    "price": "60tr", 
+                    "description": "Gói SEO cao cấp cho tập đoàn và thương mại điện tử với AI-powered optimization.",
+                    "features": [
+                        "Tối ưu không giới hạn từ khóa",
+                        "AI-powered SEO optimization",
+                        "Advanced Technical SEO",
+                        "25 bài viết SEO/tháng", 
+                        "Premium link building",
+                        "Dedicated SEO manager",
+                        "Báo cáo custom hàng tuần",
+                        "24/7 priority support",
+                        "5 landing pages tối ưu",
+                        "E-commerce SEO",
+                        "International SEO",
+                        "Competitor monitoring"
+                    ],
+                    "button": {
+                        "text": "Liên hệ Thurnix",
+                        "url": "/lien-he/"
+                    }
+                }
+            ]
+        }
+        {{< /pricing-table-1 >}}
 
         <div class="text-center mt-12">
             <p class="text-gray-600 mb-4">🎯 <strong>Cam kết kết quả:</strong> Tăng traffic organic ít nhất 150% trong 6 tháng đầu</p>
