@@ -1026,7 +1026,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Bảng giá <strong>dịch vụ SEO</strong> Thurnix</h2>
-            <p class="text-xl text-gray-600">Lựa chọn gói <strong>dịch vụ SEO</strong> phù hợp với nhu cầu và ngân sách của doanh nghiệp</p>
+            <p class="text-xl text-gray-600">So sánh chi tiết các gói <strong>dịch vụ SEO</strong> để chọn phương án phù hợp nhất</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1035,9 +1035,9 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 price="15 triệu"
                 period="tháng"
                 description="Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới bắt đầu."
-                features="Tối ưu 20 từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO cơ bản|5 bài viết SEO/tháng|Báo cáo hàng tháng|Hỗ trợ email|Google Analytics setup|1 landing page tối ưu|Local SEO cơ bản|Schema markup"
+                features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup"
                 link="/lien-he/"
-                cta="Liên hệ Thurnix"
+                cta="Bắt đầu ngay"
             >}}
 
             {{< seo-package
@@ -1045,9 +1045,9 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 price="30 triệu"
                 period="tháng"
                 description="Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn, bao gồm link building."
-                features="Tối ưu 50 từ khóa chính|Advanced On-page SEO|Technical SEO nâng cao|15 bài viết SEO/tháng|Link building chất lượng cao|Báo cáo chi tiết 2 lần/tháng|Hỗ trợ phone & email|Local SEO optimization|3 landing pages tối ưu|Core Web Vitals optimization|Competitor analysis|Conversion tracking setup"
+                features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup|Link building|Core Web Vitals optimization|Competitor analysis|Conversion tracking setup"
                 link="/lien-he/"
-                cta="Liên hệ Thurnix"
+                cta="Chọn gói này"
                 featured="true"
             >}}
 
@@ -1056,9 +1056,9 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                 price="60 triệu"
                 period="tháng"
                 description="Gói SEO cao cấp cho tập đoàn và thương mại điện tử với AI-powered optimization."
-                features="Tối ưu không giới hạn từ khóa|AI-powered SEO optimization|Advanced Technical SEO|25 bài viết SEO/tháng|Premium link building|Dedicated SEO manager|Báo cáo custom hàng tuần|24/7 priority support|5 landing pages tối ưu|E-commerce SEO|International SEO|Competitor monitoring|Advanced analytics dashboard|Video SEO optimization|Voice search optimization"
+                features="Tối ưu từ khóa chính|On-page SEO hoàn chỉnh|Technical SEO|Bài viết SEO/tháng|Báo cáo định kỳ|Hỗ trợ khách hàng|Google Analytics setup|Landing pages tối ưu|Local SEO|Schema markup|Link building|Core Web Vitals optimization|Competitor analysis|Conversion tracking setup|AI-powered optimization|Dedicated SEO manager|E-commerce SEO|International SEO|Competitor monitoring|Advanced analytics dashboard|Video SEO optimization|Voice search optimization"
                 link="/lien-he/"
-                cta="Liên hệ Thurnix"
+                cta="Liên hệ tư vấn"
             >}}
         </div>
 

@@ -1,4 +1,36 @@
-<div class="bg-white rounded-xl shadow-lg p-8 relative {{ if .Get "featured" }}ring-2 ring-blue-500{{ end }}">
+{{ $allFeatures := slice 
+    "Tối ưu từ khóa chính"
+    "On-page SEO hoàn chỉnh" 
+    "Technical SEO"
+    "Bài viết SEO/tháng"
+    "Báo cáo định kỳ"
+    "Hỗ trợ khách hàng"
+    "Google Analytics setup"
+    "Landing pages tối ưu"
+    "Local SEO"
+    "Schema markup"
+    "Link building"
+    "Core Web Vitals optimization"
+    "Competitor analysis"
+    "Conversion tracking setup"
+    "AI-powered optimization"
+    "Dedicated SEO manager"
+    "E-commerce SEO"
+    "International SEO"
+    "Competitor monitoring"
+    "Advanced analytics dashboard"
+    "Video SEO optimization"
+    "Voice search optimization"
+}}
+
+{{ $packageFeatures := split (.Get "features") "|" }}
+{{ $featuresMap := dict }}
+{{ range $packageFeatures }}
+    {{ $feature := trim . " " }}
+    {{ $featuresMap = merge $featuresMap (dict $feature true) }}
+{{ end }}
+
+<div class="bg-white rounded-xl shadow-lg p-8 relative {{ if .Get "featured" }}ring-2 ring-blue-500{{ end }} h-full flex flex-col">
     {{ if .Get "featured" }}
     <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
         <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -20,23 +52,28 @@
         {{ end }}
     </div>
     
-    {{ if .Get "features" }}
-    <ul class="space-y-3 mb-8">
-        {{ range split (.Get "features") "|" }}
-        {{ $feature := trim . " " }}
-        {{ if $feature }}
-        <li class="flex items-center text-gray-600">
-            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span>{{ $feature }}</span>
-        </li>
-        {{ end }}
-        {{ end }}
-    </ul>
-    {{ end }}
+    <div class="flex-grow mb-8">
+        <ul class="space-y-3">
+            {{ range $allFeatures }}
+            {{ $hasFeature := index $featuresMap . }}
+            <li class="flex items-center text-gray-600">
+                {{ if $hasFeature }}
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-900">{{ . }}</span>
+                {{ else }}
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <span class="text-gray-400 line-through">{{ . }}</span>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
     
-    <div class="text-center">
+    <div class="text-center mt-auto">
         <a href="{{ .Get "link" | default "#lien-he" }}" 
            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 inline-block">
             {{ .Get "cta" | default "Liên hệ Thurnix" }}
