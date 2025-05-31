@@ -1,0 +1,122 @@
+{{ $title := .Get "title" | default "Tại sao chọn Thurnix?" }}
+{{ $subtitle := .Get "subtitle" | default "Những điểm khác biệt tạo nên sự thành công" }}
+{{ $backgroundImage := .Get "background-image" }}
+
+<section class="py-20 relative overflow-hidden">
+    {{ if $backgroundImage }}
+    <div class="absolute inset-0">
+        <img src="{{ $backgroundImage }}" alt="Background" class="w-full h-full object-cover opacity-10">
+    </div>
+    {{ else }}
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50"></div>
+    {{ end }}
+    
+    <div class="relative max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">{{ $title }}</h2>
+            <p class="text-xl text-gray-600">{{ $subtitle }}</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h3 class="text-2xl font-bold mb-6">🚀 Công nghệ AI độc quyền</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-xs">✓</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">ThurnixAI Engine độc quyền</h4>
+                            <p class="text-gray-600">Hệ thống AI phân tích và tối ưu website tự động với độ chính xác cao</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-xs">✓</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Semantic keyword research</h4>
+                            <p class="text-gray-600">Phát hiện từ khóa tiềm năng bằng AI semantic analysis</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-xs">✓</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Competitor intelligence</h4>
+                            <p class="text-gray-600">Phân tích đối thủ real-time và đưa ra chiến lược vượt mặt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <div class="text-center mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-3xl">🤖</span>
+                    </div>
+                    <h4 class="text-2xl font-bold">AI-Powered SEO</h4>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600">5x</div>
+                        <div class="text-sm text-gray-600">Nhanh hơn phương pháp thủ công</div>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600">99%</div>
+                        <div class="text-sm text-gray-600">Độ chính xác phân tích</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">24/7</div>
+                        <div class="text-sm text-gray-600">Monitoring tự động</div>
+                    </div>
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600">∞</div>
+                        <div class="text-sm text-gray-600">Khả năng scale</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl">👥</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3">Đội ngũ chuyên gia 8+ năm</h4>
+                <p class="text-gray-600">25+ chuyên gia SEO và web design giàu kinh nghiệm, không ngừng cập nhật xu hướng mới</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl">🎯</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3">Cam kết kết quả cụ thể</h4>
+                <p class="text-gray-600">Đảm bảo tăng traffic organic ít nhất 150% trong 6 tháng, hoàn tiền 100% nếu không đạt</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-2xl">🛡️</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3">100% White Hat SEO</h4>
+                <p class="text-gray-600">Chỉ sử dụng phương pháp SEO an toàn, tuân thủ Google Guidelines cho kết quả bền vững</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <div class="inline-block bg-white p-6 rounded-2xl shadow-lg">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                        <span class="text-white text-xl">🏆</span>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-bold text-lg">Google Partner & Certified</div>
+                        <div class="text-gray-600">Official Google Analytics & Ads Certified Agency</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

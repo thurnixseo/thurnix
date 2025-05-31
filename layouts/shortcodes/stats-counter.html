@@ -1,0 +1,40 @@
+{{ $title := .Get "title" | default "Thành tựu của Thurnix" }}
+{{ $subtitle := .Get "subtitle" | default "Những con số ấn tượng từ hành trình 8+ năm" }}
+
+<section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">{{ $title }}</h2>
+            <p class="text-xl text-gray-600">{{ $subtitle }}</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {{ range $index := (seq 1 8) }}
+                {{ $stat := printf "stat%d" $index }}
+                {{ with $.Get $stat }}
+                    {{ $parts := split . "|" }}
+                    {{ if ge (len $parts) 3 }}
+                        {{ $number := index $parts 0 }}
+                        {{ $label := index $parts 1 }}
+                        {{ $description := index $parts 2 }}
+                        {{ $color := index $parts 3 | default "#3b82f6" }}
+                        
+                        <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="text-4xl md:text-5xl font-bold mb-2" style="color: {{ $color }};">
+                                {{ $number }}
+                            </div>
+                            <div class="text-lg font-semibold text-gray-800 mb-2">{{ $label }}</div>
+                            <div class="text-sm text-gray-600">{{ $description }}</div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+        
+        <div class="text-center mt-12">
+            <div class="inline-block px-6 py-3 bg-white rounded-full shadow-md">
+                <span class="text-gray-600 font-medium">🏆 Được tin tưởng bởi 850+ doanh nghiệp tại Việt Nam</span>
+            </div>
+        </div>
+    </div>
+</section>
