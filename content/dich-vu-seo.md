@@ -1181,7 +1181,7 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
                     <span class="text-white text-2xl">⚡</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Page Speed Test</h3>
-                <p class="text-gray-700 mb-6">Kiểm tra tốc độ tải trang và Core Web Vitals với đề xuất tối ưu cụ thể cho từng trang riêng biệt hoặc toàn bộ website.</p>
+                <p class="text-gray-700 mb-6">Kiểm tra tốc độ tải trang và Core Web Vitals với đề xuất tối ưu cụ thể cho từng trang riêng biệt.</p>
                 <div class="space-y-2 mb-6">
                     <div class="flex items-center text-sm">
                         <span class="text-green-500 mr-2">✓</span>
