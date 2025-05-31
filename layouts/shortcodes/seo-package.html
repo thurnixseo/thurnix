@@ -15,26 +15,28 @@
             <span class="text-lg text-gray-500 font-normal">/{{ .Get "period" }}</span>
             {{ end }}
         </div>
+        {{ if .Get "description" }}
         <p class="text-gray-600">{{ .Get "description" }}</p>
+        {{ end }}
     </div>
     
     {{ if .Get "features" }}
     <ul class="space-y-3 mb-8">
         {{ range split (.Get "features") "|" }}
         <li class="flex items-center text-gray-600">
-            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            {{ . | strings.TrimSpace }}
+            <span>{{ . | trim }}</span>
         </li>
         {{ end }}
     </ul>
     {{ end }}
     
     <div class="text-center">
-        <a href="{{ .Get "link" | default "#" }}" 
+        <a href="{{ .Get "link" | default "#lien-he" }}" 
            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 inline-block">
-            {{ .Get "cta" | default "Chọn gói này" }}
+            {{ .Get "cta" | default "Liên hệ Thurnix" }}
         </a>
     </div>
 </div>
