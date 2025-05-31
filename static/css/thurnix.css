@@ -1,357 +1,58 @@
-/* ===== THURNIX HERO SECTION CSS ===== */
+/* CSS DEBUG VÀ FIX CHO STATS SECTION - FORCE OVERRIDE */
 
-/* Font chữ màu trắng cho hero section */
-section.relative h1,
-section.relative .text-4xl,
-section.relative .text-5xl,
-section.relative .text-6xl,
-section.relative .font-bold,
-section[style*="background"] h1,
-section[style*="gradient"] h1 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+/* ===== STEP 1: KIỂM TRA CSS ĐÃ LOAD ===== */
+/* Thêm dòng này để test CSS đã load chưa */
+body {
+    border-top: 3px solid lime !important;
+}
+
+/* ===== STEP 2: FORCE OVERRIDE STATS SECTION ===== */
+
+/* Target tất cả các class có thể có của stats section */
+section[class*="py-20"],
+section[class*="py-16"],
+section[class*="stats"],
+.stats-counter,
+section.bg-gradient-to-br,
+section[style*="gradient"],
+section[style*="background"] {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+    padding: 80px 0 !important;
+}
+
+/* Force override cho heading trong stats */
+section[class*="py-20"] h2,
+section[class*="py-16"] h2,
+section[class*="stats"] h2,
+.stats-counter h2,
+section.bg-gradient-to-br h2,
+section[style*="gradient"] h2:not(.hero h2),
+section[style*="background"] h2:not(.hero h2) {
+    color: #111827 !important;
+    text-shadow: none !important;
     font-weight: 700 !important;
-    line-height: 1.2 !important;
 }
 
-section.relative p,
-section.relative .text-xl,
-section.relative .text-lg,
-section[style*="background"] p,
-section[style*="gradient"] p {
-    color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-    font-weight: 400 !important;
-}
-
-/* Strong text trong hero */
-section.relative strong,
-section.relative b,
-section[style*="background"] strong,
-section[style*="gradient"] strong {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-}
-
-/* WhatsApp Button - Primary CTA */
-a[href*="whatsapp"],
-a[href*="wa.me"],
-.btn-primary {
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
-    color: #ffffff !important;
-    border: none !important;
-    padding: 16px 32px !important;
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    border-radius: 12px !important;
-    box-shadow: 
-        0 4px 14px rgba(37, 211, 102, 0.4),
-        0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.3s ease !important;
-    transform: translateY(0) !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    position: relative !important;
-    overflow: hidden !important;
-}
-
-a[href*="whatsapp"]:hover,
-a[href*="wa.me"]:hover,
-.btn-primary:hover {
-    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 
-        0 6px 20px rgba(37, 211, 102, 0.6),
-        0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    color: #ffffff !important;
-}
-
-/* Phone Button - Secondary CTA */
-a[href^="tel:"],
-.btn-secondary,
-.btn-outline {
-    background: rgba(255, 255, 255, 0.95) !important;
-    color: #1e40af !important;
-    border: 2px solid rgba(255, 255, 255, 0.8) !important;
-    padding: 16px 32px !important;
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    border-radius: 12px !important;
-    box-shadow: 
-        0 4px 14px rgba(255, 255, 255, 0.2),
-        0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.3s ease !important;
-    transform: translateY(0) !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    backdrop-filter: blur(10px) !important;
-}
-
-a[href^="tel:"]:hover,
-.btn-secondary:hover,
-.btn-outline:hover {
-    background: #ffffff !important;
-    border-color: #ffffff !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 
-        0 6px 20px rgba(255, 255, 255, 0.3),
-        0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    color: #1e40af !important;
-}
-
-/* Shine effect cho WhatsApp button */
-a[href*="whatsapp"]::after,
-a[href*="wa.me"]::after,
-.btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transition: left 0.5s ease;
-}
-
-a[href*="whatsapp"]:hover::after,
-a[href*="wa.me"]:hover::after,
-.btn-primary:hover::after {
-    left: 100%;
-}
-
-/* Emoji animation trong button */
-a[href*="whatsapp"] span:first-child,
-a[href*="wa.me"] span:first-child,
-a[href^="tel:"] span:first-child {
-    font-size: 18px !important;
-    display: inline-block !important;
-    transition: transform 0.3s ease !important;
-}
-
-a[href*="whatsapp"]:hover span:first-child,
-a[href*="wa.me"]:hover span:first-child,
-a[href^="tel:"]:hover span:first-child {
-    transform: scale(1.1) rotate(5deg) !important;
-}
-
-/* Button container spacing */
-section.relative .flex,
-section.relative .grid,
-.button-group {
-    gap: 16px !important;
-    margin-top: 32px !important;
-}
-
-/* Ripple effect khi click */
-a[href*="whatsapp"]:active::before,
-a[href*="wa.me"]:active::before,
-a[href^="tel:"]:active::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    animation: ripple 0.6s ease-out;
-}
-
-@keyframes ripple {
-    to {
-        width: 300px;
-        height: 300px;
-        opacity: 0;
-    }
-}
-
-/* Override Tailwind gray colors trong hero */
-section.relative .text-gray-600,
-section.relative .text-gray-500,
-section.relative .text-gray-700,
-section.relative .text-gray-800,
-section[style*="background"] .text-gray-600,
-section[style*="gradient"] .text-gray-600 {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    section.relative h1,
-    section.relative .text-4xl,
-    section.relative .text-5xl {
-        font-size: 2.5rem !important;
-        line-height: 1.1 !important;
-    }
-    
-    section.relative p,
-    section.relative .text-xl {
-        font-size: 1.125rem !important;
-        line-height: 1.4 !important;
-    }
-    
-    a[href*="whatsapp"],
-    a[href*="wa.me"],
-    a[href^="tel:"],
-    .btn-primary,
-    .btn-secondary {
-        padding: 14px 24px !important;
-        font-size: 15px !important;
-        width: 100% !important;
-        justify-content: center !important;
-        margin-bottom: 12px !important;
-    }
-    
-    section.relative .flex,
-    section.relative .grid {
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    section.relative h1,
-    section.relative .text-4xl {
-        font-size: 2rem !important;
-    }
-    
-    a[href*="whatsapp"] span:first-child,
-    a[href*="wa.me"] span:first-child,
-    a[href^="tel:"] span:first-child {
-        font-size: 16px !important;
-    }
-}
-
-/* Focus states for accessibility */
-a[href*="whatsapp"]:focus,
-a[href*="wa.me"]:focus,
-a[href^="tel:"]:focus,
-.btn-primary:focus,
-.btn-secondary:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.8) !important;
-    outline-offset: 2px !important;
-}
-
-/* Additional button styling for better visibility */
-a[class*="btn"],
-section a[href*="wa.me"],
-section a[href^="tel:"] {
-    font-family: inherit !important;
-    letter-spacing: 0.3px !important;
-    text-transform: none !important;
-    min-height: 48px !important;
-    cursor: pointer !important;
-}
-
-/* Prevent text selection on buttons */
-a[href*="whatsapp"],
-a[href*="wa.me"],
-a[href^="tel:"] {
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-}
-
-/* Loading state */
-.btn-loading {
-    pointer-events: none !important;
-    opacity: 0.7 !important;
-}
-
-.btn-loading::after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    margin-left: 8px;
-    border: 2px solid transparent;
-    border-top: 2px solid currentColor;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Gradient animation for WhatsApp button */
-a[href*="whatsapp"],
-a[href*="wa.me"] {
-    background-size: 200% 200% !important;
-    animation: gradientShift 3s ease infinite !important;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Fix for Hugo template issues */
-section[class*="section"],
-section[class*="relative"],
-section[class*="hero"] {
-    color: inherit !important;
-}
-
-/* Ensure all nested elements inherit white color */
-section.relative *,
-section[style*="background"] *,
-section[style*="gradient"] * {
-    color: inherit;
-}
-
-/* Final override for stubborn elements */
-section.relative div,
-section.relative span,
-section[style*="background"] div,
-section[style*="gradient"] div {
-    color: rgba(255, 255, 255, 0.95) !important;
-}
-/* ===== COMPLETE HOMEPAGE TEXT COLOR FIX ===== */
-
-/* Reset all text shadows except hero */
-section:not([style*="gradient"]):not(.hero) * {
+/* Force override cho paragraph */
+section[class*="py-20"] p,
+section[class*="py-16"] p,
+section[class*="stats"] p,
+.stats-counter p,
+section.bg-gradient-to-br p,
+section[style*="gradient"] p:not(.hero p),
+section[style*="background"] p:not(.hero p) {
+    color: #4b5563 !important;
     text-shadow: none !important;
 }
 
-/* ===== 1. HERO SECTION - Keep white text ===== */
-section.relative[style*="gradient"] h1,
-section.relative[style*="gradient"] p,
-section[style*="background:linear-gradient"] h1,
-section[style*="background:linear-gradient"] p {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* ===== 2. STATS COUNTER SECTION ===== */
-section.py-20.bg-gradient-to-br,
-section[class*="from-blue-50"] {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
-    color: #1f2937 !important;
-}
-
-section.py-20.bg-gradient-to-br h2,
-section.py-20.bg-gradient-to-br .text-3xl,
-section.py-20.bg-gradient-to-br .text-4xl {
-    color: #111827 !important;
-    font-weight: 700 !important;
-}
-
-section.py-20.bg-gradient-to-br p.text-xl {
-    color: #4b5563 !important;
-}
-
-section.py-20.bg-gradient-to-br .bg-white {
+/* Force override cho stat cards */
+section[class*="py-20"] .bg-white,
+section[class*="py-16"] .bg-white,
+section[class*="stats"] .bg-white,
+.stats-counter .bg-white,
+section.bg-gradient-to-br .bg-white,
+div[class*="bg-white"] {
     background: #ffffff !important;
     color: #1f2937 !important;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
@@ -359,248 +60,160 @@ section.py-20.bg-gradient-to-br .bg-white {
     padding: 32px 24px !important;
 }
 
-section.py-20.bg-gradient-to-br .text-4xl.font-bold,
-section.py-20.bg-gradient-to-br .text-5xl.font-bold {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
+/* Force numbers trong stat cards */
+section[class*="py-20"] .text-4xl,
+section[class*="py-20"] .text-5xl,
+section[class*="stats"] .text-4xl,
+section[class*="stats"] .text-5xl,
+.stats-counter .text-4xl,
+.stats-counter .text-5xl,
+div[class*="font-bold"][class*="text-4xl"],
+div[class*="font-bold"][class*="text-5xl"] {
+    color: #3b82f6 !important;
     font-size: 3rem !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
 }
 
-section.py-20.bg-gradient-to-br .text-lg.font-semibold {
+/* Force labels trong stat cards */
+section[class*="py-20"] .font-semibold,
+section[class*="stats"] .font-semibold,
+.stats-counter .font-semibold,
+div[class*="font-semibold"] {
     color: #111827 !important;
     font-weight: 600 !important;
+    text-shadow: none !important;
 }
 
-section.py-20.bg-gradient-to-br .text-sm {
+/* Force descriptions */
+section[class*="py-20"] .text-sm,
+section[class*="stats"] .text-sm,
+.stats-counter .text-sm,
+div[class*="text-sm"] {
     color: #6b7280 !important;
+    text-shadow: none !important;
 }
 
-/* ===== 3. CLIENT LOGOS SECTION ===== */
-section.border-y {
-    background: #ffffff !important;
-    color: #1f2937 !important;
+/* ===== STEP 3: UNIVERSAL OVERRIDE ===== */
+
+/* Force tất cả elements trong stats section */
+section[class*="py-20"]:not(.hero) *,
+section[class*="py-16"]:not(.hero) *,
+section[class*="stats"] *,
+.stats-counter * {
+    text-shadow: none !important;
 }
 
-section.border-y h2,
-section.border-y p {
-    color: #111827 !important;
+/* Override text màu trắng */
+section[class*="py-20"]:not(.hero) *:not(.bg-gradient-to-br *),
+section[class*="py-16"]:not(.hero) *:not(.bg-gradient-to-br *) {
+    color: inherit !important;
 }
 
-/* ===== 4. SERVICE HIGHLIGHTS SECTION ===== */
-section.py-20.bg-gray-50 {
-    background: #f9fafb !important;
-    color: #1f2937 !important;
-}
+/* ===== STEP 4: SPECIFIC TARGETING ===== */
 
-section.py-20.bg-gray-50 h2,
-section.py-20.bg-gray-50 .text-3xl,
-section.py-20.bg-gray-50 .text-4xl {
-    color: #111827 !important;
-}
-
-section.py-20.bg-gray-50 p.text-xl {
-    color: #4b5563 !important;
-}
-
-section.py-20.bg-gray-50 .bg-white {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-}
-
-section.py-20.bg-gray-50 .bg-white h3 {
-    color: #111827 !important;
-}
-
-section.py-20.bg-gray-50 .bg-white p {
-    color: #4b5563 !important;
-}
-
-/* ===== 5. FEATURES SECTION ===== */
-section.section {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-}
-
-section.section h2,
-section.section h3 {
-    color: #111827 !important;
-}
-
-section.section p {
-    color: #4b5563 !important;
-}
-
-/* ===== 6. COMPANY HIGHLIGHTS SECTION ===== */
-section.relative.overflow-hidden {
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9) !important;
-    color: #1f2937 !important;
-}
-
-section.relative.overflow-hidden h2,
-section.relative.overflow-hidden h3,
-section.relative.overflow-hidden h4 {
-    color: #111827 !important;
-}
-
-section.relative.overflow-hidden p {
-    color: #4b5563 !important;
-}
-
-section.relative.overflow-hidden .bg-white {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-}
-
-section.relative.overflow-hidden .bg-white h3,
-section.relative.overflow-hidden .bg-white h4,
-section.relative.overflow-hidden .bg-white p {
-    color: #1f2937 !important;
-}
-
-/* Keep gradient cards white text */
-section.relative.overflow-hidden .bg-gradient-to-br {
-    color: white !important;
-}
-
-section.relative.overflow-hidden .bg-gradient-to-br * {
-    color: white !important;
-}
-
-/* ===== 7. CASE STUDIES SECTION ===== */
-section.py-20.bg-white {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-}
-
-section.py-20.bg-white h2,
-section.py-20.bg-white h3 {
-    color: #111827 !important;
-}
-
-section.py-20.bg-white p {
-    color: #4b5563 !important;
-}
-
-/* ===== 8. TESTIMONIALS SECTION ===== */
-section[style*="background-color:#f8fafc"] {
+/* Nếu section có data attribute */
+section[data-section="stats"],
+section[data-component="stats-counter"] {
     background: #f8fafc !important;
     color: #1f2937 !important;
 }
 
-section[style*="background-color:#f8fafc"] h2 {
+/* Nếu section có ID */
+#stats-section,
+#thành-tựu,
+#achievements {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+/* Target theo text content (nếu có) */
+section:has(h2:contains("Thành tựu")),
+section:has(h2:contains("Achievement")),
+section:has(h2:contains("Stats")) {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+/* ===== STEP 5: NUCLEAR OPTION ===== */
+
+/* Override mọi thứ trong stats */
+body section:nth-child(3),
+body section:nth-child(4),
+body section:nth-child(5) {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+body section:nth-child(3) *,
+body section:nth-child(4) *,
+body section:nth-child(5) * {
+    color: #1f2937 !important;
+    text-shadow: none !important;
+}
+
+/* ===== STEP 6: TARGET BY CONTENT ===== */
+
+/* Target section chứa số liệu */
+section:has(div:contains("850+")),
+section:has(div:contains("97%")),
+section:has(div:contains("8+")),
+section:has(div:contains("24/7")) {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+/* ===== STEP 7: LAST RESORT - INLINE STYLE ===== */
+
+/* Thêm style inline cho stats section */
+/*
+Trong shortcode stats-counter.html, thêm:
+<section style="background: #f8fafc !important; color: #1f2937 !important;">
+*/
+
+/* ===== STEP 8: DEBUG BORDERS ===== */
+/* Uncomment để xem section nào đang được target */
+
+/*
+section[class*="py-20"] {
+    border: 5px solid red !important;
+}
+
+section[class*="stats"] {
+    border: 5px solid blue !important;
+}
+
+.stats-counter {
+    border: 5px solid green !important;
+}
+*/
+
+/* ===== STEP 9: FORCE ALL SECTIONS ===== */
+
+/* Force tất cả sections trừ hero */
+main section:not(:first-child),
+.container section:not(:first-child),
+body > section:not(:first-child) {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+}
+
+main section:not(:first-child) h1,
+main section:not(:first-child) h2,
+main section:not(:first-child) h3 {
     color: #111827 !important;
+    text-shadow: none !important;
 }
 
-section[style*="background-color:#f8fafc"] p {
+main section:not(:first-child) p {
     color: #4b5563 !important;
+    text-shadow: none !important;
 }
 
-/* ===== 9. TOOLS SECTION ===== */
-section.py-20.bg-gray-50:last-of-type {
-    background: #f9fafb !important;
-    color: #1f2937 !important;
+/* ===== REMOVE DEBUG WHEN FIXED ===== */
+/* Remove border-top từ body khi đã fix xong */
+/*
+body {
+    border-top: none !important;
 }
-
-/* ===== 10. FINAL CTA SECTION ===== */
-section.py-20.bg-white:last-child {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-}
-
-/* ===== GENERAL OVERRIDES ===== */
-
-/* All white background elements */
-.bg-white {
-    background: #ffffff !important;
-    color: #1f2937 !important;
-}
-
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6 {
-    color: #111827 !important;
-}
-
-.bg-white p, .bg-white div:not(.bg-gradient-to-br), .bg-white span {
-    color: #4b5563 !important;
-}
-
-/* All gray background elements */
-.bg-gray-50 {
-    background: #f9fafb !important;
-    color: #1f2937 !important;
-}
-
-/* Tailwind color classes */
-.text-gray-600 { color: #4b5563 !important; }
-.text-gray-500 { color: #6b7280 !important; }
-.text-gray-700 { color: #374151 !important; }
-.text-gray-800 { color: #1f2937 !important; }
-.text-gray-900 { color: #111827 !important; }
-
-/* Strong/bold elements */
-strong, b {
-    color: inherit !important;
-    font-weight: 700 !important;
-}
-
-/* Links (except buttons) */
-a:not([class*="btn"]):not([href*="wa.me"]):not([href^="tel:"]) {
-    color: #2563eb !important;
-}
-
-a:not([class*="btn"]):not([href*="wa.me"]):not([href^="tel:"]):hover {
-    color: #1d4ed8 !important;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-    section h1, section h2 {
-        font-size: 2rem !important;
-        line-height: 1.2 !important;
-    }
-    
-    section p.text-xl {
-        font-size: 1.125rem !important;
-    }
-    
-    section.py-20 {
-        padding: 60px 0 !important;
-    }
-    
-    section.py-16 {
-        padding: 48px 0 !important;
-    }
-}
-
-/* ===== ANIMATIONS ===== */
-.bg-white {
-    transition: all 0.3s ease !important;
-}
-
-.bg-white:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* ===== FINAL FORCE OVERRIDES ===== */
-/* Remove any remaining white text issues */
-section:not([style*="gradient"]):not(.hero) {
-    color: #1f2937 !important;
-}
-
-section:not([style*="gradient"]):not(.hero) h1,
-section:not([style*="gradient"]):not(.hero) h2,
-section:not([style*="gradient"]):not(.hero) h3,
-section:not([style*="gradient"]):not(.hero) h4 {
-    color: #111827 !important;
-}
-
-section:not([style*="gradient"]):not(.hero) p,
-section:not([style*="gradient"]):not(.hero) div:not(.bg-gradient-to-br),
-section:not([style*="gradient"]):not(.hero) span {
-    color: #4b5563 !important;
-}
+*/
