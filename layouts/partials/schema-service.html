@@ -2,209 +2,103 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "{{ .Page.Permalink }}#service",
   "name": "Dịch vụ SEO",
-  "alternateName": ["SEO Service", "Search Engine Optimization"],
-  "description": "Dịch vụ SEO chuyên nghiệp của Thurnix giúp tăng thứ hạng Google, tăng traffic organic và tối ưu hóa ROI cho doanh nghiệp với phương pháp AI độc quyền.",
+  "description": "Dịch vụ SEO chuyên nghiệp của Thurnix giúp tăng thứ hạng Google, tăng traffic organic và tối ưu hóa ROI cho doanh nghiệp.",
   "url": "{{ .Page.Permalink }}",
   "image": "{{ .Site.BaseURL }}/images/seo-service-cover.webp",
   "provider": {
     "@type": "Organization",
     "name": "Thurnix",
     "url": "{{ .Site.BaseURL }}",
-    "logo": "{{ .Site.BaseURL }}/images/thurnix.webp",
-    "@id": "{{ .Site.BaseURL }}#organization",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
       "addressLocality": "Phường Gò Vấp",
       "addressRegion": "Thành phố Hồ Chí Minh",
+      "postalCode": "700000",
       "addressCountry": "VN"
     },
     "telephone": "+84925604604",
     "email": "seo@thurnix.com"
   },
   "serviceType": "Search Engine Optimization",
-  "category": "Digital Marketing",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Business",
-    "geographicArea": {
-      "@type": "Country",
-      "name": "Vietnam"
-    }
+  "priceRange": "$$-$$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Vietnam"
   },
-  "areaServed": [
+  "offers": [
     {
-      "@type": "Country",
-      "name": "Vietnam"
+      "@type": "Offer",
+      "name": "SEO Startup",
+      "description": "Gói SEO cơ bản cho doanh nghiệp nhỏ",
+      "price": "15000000",
+      "priceCurrency": "VND"
     },
     {
-      "@type": "City",
-      "name": "Ho Chi Minh City"
+      "@type": "Offer", 
+      "name": "SEO Professional",
+      "description": "Gói SEO chuyên nghiệp cho doanh nghiệp",
+      "price": "30000000",
+      "priceCurrency": "VND"
     },
     {
-      "@type": "City",
-      "name": "Hanoi"
+      "@type": "Offer",
+      "name": "SEO Enterprise", 
+      "description": "Gói SEO cao cấp cho tập đoàn",
+      "price": "60000000",
+      "priceCurrency": "VND"
     }
   ],
-  "availableChannel": {
-    "@type": "ServiceChannel",
-    "serviceUrl": "{{ .Page.Permalink }}",
-    "serviceSmsNumber": "+84925604604",
-    "servicePhone": "+84925604604",
-    "availableLanguage": "Vietnamese"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Gói dịch vụ SEO",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "SEO Startup",
-        "description": "Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới, tối ưu 20 từ khóa chính với on-page SEO hoàn chỉnh",
-        "price": "15000000",
-        "priceCurrency": "VND",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2024-01-01",
-        "priceValidUntil": "2025-12-31",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "SEO Startup Package"
-        },
-        "includesObject": [
-          {
-            "@type": "TypeAndQuantityNode",
-            "amountOfThisGood": 20,
-            "typeOfGood": {
-              "@type": "Service",
-              "name": "Keyword Optimization"
-            }
-          },
-          {
-            "@type": "TypeAndQuantityNode", 
-            "amountOfThisGood": 5,
-            "typeOfGood": {
-              "@type": "Service",
-              "name": "SEO Articles per month"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "Offer",
-        "name": "SEO Professional",
-        "description": "Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn, tối ưu 50 từ khóa với advanced SEO và link building",
-        "price": "30000000",
-        "priceCurrency": "VND", 
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2024-01-01",
-        "priceValidUntil": "2025-12-31",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "SEO Professional Package"
-        },
-        "includesObject": [
-          {
-            "@type": "TypeAndQuantityNode",
-            "amountOfThisGood": 50,
-            "typeOfGood": {
-              "@type": "Service",
-              "name": "Keyword Optimization"
-            }
-          },
-          {
-            "@type": "TypeAndQuantityNode",
-            "amountOfThisGood": 15,
-            "typeOfGood": {
-              "@type": "Service", 
-              "name": "SEO Articles per month"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "Offer",
-        "name": "SEO Enterprise",
-        "description": "Gói SEO cao cấp cho tập đoàn và thương mại điện tử, tối ưu không giới hạn từ khóa với AI-powered optimization",
-        "price": "60000000",
-        "priceCurrency": "VND",
-        "availability": "https://schema.org/InStock", 
-        "validFrom": "2024-01-01",
-        "priceValidUntil": "2025-12-31",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "SEO Enterprise Package"
-        },
-        "includesObject": [
-          {
-            "@type": "TypeAndQuantityNode",
-            "amountOfThisGood": 999,
-            "typeOfGood": {
-              "@type": "Service",
-              "name": "Unlimited Keyword Optimization"
-            }
-          },
-          {
-            "@type": "TypeAndQuantityNode",
-            "amountOfThisGood": 25,
-            "typeOfGood": {
-              "@type": "Service",
-              "name": "SEO Articles per month"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "serviceOutput": [
-    {
-      "@type": "Thing",
-      "name": "Tăng thứ hạng Google"
-    },
-    {
-      "@type": "Thing", 
-      "name": "Tăng traffic organic"
-    },
-    {
-      "@type": "Thing",
-      "name": "Tăng conversion rate"
-    },
-    {
-      "@type": "Thing",
-      "name": "Tối ưu ROI"
-    }
-  ],
-  "produces": [
-    {
-      "@type": "DigitalDocument",
-      "name": "SEO Audit Report"
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Monthly SEO Report"
-    },
-    {
-      "@type": "DigitalDocument", 
-      "name": "Keyword Research Report"
-    }
-  ],
-  "termsOfService": "{{ .Site.BaseURL }}/terms-of-service/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "itemReviewed": {
-      "@type": "Service",
-      "name": "Dịch vụ SEO",
-      "provider": {
-        "@type": "Organization",
-        "name": "Thurnix"
+      "@type": "LocalBusiness",
+      "name": "Thurnix",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
+        "addressLocality": "Phường Gò Vấp",
+        "addressRegion": "Thành phố Hồ Chí Minh",
+        "postalCode": "700000",
+        "addressCountry": "VN"
       }
     },
-    "ratingValue": "4.8",
-    "reviewCount": "89",
-    "bestRating": "5",
-    "worstRating": "4"
-  }
+    "ratingValue": 4.8,
+    "reviewCount": 89,
+    "bestRating": 5,
+    "worstRating": 4
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Lê Minh Tuấn"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5,
+        "bestRating": 5
+      },
+      "reviewBody": "Dịch vụ SEO của Thurnix rất chuyên nghiệp. Website của tôi đã lên top 3 Google sau 4 tháng.",
+      "datePublished": "2024-03-15"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Nguyễn Thị Hương"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5,
+        "bestRating": 5
+      },
+      "reviewBody": "Kết quả SEO vượt mong đợi. Lead từ organic search tăng 300%.",
+      "datePublished": "2024-02-28"
+    }
+  ]
 }
 </script>
 
@@ -215,6 +109,8 @@
   "name": "Thurnix SEO Agency",
   "description": "Công ty cung cấp dịch vụ SEO chuyên nghiệp tại Việt Nam, chuyên tối ưu hóa website cho doanh nghiệp với công nghệ AI tiên tiến.",
   "url": "{{ .Site.BaseURL }}",
+  "image": "{{ .Site.BaseURL }}/images/thurnix-cover.webp",
+  "priceRange": "$$-$$$",
   "telephone": "+84925604604",
   "email": "seo@thurnix.com",
   "address": {
@@ -222,6 +118,7 @@
     "streetAddress": "Số 5, Đường số 9 (Cityland Park Hills)",
     "addressLocality": "Phường Gò Vấp", 
     "addressRegion": "Thành phố Hồ Chí Minh",
+    "postalCode": "700000",
     "addressCountry": "VN"
   },
   "geo": {
