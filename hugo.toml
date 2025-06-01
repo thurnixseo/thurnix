@@ -21,6 +21,10 @@ enableGitInfo = true
   category = 'categories'
   tag = 'tags'
 
+[permalinks]
+  categories = "/danh-muc/"
+  tags = "/tag/"
+
 # Pagination
 paginate = 6
 paginatePath = "page"
