@@ -245,7 +245,7 @@ lastmod: 2025-01-01
                         <strong>Giờ làm việc:</strong> 8:00 - 18:00 (Thứ 2 - Thứ 6)<br>
                         <strong>Thứ 7:</strong> 8:00 - 12:00 (theo lịch hẹn)
                     </p>
-                    <a href="https://maps.google.com/?q=Số+5+Đường+số+9+Cityland+Park+Hills+Gò+Vấp" 
+                    <a href="https://maps.app.goo.gl/JvmPcyXHhCcX4y1f8" 
                        target="_blank" 
                        class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                         📍 Xem trên Google Maps
@@ -735,7 +735,7 @@ document.head.appendChild(style);
         <!-- Map -->
         <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg h-96">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7542724469836!2d106.68035531533404!3d10.833775361180799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sCityland%20Park%20Hills!5e0!3m2!1sen!2s!4v1635789123456!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.4957276903955!2d106.65243265442302!3d10.84581878723385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529364d88c087%3A0xb5c1f3d88afc33a5!2zVGh1cm5peCAtIEThu4tjaCB24bulIFNFTw!5e0!3m2!1svi!2s!4v1748770107446!5m2!1svi!2s"
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -799,7 +799,7 @@ document.head.appendChild(style);
     </div>
     
     <div class="text-center mt-8">
-        <a href="https://maps.google.com/?q=Số+5+Đường+số+9+Cityland+Park+Hills+Gò+Vấp" 
+        <a href="https://maps.app.goo.gl/JvmPcyXHhCcX4y1f8" 
            target="_blank"
            class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             📱 Mở bằng Google Maps
