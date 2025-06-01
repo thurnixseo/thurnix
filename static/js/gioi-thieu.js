@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Page Loader
+    const pageLoader = document.createElement('div');
+    pageLoader.className = 'page-loader';
+    pageLoader.innerHTML = `
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h3 class="text-xl font-bold">Đang tải...</h3>
+            <p class="text-sm opacity-80">Chuẩn bị trải nghiệm tuyệt vời</p>
+        </div>
+    `;
+    document.body.appendChild(pageLoader);
+
     // Hide loader after page load
     window.addEventListener('load', function() {
         setTimeout(() => {
