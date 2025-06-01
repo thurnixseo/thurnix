@@ -17,7 +17,7 @@
     <!-- Recent Articles -->
     {{ if .Site.Params.blog.sidebar.recent.enable }}
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.recent.title | default "Recent Articles" }}</h3>
+            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.recent.title | default "Bài viết mới" }}</h3>
             <div class="space-y-4">
                 {{ $recentCount := .Site.Params.blog.sidebar.recent.count | default 5 }}
                 {{ range first $recentCount (where .Site.RegularPages "Type" "blog") }}
@@ -41,7 +41,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                                 <time datetime="{{ .Date.Format "2006-01-02" }}">
-                                    {{ .Date.Format "Jan 2, 2006" }}
+                                    {{ .Date.Format "2 Jan 2006" }}
                                 </time>
                             </div>
                         </a>
@@ -54,13 +54,13 @@
     <!-- Categories -->
     {{ if .Site.Params.blog.sidebar.categories.enable }}
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.categories.title | default "Categories" }}</h3>
-            <div class="flex flex-wrap gap-2">
-                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                    <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}"
-                       class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
-                        {{ $name }}
-                        <span class="text-gray-500 ml-1">({{ $taxonomy.Count }})</span>
+            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.categories.title | default "Danh mục" }}</h3>
+            <div class="space-y-2">
+                {{ range .Site.Taxonomies.categories.ByCount }}
+                    <a href="{{ .Page.RelPermalink }}"
+                       class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                        <span class="text-gray-700 group-hover:text-primary-600">{{ .Page.Title }}</span>
+                        <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full group-hover:bg-primary-100 group-hover:text-primary-700">{{ .Count }}</span>
                     </a>
                 {{ end }}
             </div>
@@ -70,17 +70,137 @@
     <!-- Tags Cloud -->
     {{ if .Site.Params.blog.sidebar.tags.enable }}
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.tags.title | default "Popular Tags" }}</h3>
+            <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.tags.title | default "Tags phổ biến" }}</h3>
             <div class="flex flex-wrap gap-2">
                 {{ $tagCount := .Site.Params.blog.sidebar.tags.count | default 20 }}
                 {{ range first $tagCount .Site.Taxonomies.tags.ByCount }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}"
-                       class="text-sm text-gray-600 hover:text-primary-600">
+                    <a href="{{ .Page.RelPermalink }}"
+                       class="inline-block px-3 py-1 text-sm text-gray-600 bg-gray-100 hover:bg-primary-100 hover:text-primary-700 rounded-full transition-colors">
                         #{{ .Name }}
-                        <span class="text-gray-500">({{ .Count }})</span>
+                        <span class="text-xs text-gray-500 ml-1">({{ .Count }})</span>
                     </a>
                 {{ end }}
             </div>
         </div>
     {{ end }}
+
+    <!-- Phần còn lại giữ nguyên... -->
+    <!-- CTA Widget cho Thurnix -->
+    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-md p-6 text-white">
+        <div class="text-center">
+            <div class="text-3xl mb-3">🚀</div>
+            <h3 class="text-xl font-bold mb-3">Cần tư vấn SEO miễn phí?</h3>
+            <p class="text-blue-100 mb-4 text-sm">Liên hệ ngay với chuyên gia Thurnix để được phân tích website và tư vấn chiến lược SEO phù hợp!</p>
+            <div class="space-y-2">
+                <a href="/lien-he/" 
+                   class="block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    💬 Tư vấn miễn phí
+                </a>
+                <a href="/yeu-cau-bao-gia/" 
+                   class="block bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-400 transition-colors border border-blue-400">
+                    📋 Yêu cầu báo giá
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Links Widget -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-bold mb-4">🔗 Liên kết hữu ích</h3>
+        <div class="space-y-3">
+            <a href="/dich-vu-seo/" 
+               class="flex items-center text-gray-700 hover:text-primary-600 transition-colors group">
+                <span class="text-primary-600 mr-3 group-hover:scale-110 transition-transform">🔍</span>
+                <span>Dịch vụ SEO</span>
+            </a>
+            <a href="/dich-vu-aeo/" 
+               class="flex items-center text-gray-700 hover:text-primary-600 transition-colors group">
+                <span class="text-purple-600 mr-3 group-hover:scale-110 transition-transform">🤖</span>
+                <span>Dịch vụ AEO</span>
+            </a>
+            <a href="/thiet-ke-web-chuan-seo/" 
+               class="flex items-center text-gray-700 hover:text-primary-600 transition-colors group">
+                <span class="text-green-600 mr-3 group-hover:scale-110 transition-transform">🎨</span>
+                <span>Thiết kế web chuẩn SEO</span>
+            </a>
+            <a href="/bang-gia/" 
+               class="flex items-center text-gray-700 hover:text-primary-600 transition-colors group">
+                <span class="text-orange-600 mr-3 group-hover:scale-110 transition-transform">💰</span>
+                <span>Bảng giá dịch vụ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Info Widget -->
+    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-bold mb-4">📞 Liên hệ Thurnix</h3>
+        <div class="space-y-3 text-sm">
+            <div class="flex items-center group">
+                <span class="text-green-600 mr-3 group-hover:scale-110 transition-transform">📱</span>
+                <div>
+                    <div class="font-medium">Hotline 24/7</div>
+                    <a href="tel:0925604604" class="text-primary-600 hover:underline font-bold">0925 604 604</a>
+                </div>
+            </div>
+            <div class="flex items-center group">
+                <span class="text-blue-600 mr-3 group-hover:scale-110 transition-transform">📧</span>
+                <div>
+                    <div class="font-medium">Email</div>
+                    <a href="mailto:seo@thurnix.com" class="text-primary-600 hover:underline">seo@thurnix.com</a>
+                </div>
+            </div>
+            <div class="flex items-center group">
+                <span class="text-purple-600 mr-3 group-hover:scale-110 transition-transform">💬</span>
+                <div>
+                    <div class="font-medium">WhatsApp</div>
+                    <a href="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn dịch vụ của Thurnix" 
+                       class="text-primary-600 hover:underline">Chat ngay</a>
+                </div>
+            </div>
+            <div class="flex items-center group">
+                <span class="text-red-600 mr-3 group-hover:scale-110 transition-transform">📍</span>
+                <div>
+                    <div class="font-medium">Địa chỉ</div>
+                    <span class="text-gray-600">Gò Vấp, TPHCM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Widget -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-bold mb-4">🌐 Theo dõi Thurnix</h3>
+        <div class="flex flex-wrap gap-3">
+            {{ with .Site.Params.social.facebook }}
+                <a href="{{ . }}" target="_blank" rel="noopener" 
+                   class="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                    <span class="text-sm">📘</span>
+                </a>
+            {{ end }}
+            {{ with .Site.Params.social.youtube }}
+                <a href="{{ . }}" target="_blank" rel="noopener" 
+                   class="flex items-center justify-center w-10 h-10 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">
+                    <span class="text-sm">📺</span>
+                </a>
+            {{ end }}
+            {{ with .Site.Params.social.linkedin }}
+                <a href="{{ . }}" target="_blank" rel="noopener" 
+                   class="flex items-center justify-center w-10 h-10 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-colors">
+                    <span class="text-sm">💼</span>
+                </a>
+            {{ end }}
+            {{ with .Site.Params.social.twitter }}
+                <a href="{{ . }}" target="_blank" rel="noopener" 
+                   class="flex items-center justify-center w-10 h-10 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors">
+                    <span class="text-sm">🐦</span>
+                </a>
+            {{ end }}
+            {{ with .Site.Params.social.instagram }}
+                <a href="{{ . }}" target="_blank" rel="noopener" 
+                   class="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors">
+                    <span class="text-sm">📷</span>
+                </a>
+            {{ end }}
+        </div>
+    </div>
 </div>
