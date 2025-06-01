@@ -6,9 +6,6 @@ keywords: ["chính sách bảo mật", "bảo vệ thông tin cá nhân", "quy�
 date: 2025-01-01
 lastmod: 2025-01-01
 ---
-
-# Chính sách bảo mật
-
 **Cập nhật lần cuối: 01/01/2025**
 
 Tại **Thurnix**, chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của khách hàng. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, lưu trữ và bảo vệ thông tin của bạn khi sử dụng dịch vụ SEO và thiết kế web của chúng tôi.
@@ -309,42 +306,3 @@ Chính sách này tuân thủ:
   ]
 }
 {{< /faq >}}
-
-{{< section-container class="py-20 bg-blue-600 text-white" >}}
-<div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Có thắc mắc về bảo mật dữ liệu?</h2>
-    <p class="text-xl mb-8">Đội ngũ Data Protection Officer sẵn sàng hỗ trợ và giải đáp mọi thắc mắc về bảo mật</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-white/10 rounded-lg p-6">
-            <h3 class="text-xl font-bold mb-2">📧 Email bảo mật</h3>
-            <p>privacy@thurnix.com</p>
-            <p class="text-sm mt-2 opacity-80">Phản hồi trong 24 giờ</p>
-        </div>
-        <div class="bg-white/10 rounded-lg p-6">
-            <h3 class="text-xl font-bold mb-2">👨‍💼 Data Protection Officer</h3>
-            <p>dpo@thurnix.com</p>
-            <p class="text-sm mt-2 opacity-80">Chuyên viên bảo vệ dữ liệu</p>
-        </div>
-        <div class="bg-white/10 rounded-lg p-6">
-            <h3 class="text-xl font-bold mb-2">📞 Hotline</h3>
-            <p class="text-2xl font-bold">0925 604 604</p>
-            <p class="text-sm">Hỗ trợ khẩn cấp về bảo mật</p>
-        </div>
-    </div>
-
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="mailto:privacy@thurnix.com" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-            📧 Email về bảo mật
-        </a>
-        <a href="tel:0925604604" class="border border-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
-            📞 Gọi ngay: 0925 604 604
-        </a>
-    </div>
-    
-    <div class="mt-8 bg-white/10 rounded-lg p-6">
-        <p class="text-lg"><strong>🛡️ Cam kết bảo mật 100%</strong></p>
-        <p class="text-sm mt-2">ISO 27001 certified • GDPR compliant • PCI DSS level 1</p>
-    </div>
-</div>
-{{< /section-container >}}
