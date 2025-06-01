@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="loader-content">
             <div class="loader-spinner"></div>
             <h3 class="text-xl font-bold">Đang tải...</h3>
-            <p class="text-sm opacity-80">Chuẩn bị trải nghiệm tuyệt vời</p>
+            <p class="text-sm opacity-80">Đợi Thurnix chút nhé khách ơi!</p>
         </div>
     `;
     document.body.appendChild(pageLoader);
