@@ -14,7 +14,7 @@ schemas:
     primary_button_text="🎨 Xem Demo Website"
     primary_button_url="#demo-websites"
     secondary_button_text="💰 Yêu cầu báo giá"
-    secondary_button_url="#bang-gia"
+    secondary_button_url="/yeu-cau-bao-gia/"
     hero_image="/images/web-design-hero.webp"
     gradient-from="#0f172a"
     gradient-to="#1e293b"
