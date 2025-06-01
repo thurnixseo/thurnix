@@ -717,7 +717,7 @@ schemas:
 {{< /section-container >}}
 
 <!-- Final CTA Section -->
-<section class="py-32 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+{{< section-container class="py-32 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden" >}}
     <!-- Background Animation -->
     <div class="absolute inset-0 opacity-20">
         <div class="cta-particles">
@@ -772,4 +772,4 @@ schemas:
             </div>
         </div>
     </div>
-</section>
+{{< /section-container >}}
