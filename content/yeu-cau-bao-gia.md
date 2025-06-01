@@ -15,8 +15,8 @@ lastmod: 2025-01-01
     secondary_button_text="📞 Gọi tư vấn trực tiếp"
     secondary_button_url="tel:0925604604"
     hero_image="/images/thurnix-quote-consultation.webp"
-    gradient-from="#059669"
-    gradient-to="#10b981"
+    gradient-from="#0c4a6e"
+    gradient-to="#0284c7"
 >}}
 
 {{< section-container class="py-16 bg-white" >}}
