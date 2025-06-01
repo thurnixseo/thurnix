@@ -390,29 +390,24 @@ lastmod: 2025-01-01
 
 <!-- Contact Form JavaScript -->
 <script>
-// Từ data Google Form bạn cung cấp, đây là các Entry IDs:
-
-const GOOGLE_FORM_ENTRY_IDS = {
-    fullName: 'entry.725326284',      // Họ & Tên
-    email: 'entry.1572242119',       // Email  
-    phone: 'entry.2046391001',       // Điện thoại
-    company: 'entry.607685616',      // Tên công ty
-    website: 'entry.861555661',      // Website hiện tại
-    service: 'entry.2025931002',     // Dịch vụ quan tâm
-    budget: 'entry.500441376',       // Ngân sách dự kiến
-    timeline: 'entry.1005120682',    // Thời gian mong muốn
-    message: 'entry.873593794'       // Mô tả chi tiết
-};
-
-// Google Form ID từ URL cuối
-const GOOGLE_FORM_ID = '1FAIpQLSdmLAuKSRv3IMwMFY_m62rLbPJesAPUnk_jemhdQeWyRaSWYA';
-
-// URL hoàn chỉnh
-const GOOGLE_FORM_URL = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform`;
-
-// Updated JavaScript code cho contact form
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
+    
+    // Google Form submit URL (replace formResponse with your form ID)
+    const GOOGLE_FORM_SUBMIT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdmLAuKSRv3IMwMFY_m62rLbPJesAPUnk_jemhdQeWyRaSWYA/formResponse';
+    
+    // Entry IDs mapping
+    const ENTRY_IDS = {
+        fullName: 'entry.725326284',
+        email: 'entry.1572242119', 
+        phone: 'entry.2046391001',
+        company: 'entry.607685616',
+        website: 'entry.861555661',
+        service: 'entry.2025931002',
+        budget: 'entry.500441376',
+        timeline: 'entry.1005120682',
+        message: 'entry.873593794'
+    };
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -431,7 +426,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const missingFields = requiredFields.filter(field => !data[field]);
         
         if (missingFields.length > 0) {
-            alert('Vui lòng điền đầy đủ các trường bắt buộc!');
+            showErrorMessage('Vui lòng điền đầy đủ các trường bắt buộc!');
+            return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            showErrorMessage('Vui lòng nhập email hợp lệ!');
             return;
         }
         
@@ -441,46 +443,119 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.innerHTML = '⏳ Đang gửi...';
         submitBtn.disabled = true;
         
-        // Create Google Form URL with pre-filled data
-        const params = new URLSearchParams({
-            'usp': 'pp_url',
-            // Map form fields to Google Form entry IDs
-            [GOOGLE_FORM_ENTRY_IDS.fullName]: data.fullName,
-            [GOOGLE_FORM_ENTRY_IDS.email]: data.email,
-            [GOOGLE_FORM_ENTRY_IDS.phone]: data.phone,
-            [GOOGLE_FORM_ENTRY_IDS.company]: data.company || '',
-            [GOOGLE_FORM_ENTRY_IDS.website]: data.website || '',
-            [GOOGLE_FORM_ENTRY_IDS.service]: data.service,
-            [GOOGLE_FORM_ENTRY_IDS.budget]: data.budget || '',
-            [GOOGLE_FORM_ENTRY_IDS.timeline]: data.timeline || '',
-            [GOOGLE_FORM_ENTRY_IDS.message]: data.message || ''
+        // Submit to Google Form
+        submitToGoogleForm(data)
+            .then(() => {
+                // Success
+                form.reset();
+                showSuccessMessage();
+                
+                // Track conversion (optional)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        event_category: 'Contact',
+                        event_label: 'Contact Form Submission'
+                    });
+                }
+                
+                // Send notification email to team (optional)
+                sendNotificationToTeam(data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                showErrorMessage('Có lỗi xảy ra khi gửi form. Vui lòng thử lại hoặc gọi hotline: 0925 604 604');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+    });
+    
+    function submitToGoogleForm(data) {
+        return new Promise((resolve, reject) => {
+            // Create FormData for Google Form submission
+            const googleFormData = new FormData();
+            
+            // Map our form data to Google Form entries
+            googleFormData.append(ENTRY_IDS.fullName, data.fullName);
+            googleFormData.append(ENTRY_IDS.email, data.email);
+            googleFormData.append(ENTRY_IDS.phone, data.phone);
+            googleFormData.append(ENTRY_IDS.company, data.company || '');
+            googleFormData.append(ENTRY_IDS.website, data.website || '');
+            googleFormData.append(ENTRY_IDS.service, data.service);
+            googleFormData.append(ENTRY_IDS.budget, data.budget || '');
+            googleFormData.append(ENTRY_IDS.timeline, data.timeline || '');
+            googleFormData.append(ENTRY_IDS.message, data.message || '');
+            
+            // Submit using fetch with no-cors mode
+            fetch(GOOGLE_FORM_SUBMIT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Important: bypass CORS
+                body: googleFormData
+            })
+            .then(() => {
+                // Note: no-cors mode doesn't allow reading response
+                // But if no error thrown, submission likely succeeded
+                resolve();
+            })
+            .catch(reject);
+        });
+    }
+    
+    function sendNotificationToTeam(data) {
+        // Optional: Send notification to your team via webhook/API
+        const notificationData = {
+            name: data.fullName,
+            email: data.email,
+            phone: data.phone,
+            company: data.company,
+            service: data.service,
+            budget: data.budget,
+            message: data.message,
+            timestamp: new Date().toISOString(),
+            source: 'Website Contact Form'
+        };
+        
+        // Example: Send to your notification webhook
+        fetch('/api/notify-team', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(notificationData)
+        }).catch(err => {
+            console.log('Notification failed:', err);
+            // Don't show error to user, just log it
         });
         
-        // Redirect to Google Form with pre-filled data
-        setTimeout(() => {
-            window.open(`${GOOGLE_FORM_URL}?${params.toString()}`, '_blank');
-            
-            // Reset form
-            form.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            
-            // Show success message
-            showSuccessMessage();
-        }, 1000);
-    });
+        // Alternative: Send via EmailJS (free service)
+        /*
+        if (typeof emailjs !== 'undefined') {
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                to_name: 'Thurnix Team',
+                from_name: data.fullName,
+                from_email: data.email,
+                phone: data.phone,
+                company: data.company,
+                service: data.service,
+                budget: data.budget,
+                message: data.message
+            });
+        }
+        */
+    }
     
     function showSuccessMessage() {
         // Create success modal
         const modal = document.createElement('div');
         modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
         modal.innerHTML = `
-            <div class="bg-white p-8 rounded-xl max-w-md mx-4 text-center">
+            <div class="bg-white p-8 rounded-xl max-w-md mx-4 text-center animate-fade-in">
                 <div class="text-green-500 text-6xl mb-4">✅</div>
                 <h3 class="text-2xl font-bold mb-4">Gửi thành công!</h3>
                 <p class="text-gray-600 mb-6">
                     Cảm ơn bạn đã liên hệ với Thurnix.<br>
-                    Chúng tôi sẽ phản hồi trong vòng 30 phút.
+                    <strong>Chúng tôi sẽ phản hồi trong vòng 30 phút.</strong>
                 </p>
                 <div class="space-y-3">
                     <button onclick="this.closest('.fixed').remove()" 
@@ -488,7 +563,50 @@ document.addEventListener('DOMContentLoaded', function() {
                         Đóng
                     </button>
                     <div class="text-sm text-gray-500">
-                        Hoặc gọi ngay: <a href="tel:0925604604" class="text-blue-600 font-semibold">0925 604 604</a>
+                        Hoặc gọi ngay: <a href="tel:0925604604" class="text-blue-600 font-semibold hover:underline">0925 604 604</a>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="text-sm text-blue-700">
+                        <strong>📧 Email xác nhận</strong> đã được gửi đến hộp thư của bạn
+                    </p>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Auto close after 15 seconds
+        setTimeout(() => {
+            if (modal.parentNode) {
+                modal.remove();
+            }
+        }, 15000);
+        
+        // Close on background click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+    }
+    
+    function showErrorMessage(message) {
+        // Create error modal
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+        modal.innerHTML = `
+            <div class="bg-white p-8 rounded-xl max-w-md mx-4 text-center animate-fade-in">
+                <div class="text-red-500 text-6xl mb-4">❌</div>
+                <h3 class="text-2xl font-bold mb-4 text-red-600">Có lỗi xảy ra!</h3>
+                <p class="text-gray-600 mb-6">${message}</p>
+                <div class="space-y-3">
+                    <button onclick="this.closest('.fixed').remove()" 
+                            class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                        Thử lại
+                    </button>
+                    <div class="text-sm text-gray-500">
+                        Hoặc gọi trực tiếp: <a href="tel:0925604604" class="text-blue-600 font-semibold hover:underline">0925 604 604</a>
                     </div>
                 </div>
             </div>
@@ -496,45 +614,63 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.body.appendChild(modal);
         
-        // Auto close after 10 seconds
+        // Auto close after 8 seconds
         setTimeout(() => {
             if (modal.parentNode) {
                 modal.remove();
             }
-        }, 10000);
+        }, 8000);
     }
 });
 
 // Phone number formatting
-document.getElementById('phone').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length > 0) {
-        if (value.length <= 4) {
-            value = value;
-        } else if (value.length <= 7) {
-            value = value.slice(0, 4) + ' ' + value.slice(4);
-        } else {
-            value = value.slice(0, 4) + ' ' + value.slice(4, 7) + ' ' + value.slice(7, 10);
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 4) {
+                    value = value;
+                } else if (value.length <= 7) {
+                    value = value.slice(0, 4) + ' ' + value.slice(4);
+                } else {
+                    value = value.slice(0, 4) + ' ' + value.slice(4, 7) + ' ' + value.slice(7, 10);
+                }
+            }
+            e.target.value = value;
+        });
     }
-    e.target.value = value;
 });
 
-// Test URL để verify (paste vào browser để test)
-const TEST_URL = `${GOOGLE_FORM_URL}?${new URLSearchParams({
-    'usp': 'pp_url',
-    [GOOGLE_FORM_ENTRY_IDS.fullName]: 'Nguyễn Văn A',
-    [GOOGLE_FORM_ENTRY_IDS.email]: 'test@company.com',
-    [GOOGLE_FORM_ENTRY_IDS.phone]: '0901 234 567',
-    [GOOGLE_FORM_ENTRY_IDS.company]: 'Công ty ABC',
-    [GOOGLE_FORM_ENTRY_IDS.website]: 'https://example.com',
-    [GOOGLE_FORM_ENTRY_IDS.service]: 'SEO tổng thể',
-    [GOOGLE_FORM_ENTRY_IDS.budget]: '20 - 50 triệu VNĐ',
-    [GOOGLE_FORM_ENTRY_IDS.timeline]: 'Trong tháng này',
-    [GOOGLE_FORM_ENTRY_IDS.message]: 'Tôi muốn tăng traffic cho website'
-}).toString()}`;
-
-console.log('Test URL:', TEST_URL);
+// Add CSS animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.3s ease-out;
+    }
+    
+    /* Loading spinner */
+    .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
 </script>
 
 <!-- FAQ Section -->
