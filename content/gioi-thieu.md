@@ -50,16 +50,6 @@ schemas:
                 </a>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 fade-in-up" data-delay="600">
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <p class="text-sm mt-3 opacity-70">Cuộn để khám phá</p>
-            </div>
-        </div>
     </div>
 {{< /section-container >}}
 
