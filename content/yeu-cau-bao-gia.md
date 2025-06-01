@@ -1271,3 +1271,17 @@ document.head.appendChild(style);
     </div>
 </div>
 {{< /section-container >}}
+<script>
+// Fix Hugo security issue with tel: links
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all broken phone links and fix them
+    document.querySelectorAll('a').forEach(link => {
+        if (link.href.includes('ZgotmplZ') || 
+            link.textContent.includes('📞') || 
+            link.textContent.includes('Gọi ngay') ||
+            link.textContent.includes('Gọi tư vấn')) {
+            link.href = 'tel:0925604604';
+        }
+    });
+});
+</script>
