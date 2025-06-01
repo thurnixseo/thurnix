@@ -1,0 +1,141 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ .Site.BaseURL }}/dich-vu-seo/#service",
+  "name": "Dịch vụ SEO chuyên nghiệp",
+  "description": "Dịch vụ SEO (Search Engine Optimization) chuyên nghiệp giúp website tăng thứ hạng Google, tăng traffic organic và tối ưu ROI cho doanh nghiệp với phương pháp White Hat SEO an toàn.",
+  "serviceType": "Search Engine Optimization",
+  "category": ["Digital Marketing", "Search Engine Optimization", "Website Optimization"],
+  "brand": {
+    "@type": "Brand",
+    "name": "Thurnix SEO"
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Thurnix",
+    "url": "{{ .Site.BaseURL }}",
+    "telephone": "+84925604604",
+    "email": "seo@thurnix.com",
+    "@id": "{{ .Site.BaseURL }}#localbusiness"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "SEO Startup",
+      "description": "Gói SEO cơ bản cho doanh nghiệp nhỏ và website mới bắt đầu, tối ưu 20 từ khóa chính",
+      "price": "15000000",
+      "priceCurrency": "VND",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2025-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }
+    },
+    {
+      "@type": "Offer", 
+      "name": "SEO Professional",
+      "description": "Gói SEO chuyên nghiệp cho doanh nghiệp vừa và lớn với link building chất lượng cao, tối ưu 50 từ khóa",
+      "price": "30000000",
+      "priceCurrency": "VND",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2025-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "SEO Enterprise", 
+      "description": "Gói SEO cao cấp cho tập đoàn và thương mại điện tử với AI-powered optimization, không giới hạn từ khóa",
+      "price": "60000000",
+      "priceCurrency": "VND",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2025-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Vietnam"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dịch vụ SEO Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Keyword Research & Strategy",
+          "description": "Nghiên cứu từ khóa chuyên sâu và lập chiến lược SEO"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "On-page SEO Optimization",
+          "description": "Tối ưu hóa On-page SEO toàn diện"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Technical SEO",
+          "description": "Tối ưu kỹ thuật website và Core Web Vitals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Link Building",
+          "description": "Xây dựng backlink chất lượng cao White Hat"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Content Marketing",
+          "description": "Content marketing tối ưu SEO và conversion"
+        }
+      }
+    ]
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Business"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ .Site.BaseURL }}/dich-vu-seo/",
+    "serviceSmsNumber": "+84925604604",
+    "servicePhone": "+84925604604"
+  },
+  "hoursAvailable": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "termsOfService": "{{ .Site.BaseURL }}/terms-of-service/",
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Improved Search Engine Rankings"
+  }
+}
+</script>
