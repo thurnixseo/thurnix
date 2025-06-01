@@ -3,14 +3,18 @@
     <div class="max-w-4xl mx-auto">
         <header class="mb-12">
             <h1 class="text-4xl font-bold mb-4">
-                {{ .Data.Singular | title }}: {{ .Title }}
+                {{ if eq .Data.Singular "category" }}
+                    Danh mục: {{ .Title }}
+                {{ else }}
+                    {{ .Data.Singular | title }}: {{ .Title }}
+                {{ end }}
             </h1>
             <div class="text-xl text-gray-600">
                 {{ $count := len .Pages }}
                 {{ if eq $count 1 }}
-                    1 post
+                    1 bài viết
                 {{ else }}
-                    {{ $count }} posts
+                    {{ $count }} bài viết
                 {{ end }}
             </div>
         </header>
@@ -31,7 +35,7 @@
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>
-                        Previous
+                        Trang trước
                     </a>
                 {{ else }}
                     <div></div>
@@ -55,7 +59,7 @@
                 {{ if $paginator.HasNext }}
                     <a href="{{ $paginator.Next.URL }}" 
                        class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200">
-                        Next
+                        Trang sau
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
