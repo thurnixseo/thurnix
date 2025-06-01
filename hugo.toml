@@ -21,11 +21,6 @@ enableGitInfo = true
   category = 'categories'
   tag = 'tags'
 
-# Permalinks configuration
-[permalinks]
-  categories = "/danh-muc/:slug/"
-  tags = "/tag/:slug/"
-
 # Pagination
 paginate = 6
 paginatePath = "page"
