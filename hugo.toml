@@ -88,17 +88,11 @@ paginatePath = "page"
         hover_background = "hover:bg-gray-50"
         text_size = "text-sm"
     
-    # Button configuration
-    [params.header.buttons]
-      # Sign In button
-      [params.header.buttons.signIn]
-        text = "BÁO GIÁ"
-        url = "/bao-gia-seo"
-      
+    # Button configuration  
       # Get Started button
       [params.header.buttons.getStarted]
         text = "GỌI THURNIX"
-        url = "tel:+84925604604"
+        url = "/yeu-cau-bao-gia/"
 
   # Blog configuration
   [params.blog]
