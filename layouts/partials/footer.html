@@ -3,14 +3,13 @@
         <div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
             <!-- Logo and Social Media -->
             <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-4">
-                    <a href="{{ .Site.BaseURL }}" class="inline-block">
-                        {{ with .Site.Params.logo }}
-                            <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="h-6">
-                        {{ end }}
-                    </a>
-                    <span class="text-xl font-bold text-gray-900">{{ .Site.Title }}</span>
-                </div>
+<div class="flex items-center mb-4">
+    <a href="{{ .Site.BaseURL }}" class="inline-block">
+        {{ with .Site.Params.logo }}
+            <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="h-6">
+        {{ end }}
+    </a>
+</div>
                 <div class="flex space-x-3 p-2">
                     {{ with .Site.Params.social.linkedin }}
                     <a href="{{ . }}" class="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
