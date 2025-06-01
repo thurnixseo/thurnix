@@ -21,10 +21,6 @@ enableGitInfo = true
   category = 'categories'
   tag = 'tags'
 
-[permalinks]
-  categories = "/danh-muc/"
-  tags = "/tag/"
-
 # Pagination
 paginate = 6
 paginatePath = "page"
@@ -35,11 +31,6 @@ paginatePath = "page"
   logo = "/images/thurnix.webp"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
-
-[params.categorySlugMap]
-  "Tin dịch vụ" = "tin-dich-vu"
-  "Kiến thức SEO & AEO" = "kien-thuc-seo-aeo"
-  "Kiến thức thiết kế Web" = "kien-thuc-thiet-ke-web"
 
   # Global CTA Configuration
   [params.cta]
