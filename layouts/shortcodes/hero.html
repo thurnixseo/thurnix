@@ -10,6 +10,9 @@
 {{ $gradient_to := .Get "gradient-to" }}
 {{ $gradient_angle := .Get "gradient-angle" | default "180" }}
 
+<!-- Import Hero CSS -->
+<link rel="stylesheet" href="{{ "css/hero.css" | relURL }}">
+
 <section class="relative overflow-hidden hero-section" {{ if $gradient_from }}style="background:linear-gradient({{ $gradient_angle }}deg,{{ $gradient_from }},{{ $gradient_to | default $gradient_from }})"{{ else }}class="bg-gradient-to-b from-gray-50 to-white"{{ end }}>
     {{ if $background_image }}
     <div class="absolute inset-0">
@@ -51,126 +54,3 @@
         </div>
     </div>
 </section>
-
-<style>
-/* Hero Image Adjustments */
-.hero-section {
-    min-height: auto;
-    position: relative;
-}
-
-.hero-section .container {
-    padding-bottom: 0 !important;
-}
-
-.hero-section .grid {
-    align-items: end;
-    gap: 2rem;
-}
-
-.hero-image-container {
-    transform: translateX(-40px);
-    margin-bottom: -20px; /* Đẩy image xuống sát biên dưới */
-    position: relative;
-    z-index: 2;
-}
-
-.hero-image {
-    max-height: 400px !important;
-    width: auto !important;
-    object-fit: contain;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-}
-
-/* Đảm bảo text content có đủ space */
-.hero-section .space-y-8 {
-    padding-bottom: 2rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .hero-section .grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .hero-image-container {
-        transform: translateX(-20px);
-        margin-bottom: -15px;
-        text-align: center;
-    }
-    
-    .hero-image {
-        max-height: 350px !important;
-        max-width: 90% !important;
-    }
-    
-    .hero-image-container .absolute {
-        width: 12rem !important;
-        height: 12rem !important;
-    }
-    
-    .hero-section .space-y-8 {
-        padding-bottom: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section .container {
-        padding-top: 3rem;
-    }
-    
-    .hero-image-container {
-        transform: translateX(0);
-        margin-bottom: -10px;
-    }
-    
-    .hero-image {
-        max-height: 300px !important;
-        max-width: 100% !important;
-    }
-    
-    .hero-image-container .absolute {
-        display: none;
-    }
-    
-    .hero-section .space-y-8 {
-        padding-bottom: 2rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero-image {
-        max-height: 250px !important;
-    }
-    
-    .hero-image-container {
-        margin-bottom: -5px;
-    }
-    
-    .hero-section .space-y-8 {
-        gap: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-}
-
-/* Fine-tuning cho layout tổng thể */
-@media (min-width: 1024px) {
-    .hero-section .grid {
-        grid-template-columns: 1.3fr 0.7fr;
-    }
-    
-    .hero-image-container {
-        margin-bottom: -30px; /* Đẩy sâu hơn trên desktop */
-    }
-}
-
-/* Đảm bảo image không bị overflow */
-.hero-section {
-    overflow: hidden;
-}
-</style>
