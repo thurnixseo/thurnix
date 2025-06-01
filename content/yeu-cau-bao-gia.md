@@ -683,26 +683,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('quoteForm');
     
     // Google Form submit URL for quote requests
-    const GOOGLE_FORM_SUBMIT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrJNqYl_OI5DTc4qEB2EPrYOLLxVWwiyJ60j5l0lhvedFDRQ/formResponse';
+    const GOOGLE_FORM_SUBMIT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeAccs2la9U4IBAgD-3wMSx2KgR05v74V06KIhS64xk9-V44A/formResponse';
     
 // Entry IDs mapping for quote form
 const ENTRY_IDS = {
-   fullName: 'entry.2032251370',
-   email: 'entry.135120597',
-   phone: 'entry.812114720',
-   company: 'entry.1808082784',
-   website: 'entry.2111370595',
-   services: 'entry.1232945346',
-   industry: 'entry.1698602306',
-   businessModel: 'entry.1585425694',
-   targetKeywords: 'entry.1241829040',
-   competitors: 'entry.678816119',
-   budget: 'entry.1714917567',
-   timeline: 'entry.1772485597',
-   cooperationType: 'entry.896520182',
-   projectDescription: 'entry.1155175539',
-   websiteStatus: 'entry.2096691716',
-   specificGoals: 'entry.540686527'
+    fullName: 'entry.1807934851',
+    email: 'entry.1559731827',
+    phone: 'entry.803502262',
+    company: 'entry.279343102',
+    website: 'entry.524572751',
+    services: 'entry.813557611',
+    industry: 'entry.1381860166',
+    businessModel: 'entry.579140065',
+    targetKeywords: 'entry.1599384857',
+    competitors: 'entry.959227318',
+    budget: 'entry.651728210',
+    timeline: 'entry.1101187740',
+    cooperationType: 'entry.569392886',
+    projectDescription: 'entry.1393898285',
+    websiteStatus: 'entry.100532892',
+    specificGoals: 'entry.1269154122'
 };
     form.addEventListener('submit', function(e) {
         e.preventDefault();
