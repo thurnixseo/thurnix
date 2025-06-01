@@ -289,7 +289,7 @@ schemas:
                     <p class="text-purple-600 font-semibold mb-4">CEO & Founder</p>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         8+ năm kinh nghiệm trong lĩnh vực SEO và Digital Marketing. 
-                        Visionary đằng sau ThurnixAI Engine và chiến lược phát triển dài hạn.
+                        Visionary đằng sau ThurnixAI Engine và chiến lược phát triển.
                     </p>
                     <div class="mt-4">
                         <a href="https://www.linkedin.com/in/thuong-pham-thurnix" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
