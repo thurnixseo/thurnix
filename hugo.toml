@@ -22,8 +22,8 @@ enableGitInfo = true
   tag = 'tags'
 
 [permalinks]
-  categories = "danh-muc/:slug"
-  tags = "tag/:slug"
+  categories = "/danh-muc/:slug"
+  tags = "/tag/:slug"
 
 # Pagination
 paginate = 6
