@@ -13,8 +13,38 @@
     <!-- Title -->
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
-    {{ partial "schemas/breadcrumb.html" . }}
-    {{ partial "schemas/website.html" . }}
+  <!-- Always include breadcrumb and website schemas -->
+  {{ partial "schemas/breadcrumb.html" . }}
+  {{ partial "schemas/website.html" . }}
+
+  <!-- Include organization and local-business schemas on homepage -->
+  {{ if .IsHome }}
+    {{ partial "schemas/organization.html" . }}
+    {{ partial "schemas/local-business.html" . }}
+  {{ end }}
+
+  <!-- Include person schema on gioi-thieu.md page -->
+  {{ if eq .File.Path "content/gioi-thieu.md" }}
+    {{ partial "schemas/person.html" . }}
+  {{ end }}
+
+  <!-- Include seo-service and seo-faq schemas on dich-vu-seo.md -->
+  {{ if eq .File.Path "content/dich-vu-seo.md" }}
+    {{ partial "schemas/seo-service.html" . }}
+    {{ partial "schemas/seo-faq.html" . }}
+  {{ end }}
+
+  <!-- Include aeo-service and aeo-faq schemas on dich-vu-aeo.md -->
+  {{ if eq .File.Path "content/dich-vu-aeo.md" }}
+    {{ partial "schemas/aeo-service.html" . }}
+    {{ partial "schemas/aeo-faq.html" . }}
+  {{ end }}
+
+  <!-- Include web-design-service and web-design-faq schemas on thiet-ke-web-chuan-seo.md -->
+  {{ if eq .File.Path "content/thiet-ke-web-chuan-seo.md" }}
+    {{ partial "schemas/web-design-service.html" . }}
+    {{ partial "schemas/web-design-faq.html" . }}
+  {{ end }}
 
     <!-- Meta Tags -->
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
