@@ -18,19 +18,6 @@ pricing_stats:
     description: "Luôn sẵn sàng hỗ trợ khách hàng"
 ---
 
-{{< hero 
-    headline="<span class='text-white'><strong>Bảng Giá Dịch Vụ</strong> Minh Bạch</span><br><span class='text-white'>Đầu tư Thông Minh - Tăng Trưởng Bền Vững</span>"
-    sub_headline="<span class='text-white/90'>Không phí ẩn, không ràng buộc dài hạn. <strong>Cam kết kết quả cụ thể</strong> hoặc hoàn tiền 100%. Hơn 850 doanh nghiệp đã tin tưởng Thurnix.</span>"
-    primary_button_text="📞 Tư vấn miễn phí"
-    primary_button_url="tel:0925604604"
-    secondary_button_text="💬 Chat WhatsApp"
-    secondary_button_url="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn bảng giá dịch vụ của Thurnix"
-    hero_image="/images/pricing-hero.webp"
-    gradient-from="#667eea"
-    gradient-to="#764ba2"
-    gradient-angle="135"
->}}
-
 {{< pricing-stats >}}
 
 {{< section-container class="py-20 bg-gray-50" >}}
