@@ -4,7 +4,7 @@ layout: "company"
 description: "Tìm hiểu về sứ mệnh, đội ngũ lãnh đạo và hành trình phát triển của Thurnix - công ty dịch vụ SEO chuyên nghiệp tại Việt Nam"
 keywords: ["về Thurnix", "công ty SEO", "đội ngũ SEO", "CEO Thương Phạm"]
 schemas:
-  - "person-ceo"
+  - "person"
   - "organization"
 ---
 
