@@ -13,66 +13,15 @@
     <!-- Title -->
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
-    <!-- =============================================== -->
-    <!-- SCHEMA MARKUP - Tự động theo từng trang        -->
-    <!-- =============================================== -->
-    
-    <!-- 1. BREADCRUMB - Tất cả trang -->
+    <!-- Breadcrumb luôn có -->
     {{ partial "schemas/breadcrumb.html" . }}
     
-    <!-- 2. WEBSITE SCHEMA - Chỉ trang chủ -->
-    {{ if .IsHome }}
-        {{ partial "schemas/website.html" . }}
+    <!-- Schemas động theo params -->
+    {{ if .Params.schemas }}
+        {{ range .Params.schemas }}
+            {{ partial (printf "schemas/%s.html" .) $ }}
+        {{ end }}
     {{ end }}
-    
-    <!-- 3. ORGANIZATION SCHEMA - Chỉ trang chủ -->
-    {{ if .IsHome }}
-        {{ partial "schemas/organization.html" . }}
-    {{ end }}
-    
-    <!-- 4. LOCAL BUSINESS SCHEMA - Trang chủ và liên hệ -->
-    {{ if or .IsHome (eq .Section "lien-he") (eq .Type "contact") }}
-        {{ partial "schemas/local-business.html" . }}
-    {{ end }}
-    
-    <!-- 5. PERSON CEO SCHEMA - Trang giới thiệu -->
-    {{ if or (eq .Section "gioi-thieu") (eq .Type "about") (in .RelPermalink "/gioi-thieu/") }}
-        {{ partial "schemas/person.html" . }}
-    {{ end }}
-    
-    <!-- 6. SEO SERVICE SCHEMA - Trang dịch vụ SEO -->
-    {{ if or (eq .Section "dich-vu-seo") (in .RelPermalink "/dich-vu-seo/") }}
-        {{ partial "schemas/seo-service.html" . }}
-    {{ end }}
-    
-    <!-- 7. SEO FAQ SCHEMA - Trang dịch vụ SEO -->
-    {{ if or (eq .Section "dich-vu-seo") (in .RelPermalink "/dich-vu-seo/") }}
-        {{ partial "schemas/seo-faq.html" . }}
-    {{ end }}
-    
-    <!-- 8. WEB DESIGN SERVICE SCHEMA - Trang thiết kế web -->
-    {{ if or (eq .Section "thiet-ke-web-chuan-seo") (in .RelPermalink "/thiet-ke-web") }}
-        {{ partial "schemas/web-design-service.html" . }}
-    {{ end }}
-    
-    <!-- 9. WEB DESIGN FAQ SCHEMA - Trang thiết kế web -->
-    {{ if or (eq .Section "thiet-ke-web-chuan-seo") (in .RelPermalink "/thiet-ke-web") }}
-        {{ partial "schemas/web-design-faq.html" . }}
-    {{ end }}
-    
-    <!-- 10. AEO SERVICE SCHEMA - Trang dịch vụ AEO -->
-    {{ if or (eq .Section "dich-vu-aeo") (in .RelPermalink "/dich-vu-aeo/") }}
-        {{ partial "schemas/aeo-service.html" . }}
-    {{ end }}
-    
-    <!-- 11. AEO FAQ SCHEMA - Trang dịch vụ AEO -->
-    {{ if or (eq .Section "dich-vu-aeo") (in .RelPermalink "/dich-vu-aeo/") }}
-        {{ partial "schemas/aeo-faq.html" . }}
-    {{ end }}
-    
-    <!-- =============================================== -->
-    <!-- END SCHEMA MARKUP                               -->
-    <!-- =============================================== -->
 
     <!-- Meta Tags -->
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">

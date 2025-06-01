@@ -2,6 +2,10 @@
 title: "Thurnix - Công ty SEO, AEO & Thiết kế web chuẩn SEO uy tín"
 description: "Thurnix cung cấp dịch vụ SEO chuyên nghiệp, thiết kế web chuẩn SEO và dịch vụ AEO tại Việt Nam. Đưa website lên TOP Google với công nghệ AI tiên tiến."
 keywords: ["Thurnix", "SEO Việt Nam", "thiết kế web", "dịch vụ SEO", "AEO", "công ty SEO uy tín", "SEO TPHCM"]
+schemas:
+  - "organization"
+  - "local-business" 
+  - "website"
 client_logos:
   - name: "VinGroup"
     logo: "/images/logos/vingroup.webp"
