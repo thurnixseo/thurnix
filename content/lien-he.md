@@ -10,7 +10,7 @@ lastmod: 2025-01-01
 {{< hero 
     headline="<span class='text-white'><strong>Liên hệ Thurnix</strong></span><br><span class='text-white'>Tư vấn SEO miễn phí 24/7</span>"
     sub_headline="<span class='text-white/90'>Đội ngũ chuyên gia SEO và thiết kế web sẵn sàng hỗ trợ bạn. <strong>Phản hồi trong 30 phút</strong> và <strong>tư vấn miễn phí không giới hạn</strong>.</span>"
-    primary_button_text="📞 Gọi ngay: 0925 604 604"
+    primary_button_text="📞 Call: 0925 604 604"
     primary_button_url="tel:0925604604"
     secondary_button_text="💬 Chat WhatsApp"
     secondary_button_url="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn dịch vụ của Thurnix"
@@ -857,3 +857,17 @@ document.head.appendChild(style);
     </div>
 </div>
 {{< /section-container >}}
+<script>
+// Fix Hugo security issue with tel: links
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all broken phone links and fix them
+    document.querySelectorAll('a').forEach(link => {
+        if (link.href.includes('ZgotmplZ') || 
+            link.textContent.includes('📞') || 
+            link.textContent.includes('Call') ||
+            link.textContent.includes('Gọi tư vấn')) {
+            link.href = 'tel:0925604604';
+        }
+    });
+});
+</script>
