@@ -1,4 +1,3 @@
-{{< define "shortcodes/timeline-item.html" >}}
 <div class="relative flex flex-col md:flex-row items-center {{ if eq (.Get "position") "right" }}md:flex-row-reverse{{ end }}">
     <div class="md:w-1/2 {{ if eq (.Get "position") "right" }}md:pl-12{{ else }}md:pr-12{{ end }} {{ .Get "animation" | default "slide-in-left" }}">
         <div class="glass-card p-8 rounded-2xl ml-12 md:ml-0">
@@ -10,4 +9,3 @@
     <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-{{ .Get "color" | default "blue" }}-500 rounded-full border-4 border-white shadow-lg"></div>
     <div class="md:w-1/2 {{ if ne (.Get "position") "right" }}md:pl-12{{ else }}md:pr-12{{ end }} mt-8 md:mt-0"></div>
 </div>
-{{< /define >}}

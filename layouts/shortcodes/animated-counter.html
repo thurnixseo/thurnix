@@ -1,4 +1,3 @@
-{{< define "shortcodes/animated-counter.html" >}}
 <div class="text-center p-6">
     <div class="text-4xl md:text-6xl font-bold mb-2">
         <span class="counter {{ .Get "color" | default "text-blue-600" }}" data-count="{{ .Get "number" }}">0</span>
@@ -9,4 +8,3 @@
     <div class="text-sm text-gray-500 mt-2">{{ .Get "description" }}</div>
     {{ end }}
 </div>
-{{< /define >}}
