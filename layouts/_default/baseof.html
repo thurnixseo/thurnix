@@ -13,38 +13,66 @@
     <!-- Title -->
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
- <!-- Always include breadcrumb and website schemas -->
-  {{ partial "schemas/breadcrumb.html" . }}
-  {{ partial "schemas/website.html" . }}
-
-  <!-- Include organization and local-business schemas on homepage -->
-  {{ if .IsHome }}
-    {{ partial "schemas/organization.html" . }}
-    {{ partial "schemas/local-business.html" . }}
-  {{ end }}
-
-  <!-- Include person schema on gioi-thieu.md page -->
-  {{ if and .File (eq .File.Path "content/gioi-thieu.md") }}
-    {{ partial "schemas/person.html" . }}
-  {{ end }}
-
-  <!-- Include seo-service and seo-faq schemas on dich-vu-seo.md -->
-  {{ if and .File (eq .File.Path "content/dich-vu-seo.md") }}
-    {{ partial "schemas/seo-service.html" . }}
-    {{ partial "schemas/seo-faq.html" . }}
-  {{ end }}
-
-  <!-- Include aeo-service and aeo-faq schemas on dich-vu-aeo.md -->
-  {{ if and .File (eq .File.Path "content/dich-vu-aeo.md") }}
-    {{ partial "schemas/aeo-service.html" . }}
-    {{ partial "schemas/aeo-faq.html" . }}
-  {{ end }}
-
-  <!-- Include web-design-service and web-design-faq schemas on thiet-ke-web-chuan-seo.md -->
-  {{ if and .File (eq .File.Path "content/thiet-ke-web-chuan-seo.md") }}
-    {{ partial "schemas/web-design-service.html" . }}
-    {{ partial "schemas/web-design-faq.html" . }}
-  {{ end }}
+    <!-- =============================================== -->
+    <!-- SCHEMA MARKUP - Tự động theo từng trang        -->
+    <!-- =============================================== -->
+    
+    <!-- 1. BREADCRUMB - Tất cả trang -->
+    {{ partial "schemas/breadcrumb.html" . }}
+    
+    <!-- 2. WEBSITE SCHEMA - Chỉ trang chủ -->
+    {{ if .IsHome }}
+        {{ partial "schemas/website.html" . }}
+    {{ end }}
+    
+    <!-- 3. ORGANIZATION SCHEMA - Chỉ trang chủ -->
+    {{ if .IsHome }}
+        {{ partial "schemas/organization.html" . }}
+    {{ end }}
+    
+    <!-- 4. LOCAL BUSINESS SCHEMA - Trang chủ và liên hệ -->
+    {{ if or .IsHome (eq .Section "lien-he") (eq .Type "contact") }}
+        {{ partial "schemas/local-business.html" . }}
+    {{ end }}
+    
+    <!-- 5. PERSON CEO SCHEMA - Trang giới thiệu -->
+    {{ if or (eq .Section "gioi-thieu") (eq .Type "about") (in .RelPermalink "/gioi-thieu/") }}
+        {{ partial "schemas/person-ceo.html" . }}
+    {{ end }}
+    
+    <!-- 6. SEO SERVICE SCHEMA - Trang dịch vụ SEO -->
+    {{ if or (eq .Section "dich-vu-seo") (in .RelPermalink "/dich-vu-seo/") }}
+        {{ partial "schemas/seo-service.html" . }}
+    {{ end }}
+    
+    <!-- 7. SEO FAQ SCHEMA - Trang dịch vụ SEO -->
+    {{ if or (eq .Section "dich-vu-seo") (in .RelPermalink "/dich-vu-seo/") }}
+        {{ partial "schemas/seo-faq.html" . }}
+    {{ end }}
+    
+    <!-- 8. WEB DESIGN SERVICE SCHEMA - Trang thiết kế web -->
+    {{ if or (eq .Section "thiet-ke-web-chuan-seo") (in .RelPermalink "/thiet-ke-web") }}
+        {{ partial "schemas/web-design-service.html" . }}
+    {{ end }}
+    
+    <!-- 9. WEB DESIGN FAQ SCHEMA - Trang thiết kế web -->
+    {{ if or (eq .Section "thiet-ke-web-chuan-seo") (in .RelPermalink "/thiet-ke-web") }}
+        {{ partial "schemas/web-design-faq.html" . }}
+    {{ end }}
+    
+    <!-- 10. AEO SERVICE SCHEMA - Trang dịch vụ AEO -->
+    {{ if or (eq .Section "dich-vu-aeo") (in .RelPermalink "/dich-vu-aeo/") }}
+        {{ partial "schemas/aeo-service.html" . }}
+    {{ end }}
+    
+    <!-- 11. AEO FAQ SCHEMA - Trang dịch vụ AEO -->
+    {{ if or (eq .Section "dich-vu-aeo") (in .RelPermalink "/dich-vu-aeo/") }}
+        {{ partial "schemas/aeo-faq.html" . }}
+    {{ end }}
+    
+    <!-- =============================================== -->
+    <!-- END SCHEMA MARKUP                               -->
+    <!-- =============================================== -->
 
     <!-- Meta Tags -->
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
