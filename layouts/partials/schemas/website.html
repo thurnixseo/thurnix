@@ -1,0 +1,69 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ .Site.BaseURL }}#website",
+  "name": "Thurnix - Công ty SEO & Thiết kế Web hàng đầu Việt Nam",
+  "alternateName": "Thurnix SEO",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "Thurnix cung cấp dịch vụ SEO chuyên nghiệp, thiết kế web chuẩn SEO và AEO tại Việt Nam. Đưa website lên TOP Google với công nghệ AI tiên tiến.",
+  "inLanguage": "vi-VN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ .Site.BaseURL }}/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Thurnix",
+    "@id": "{{ .Site.BaseURL }}#organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}/images/thurnix-logo.webp",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Thurnix",
+    "@id": "{{ .Site.BaseURL }}#organization"
+  },
+  "copyrightYear": "2024",
+  "about": {
+    "@type": "Thing",
+    "name": "SEO và Thiết kế Web",
+    "description": "Dịch vụ SEO chuyên nghiệp và thiết kế web chuẩn SEO"
+  },
+  "keywords": "SEO Việt Nam, thiết kế web, dịch vụ SEO, AEO, công ty SEO uy tín, SEO TPHCM, thiết kế web chuẩn SEO",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "{{ .Site.BaseURL }}#organization"
+  },
+  "creator": {
+    "@type": "Organization",
+    "@id": "{{ .Site.BaseURL }}#organization"
+  },
+  "isAccessibleForFree": true,
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "url": "{{ .Site.BaseURL }}/dich-vu-seo/",
+      "name": "Dịch vụ SEO"
+    },
+    {
+      "@type": "WebPage",
+      "url": "{{ .Site.BaseURL }}/thiet-ke-web-chuan-seo/",
+      "name": "Thiết kế Web chuẩn SEO"
+    },
+    {
+      "@type": "WebPage",
+      "url": "{{ .Site.BaseURL }}/dich-vu-aeo/",
+      "name": "Dịch vụ AEO"
+    }
+  ]
+}
+</script>

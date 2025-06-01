@@ -1275,3 +1275,5 @@ keywords: ["thiết kế web chuẩn SEO", "thiết kế website", "web design S
         </div>
     </div>
 {{< /section-container >}}
+{{ partial "schemas/web-design-service.html" . }}
+{{ partial "schemas/web-design-faq.html" . }}

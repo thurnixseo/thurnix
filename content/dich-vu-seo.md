@@ -1398,3 +1398,5 @@ keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google
         </div>
     </div>
 {{< /section-container >}}
+{{ partial "schemas/seo-service.html" . }}
+{{ partial "schemas/seo-faq.html" . }}
