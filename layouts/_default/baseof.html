@@ -37,7 +37,7 @@
     
     <!-- 5. PERSON CEO SCHEMA - Trang giới thiệu -->
     {{ if or (eq .Section "gioi-thieu") (eq .Type "about") (in .RelPermalink "/gioi-thieu/") }}
-        {{ partial "schemas/person-ceo.html" . }}
+        {{ partial "schemas/person.html" . }}
     {{ end }}
     
     <!-- 6. SEO SERVICE SCHEMA - Trang dịch vụ SEO -->
