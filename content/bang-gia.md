@@ -1,5 +1,5 @@
 ---
-title: "Bảng giá dịch vụ SEO & Thiết kế Web - Thurnix 2025"
+title: "Bảng giá dịch vụ SEO, AEO & Thiết kế Web"
 layout: "pricing"
 description: "Bảng giá chi tiết các dịch vụ SEO, thiết kế web chuẩn SEO và AEO của Thurnix. Đầu tư thông minh cho tăng trưởng doanh nghiệp bền vững."
 keywords: ["bảng giá SEO", "giá thiết kế web", "chi phí dịch vụ SEO", "báo giá Thurnix", "giá AEO", "dịch vụ SEO giá rẻ"]
