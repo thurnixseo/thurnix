@@ -334,5 +334,3 @@ testimonials:
         </div>
     </div>
 {{< /section-container >}}
-{{ partial "schemas/organization.html" . }}
-{{ partial "schemas/local-business.html" . }}
