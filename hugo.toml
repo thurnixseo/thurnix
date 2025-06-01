@@ -58,9 +58,9 @@ paginatePath = "page"
   
   # Footer Configuration
   [params.footer]
-    column_1_title = "Features"
-    column_2_title = "COMPANY"
-    column_3_title = "LEGAL"
+    column_1_title = "Dịch Vụ"
+    column_2_title = "Thông tin"
+    column_3_title = "Chính sách"
   
   [params.header]
     # Header background and border styles (optional)
@@ -200,21 +200,21 @@ paginatePath = "page"
 
   # Footer Column 1 Menu
   [[menu.footer_column_1]]
-    name = "Performance"
-    url = "/features/performance/"
+    name = "Dịch vụ SEO"
+    url = "/dich-vu-seo"
     weight = 1
   [[menu.footer_column_1]]
-    name = "Design System"
-    url = "/features/design-system/"
+    name = "Dịch vụ AEO"
+    url = "/dich-vu-aeo"
     weight = 2
   [[menu.footer_column_1]]
-    name = "Developer Experience"
-    url = "/features/developer-experience/"
+    name = "Thiết kế web chuẩn SEO"
+    url = "/thiet-ke-web-chuan-seo"
     weight = 3
 
   # Footer Column 2 Menu
   [[menu.footer_column_2]]
-    name = "Blog"
+    name = "Blog Thurnix"
     url = "/blog"
     weight = 1
   [[menu.footer_column_2]]
@@ -222,14 +222,14 @@ paginatePath = "page"
     url = "/gioi-thieu"
     weight = 2
   [[menu.footer_column_2]]
-    name = "Careers"
-    url = "/careers"
+    name = "Tuyển dụng"
+    url = "/tuyen-dung"
     weight = 3
 
   # Footer Column 3 Menu
   [[menu.footer_column_3]]
-    name = "License"
-    url = "/license"
+    name = "Điều khoản & Điều kiện"
+    url = "/dieu-khoan-dieu-kien"
     weight = 1
   [[menu.footer_column_3]]
     name = "Chính sách bảo mật"
