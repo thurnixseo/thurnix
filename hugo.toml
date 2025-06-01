@@ -103,8 +103,8 @@ paginatePath = "page"
   # Blog configuration
   [params.blog]
     enable = true
-    title = "Latest Articles"
-    subtitle = "Learn more about web development and best practices"
+    title = "Thurnix's Blog"
+    subtitle = "Các bài viết thuộc lĩnh vực: Tin dịch vụ, kiến thức SEO, kiến thức AEO, Kiến thức thiết kế web chuẩn SEO."
     
     # Blog CTA configuration
     [params.blog.cta]
