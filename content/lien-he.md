@@ -1,5 +1,5 @@
 ---
-title: "Liên hệ Thurnix - Tư vấn SEO và thiết kế web miễn phí"
+title: "Liên hệ tư vấn"
 layout: "company"
 description: "Liên hệ Thurnix để nhận tư vấn miễn phí về dịch vụ SEO, thiết kế web chuẩn SEO và AEO. Hotline 24/7: 0925 604 604. Phản hồi nhanh trong 30 phút."
 keywords: ["liên hệ Thurnix", "tư vấn SEO miễn phí", "contact Thurnix", "hotline SEO", "báo giá thiết kế web", "consultation"]
@@ -47,7 +47,7 @@ lastmod: 2025-01-01
             </div>
             <h3 class="text-xl font-bold mb-3">WhatsApp</h3>
             <div class="text-lg font-semibold text-blue-600 mb-2">Chat trực tiếp</div>
-            <p class="text-gray-600 mb-4">Phản hồi nhanh trong 5 phút</p>
+            <p class="text-gray-600 mb-4">Phản hồi trong 5 phút</p>
             <a href="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn dịch vụ của Thurnix" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
                 Chat ngay
             </a>
@@ -390,6 +390,27 @@ lastmod: 2025-01-01
 
 <!-- Contact Form JavaScript -->
 <script>
+// Từ data Google Form bạn cung cấp, đây là các Entry IDs:
+
+const GOOGLE_FORM_ENTRY_IDS = {
+    fullName: 'entry.725326284',      // Họ & Tên
+    email: 'entry.1572242119',       // Email  
+    phone: 'entry.2046391001',       // Điện thoại
+    company: 'entry.607685616',      // Tên công ty
+    website: 'entry.861555661',      // Website hiện tại
+    service: 'entry.2025931002',     // Dịch vụ quan tâm
+    budget: 'entry.500441376',       // Ngân sách dự kiến
+    timeline: 'entry.1005120682',    // Thời gian mong muốn
+    message: 'entry.873593794'       // Mô tả chi tiết
+};
+
+// Google Form ID từ URL cuối
+const GOOGLE_FORM_ID = '1FAIpQLSdmLAuKSRv3IMwMFY_m62rLbPJesAPUnk_jemhdQeWyRaSWYA';
+
+// URL hoàn chỉnh
+const GOOGLE_FORM_URL = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform`;
+
+// Updated JavaScript code cho contact form
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     
@@ -421,25 +442,23 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         
         // Create Google Form URL with pre-filled data
-        // Replace with your actual Google Form URL and field IDs
-        const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
         const params = new URLSearchParams({
             'usp': 'pp_url',
-            // Map your form fields to Google Form field IDs
-            'entry.123456789': data.fullName,           // Replace with actual entry ID
-            'entry.987654321': data.email,              // Replace with actual entry ID  
-            'entry.456789123': data.phone,              // Replace with actual entry ID
-            'entry.789123456': data.company || '',      // Replace with actual entry ID
-            'entry.321654987': data.website || '',      // Replace with actual entry ID
-            'entry.654987321': data.service,            // Replace with actual entry ID
-            'entry.987321654': data.budget || '',       // Replace with actual entry ID
-            'entry.147258369': data.timeline || '',     // Replace with actual entry ID
-            'entry.258369147': data.message || ''       // Replace with actual entry ID
+            // Map form fields to Google Form entry IDs
+            [GOOGLE_FORM_ENTRY_IDS.fullName]: data.fullName,
+            [GOOGLE_FORM_ENTRY_IDS.email]: data.email,
+            [GOOGLE_FORM_ENTRY_IDS.phone]: data.phone,
+            [GOOGLE_FORM_ENTRY_IDS.company]: data.company || '',
+            [GOOGLE_FORM_ENTRY_IDS.website]: data.website || '',
+            [GOOGLE_FORM_ENTRY_IDS.service]: data.service,
+            [GOOGLE_FORM_ENTRY_IDS.budget]: data.budget || '',
+            [GOOGLE_FORM_ENTRY_IDS.timeline]: data.timeline || '',
+            [GOOGLE_FORM_ENTRY_IDS.message]: data.message || ''
         });
         
-        // Option 1: Redirect to Google Form with pre-filled data
+        // Redirect to Google Form with pre-filled data
         setTimeout(() => {
-            window.open(`${googleFormUrl}?${params.toString()}`, '_blank');
+            window.open(`${GOOGLE_FORM_URL}?${params.toString()}`, '_blank');
             
             // Reset form
             form.reset();
@@ -449,34 +468,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show success message
             showSuccessMessage();
         }, 1000);
-        
-        // Option 2: Submit to your own endpoint (if you prefer)
-        /*
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                showSuccessMessage();
-                form.reset();
-            } else {
-                alert('Có lỗi xảy ra. Vui lòng thử lại!');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Có lỗi xảy ra. Vui lòng thử lại!');
-        })
-        .finally(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        });
-        */
     });
     
     function showSuccessMessage() {
@@ -528,6 +519,22 @@ document.getElementById('phone').addEventListener('input', function(e) {
     }
     e.target.value = value;
 });
+
+// Test URL để verify (paste vào browser để test)
+const TEST_URL = `${GOOGLE_FORM_URL}?${new URLSearchParams({
+    'usp': 'pp_url',
+    [GOOGLE_FORM_ENTRY_IDS.fullName]: 'Nguyễn Văn A',
+    [GOOGLE_FORM_ENTRY_IDS.email]: 'test@company.com',
+    [GOOGLE_FORM_ENTRY_IDS.phone]: '0901 234 567',
+    [GOOGLE_FORM_ENTRY_IDS.company]: 'Công ty ABC',
+    [GOOGLE_FORM_ENTRY_IDS.website]: 'https://example.com',
+    [GOOGLE_FORM_ENTRY_IDS.service]: 'SEO tổng thể',
+    [GOOGLE_FORM_ENTRY_IDS.budget]: '20 - 50 triệu VNĐ',
+    [GOOGLE_FORM_ENTRY_IDS.timeline]: 'Trong tháng này',
+    [GOOGLE_FORM_ENTRY_IDS.message]: 'Tôi muốn tăng traffic cho website'
+}).toString()}`;
+
+console.log('Test URL:', TEST_URL);
 </script>
 
 <!-- FAQ Section -->
