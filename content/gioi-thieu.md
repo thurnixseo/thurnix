@@ -153,4 +153,3 @@ keywords: ["về Thurnix", "công ty SEO", "đội ngũ SEO", "CEO Thương Ph�
         </div>
     </div>
 {{< /section-container >}}
-{{ partial "schemas/person.html" . }}

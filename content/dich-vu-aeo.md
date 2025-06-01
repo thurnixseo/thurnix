@@ -1335,5 +1335,3 @@ keywords: ["dịch vụ AEO", "Answer Engine Optimization", "tối ưu AI search
         </div>
     </div>
 {{< /section-container >}}
-{{ partial "schemas/aeo-service.html" . }}
-{{ partial "schemas/aeo-faq.html" . }}
