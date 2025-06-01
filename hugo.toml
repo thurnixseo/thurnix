@@ -18,8 +18,8 @@ enableGitInfo = true
 
 # Enable taxonomies
 [taxonomies]
-  category = 'categories'
-  tag = 'tags'
+  category = 'danh-muc'
+  tag = 'tag'
 
 # Pagination
 paginate = 6
