@@ -18,8 +18,13 @@ enableGitInfo = true
 
 # Enable taxonomies
 [taxonomies]
-  category = 'danh-muc'
-  tag = 'tag'
+  category = 'categories'
+  tag = 'tags'
+
+# Permalinks configuration
+[permalinks]
+  categories = "/danh-muc/:slug/"
+  tags = "/tag/:slug/"
 
 # Pagination
 paginate = 6
