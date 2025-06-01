@@ -1,6 +1,5 @@
 ---
 title: "Chính sách bảo mật thông tin"
-layout: "simple"
 description: "Chính sách bảo mật của Thurnix - Cam kết bảo vệ thông tin cá nhân và dữ liệu khách hàng. Tuân thủ các quy định về bảo mật dữ liệu và quyền riêng tư."
 keywords: ["chính sách bảo mật", "bảo vệ thông tin cá nhân", "quyền riêng tư", "Thurnix privacy policy", "GDPR", "bảo mật dữ liệu"]
 date: 2025-01-01
