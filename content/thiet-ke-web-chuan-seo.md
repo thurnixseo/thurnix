@@ -3,6 +3,9 @@ title: "Thiết kế web chuẩn SEO chuyên nghiệp 2025"
 layout: "dich-vu"
 description: "Dịch vụ thiết kế web chuẩn SEO của Thurnix. Tạo website đẹp, nhanh, chuẩn SEO từ đầu với công nghệ mới nhất và tối ưu cho Google ranking."
 keywords: ["thiết kế web chuẩn SEO", "thiết kế website", "web design SEO", "website chuẩn SEO", "Thurnix web design", "thiết kế web responsive", "website tốc độ cao"]
+schemas:
+  - "web-design-service"
+  - "web-design-faq"
 ---
 
 {{< hero 

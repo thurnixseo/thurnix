@@ -3,6 +3,9 @@ title: "Về Thurnix SEO - Công ty SEO hàng đầu Việt Nam"
 layout: "company"
 description: "Tìm hiểu về sứ mệnh, đội ngũ lãnh đạo và hành trình phát triển của Thurnix - công ty dịch vụ SEO chuyên nghiệp tại Việt Nam"
 keywords: ["về Thurnix", "công ty SEO", "đội ngũ SEO", "CEO Thương Phạm"]
+schemas:
+  - "person-ceo"
+  - "organization"
 ---
 
 {{< section-container class="bg-gradient-to-b from-blue-50 via-blue-50 to-white pt-20 pb-32" >}}

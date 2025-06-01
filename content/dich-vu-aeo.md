@@ -3,6 +3,9 @@ title: "Dịch vụ AEO - Answer Engine Optimization chuyên nghiệp 2025"
 layout: "dich-vu"
 description: "Dịch vụ AEO (Answer Engine Optimization) chuyên nghiệp của Thurnix. Tối ưu cho AI search engines như ChatGPT, Google AI, Bard để dẫn đầu kỷ nguyên tìm kiếm mới."
 keywords: ["dịch vụ AEO", "Answer Engine Optimization", "tối ưu AI search", "ChatGPT SEO", "Google AI optimization", "Thurnix AEO", "AI-powered search", "voice search optimization"]
+schemas:
+  - "aeo-service"
+  - "aeo-faq"
 ---
 
 {{< hero 
