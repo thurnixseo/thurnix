@@ -3,32 +3,16 @@
     <div class="max-w-4xl mx-auto">
         <header class="mb-12">
             <h1 class="text-4xl font-bold mb-4">
-                {{ if eq .Data.Plural "categories" }}
-                    Tất cả danh mục
-                {{ else }}
-                    {{ .Title }}
-                {{ end }}
+                {{ .Title }}
             </h1>
             <div class="text-xl text-gray-600">
-                {{ if eq .Data.Plural "categories" }}
-                    Khám phá các chủ đề
-                {{ else }}
-                    Browse all {{ .Data.Plural }}
-                {{ end }}
+                Browse all {{ .Data.Plural }}
             </div>
         </header>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {{ range .Data.Terms.ByCount }}
-                {{ $slug := "" }}
-                {{ if eq $.Data.Plural "categories" }}
-                    {{ $slug = index $.Site.Params.categorySlugMap .Page.Title }}
-                    {{ $slug = $slug | default (.Page.Title | urlize) }}
-                {{ else }}
-                    {{ $slug = .Page.Title | urlize }}
-                {{ end }}
-                
-                <a href="{{ if eq $.Data.Plural "categories" }}/danh-muc/{{ $slug }}/{{ else }}{{ .Page.RelPermalink }}{{ end }}" 
+                <a href="{{ .Page.RelPermalink }}" 
                    class="group p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
                     <h2 class="text-xl font-semibold mb-2 group-hover:text-primary-600">
                         {{ .Page.Title }}
@@ -36,9 +20,9 @@
                     <div class="text-gray-600">
                         {{ .Count }} 
                         {{ if eq .Count 1 }}
-                            bài viết
+                            post
                         {{ else }}
-                            bài viết
+                            posts
                         {{ end }}
                     </div>
                 </a>
@@ -47,11 +31,7 @@
 
         {{ if not .Data.Terms }}
             <div class="text-center py-12 text-gray-600">
-                {{ if eq .Data.Plural "categories" }}
-                    Không tìm thấy danh mục nào
-                {{ else }}
-                    No {{ .Data.Plural }} found
-                {{ end }}
+                No {{ .Data.Plural }} found
             </div>
         {{ end }}
     </div>

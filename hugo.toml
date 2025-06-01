@@ -21,11 +21,6 @@ enableGitInfo = true
   category = 'categories'
   tag = 'tags'
 
-# Permalinks configuration
-[permalinks]
-  categories = "/danh-muc/:slug/"
-  tags = "/tag/:slug/"
-
 # Pagination
 paginate = 6
 paginatePath = "page"
@@ -37,12 +32,6 @@ paginatePath = "page"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
   
-  # Category slug mapping
-  [params.categorySlugMap]
-    "Tin dịch vụ" = "tin-dich-vu"
-    "Kiến thức SEO & AEO" = "kien-thuc-seo-aeo"
-    "Kiến thức thiết kế Web" = "kien-thuc-thiet-ke-web"
-
   # Global CTA Configuration
   [params.cta]
     enable = true

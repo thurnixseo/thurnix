@@ -8,9 +8,7 @@
                 {{ with .Params.categories }}
                     <div class="mb-4">
                         {{ range . }}
-                            {{ $slug := index $.Site.Params.categorySlugMap . }}
-                            {{ $slug = $slug | default (. | urlize) }}
-                            <a href="/danh-muc/{{ $slug }}/" 
+                            <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" 
                                class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100 mr-2">
                                 {{ . }}
                             </a>
@@ -53,7 +51,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
                     <div>
-                        <div class="text-sm text-gray-600">Bài trước</div>
+                        <div class="text-sm text-gray-600">Previous Post</div>
                         <div class="font-medium group-hover:text-primary-600">{{ .Title }}</div>
                     </div>
                 </a>
@@ -65,7 +63,7 @@
                 <a href="{{ .RelPermalink }}" 
                    class="group flex items-center text-right">
                     <div>
-                        <div class="text-sm text-gray-600">Bài tiếp</div>
+                        <div class="text-sm text-gray-600">Next Post</div>
                         <div class="font-medium group-hover:text-primary-600">{{ .Title }}</div>
                     </div>
                     <svg class="w-5 h-5 ml-2 text-gray-600 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
