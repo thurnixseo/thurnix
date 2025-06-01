@@ -50,7 +50,7 @@ testimonials:
     sub_headline="Thurnix chuyên cung cấp <strong>dịch vụ SEO</strong>, <strong>thiết kế web chuẩn SEO</strong> và <strong>AEO</strong> với công nghệ AI tiên tiến. 850+ website đã được tối ưu thành công."
     primary_button_text="🚀 Nhận tư vấn miễn phí"
     primary_button_url="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn dịch vụ SEO của Thurnix"
-    secondary_button_text="📞 Gọi ngay: 0925 604 604"
+    secondary_button_text="📞 Call: 0925 604 604"
     secondary_button_url="tel:0925604604"
     hero_image="/images/thurnix-seo-dashboard.webp"
     gradient-from="#1e40af"
@@ -333,3 +333,17 @@ testimonials:
         </div>
     </div>
 {{< /section-container >}}
+<script>
+// Fix Hugo security issue with tel: links
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all broken phone links and fix them
+    document.querySelectorAll('a').forEach(link => {
+        if (link.href.includes('ZgotmplZ') || 
+            link.textContent.includes('📞') || 
+            link.textContent.includes('Call') ||
+            link.textContent.includes('Gọi ngay')) {
+            link.href = 'tel:0925604604';
+        }
+    });
+});
+</script>
