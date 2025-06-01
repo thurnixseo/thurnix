@@ -197,6 +197,10 @@ paginatePath = "page"
         { name = "Về Thurnix", url = "/gioi-thieu/" },
         { name = "Tuyển dụng", url = "/tuyen-dung/" }
       ]
+  [[menu.main]]
+  name = "Liên hệ"
+  url = "/lien-he"
+  weight = 5
 
   # Footer Column 1 Menu
   [[menu.footer_column_1]]
@@ -235,3 +239,7 @@ paginatePath = "page"
     name = "Chính sách bảo mật"
     url = "/chinh-sach-bao-mat"
     weight = 2
+  [[menu.footer_column_3]]
+    name = "Liên hệ Thurnix"
+    url = "/lien-he"
+    weight = 3
