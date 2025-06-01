@@ -10,7 +10,7 @@ schemas:
 <link rel="stylesheet" href="/css/gioi-thieu.css">
 <script src="/js/gioi-thieu.js" defer></script>
 <!-- Hero Section với Parallax Effect -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+{{< section-container class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" >}}
     <!-- Background Animation -->
     <div class="absolute inset-0 opacity-30">
         <div class="floating-shapes">
@@ -61,7 +61,7 @@ schemas:
             </div>
         </div>
     </div>
-</section>
+{{< /section-container >}}
 
 <!-- Mission Section với Glass Morphism -->
 {{< section-container class="py-32 bg-gradient-to-b from-slate-900 to-gray-100 relative overflow-hidden" >}}
@@ -155,7 +155,7 @@ schemas:
 {{< /section-container >}}
 
 <!-- Timeline Story Section -->
-<section id="story" class="py-32 bg-white relative overflow-hidden">
+{{< section-container id="story" class="py-32 bg-white relative overflow-hidden" >}}
     <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-20">
             <div class="fade-in-up">
@@ -261,7 +261,7 @@ schemas:
             </div>
         </div>
     </div>
-</section>
+{{< /section-container >}}
 
 <!-- Team Section với Card Hover Effects -->
 {{< section-container class="py-32 bg-gradient-to-br from-gray-50 to-blue-50" >}}
@@ -495,7 +495,7 @@ schemas:
 {{< /section-container >}}
 
 <!-- Achievements Section với Counter Animation -->
-<section class="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+{{< section-container class="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden" >}}
     <!-- Background Effects -->
     <div class="absolute inset-0">
         <div class="absolute top-0 left-0 w-full h-full opacity-10">
@@ -600,7 +600,7 @@ schemas:
             </div>
         </div>
     </div>
-</section>
+{{< /section-container >}}
 
 <!-- Future Vision Section -->
 {{< section-container class="py-32 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden" >}}
