@@ -91,7 +91,7 @@ paginatePath = "page"
     # Button configuration  
       # Get Started button
       [params.header.buttons.getStarted]
-        text = "GỌI THURNIX"
+        text = "YÊU CẦU BÁO GIÁ"
         url = "/yeu-cau-bao-gia/"
 
   # Blog configuration
