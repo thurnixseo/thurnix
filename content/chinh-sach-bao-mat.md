@@ -6,11 +6,6 @@ date: 2025-01-01
 lastmod: 2025-01-01
 ---
 
-{{< section-container class="py-20 bg-white" >}}
-<div class="max-w-4xl mx-auto">
-
-<div class="prose prose-lg max-w-none">
-
 # Chính sách bảo mật
 
 **Cập nhật lần cuối: 01/01/2025**
@@ -264,11 +259,6 @@ Chính sách này tuân thủ:
 ---
 
 *Chính sách này có hiệu lực từ ngày 01/01/2025 và được cập nhật thường xuyên để đảm bảo tuân thủ pháp luật và bảo vệ quyền lợi khách hàng tốt nhất.*
-
-</div>
-
-</div>
-{{< /section-container >}}
 
 {{< faq >}}
 {
