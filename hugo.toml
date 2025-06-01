@@ -147,8 +147,8 @@ paginatePath = "page"
 
 [security]
   [security.exec]
-    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
-    osEnv = ['^HUGO_', '^CI$']
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', '^git$']
+  osEnv = ['^HUGO_', '^CI$']
 
   [security.funcs]
     getenv = ['^HUGO_', '^CI$']
