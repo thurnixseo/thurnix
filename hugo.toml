@@ -145,8 +145,17 @@ paginatePath = "page"
 [build.buildStats]
   enable = true
 
-[security.funcs]
-  getenv = ['^HUGO_', '^CI$']
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['^HUGO_', '^CI$']
+
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
 
 [markup]
   [markup.highlight]
