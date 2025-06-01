@@ -14,7 +14,7 @@ schemas:
     primary_button_text="💬 Chat WhatsApp"
     primary_button_url="https://wa.me/84925604604?text=Chào bạn! Tôi muốn tư vấn dịch vụ SEO của Thurnix"
     secondary_button_text="💰 Yêu cầu báo giá"
-    secondary_button_url="#bang-gia"
+    secondary_button_url="/yeu-cau-bao-gia/"
     hero_image="/images/seo-hero-dashboard.webp"
     gradient-from="#1e40af"
     gradient-to="#3b82f6"
