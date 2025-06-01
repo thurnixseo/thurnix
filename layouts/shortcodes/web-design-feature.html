@@ -14,7 +14,8 @@
     
     <div class="p-4 md:p-6">
         <div class="flex items-center mb-4">
-            <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center mr-3 md:mr-4 flex-shrink-0" style="background-color: {{ $color }}15;">
+            <!-- Perfect Circle Icon Container -->
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0" style="background-color: {{ $color }}15;">
                 {{ if eq $icon "responsive" }}
                 <span style="color: {{ $color }}; font-size: 1.5rem;">📱</span>
                 {{ else if eq $icon "speed" }}
