@@ -6,12 +6,12 @@
 {{ $buttonText := .Get "buttonText" | default "Tìm hiểu thêm" }}
 {{ $stats := split (.Get "stats") "|" }}
 
-<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full flex flex-col">
+<div class="bg-white rounded-xl hover:shadow-lg transition-all duration-300 p-8 h-full flex flex-col">
     <div class="flex items-center mb-6">
         <div class="w-16 h-16 rounded-xl flex items-center justify-center mr-4" style="background-color: {{ $color }}15;">
             {{ if .Get "icon" }}
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: {{ $color }}20;">
+                    <svg class="w-6 h-6" style="color: {{ $color }};" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {{ if eq (.Get "icon") "seo" }}
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         {{ else if eq (.Get "icon") "design" }}
@@ -41,7 +41,7 @@
         {{ range $stats }}
         {{ $statParts := split . ":" }}
         {{ if ge (len $statParts) 2 }}
-        <div class="text-center p-3 bg-gray-50 rounded-lg">
+        <div class="text-center p-3 rounded-lg" style="background-color: {{ $color }}08;">
             <div class="text-2xl font-bold" style="color: {{ $color }};">{{ index $statParts 0 }}</div>
             <div class="text-sm text-gray-600">{{ index $statParts 1 }}</div>
         </div>
@@ -50,7 +50,7 @@
     </div>
     {{ end }}
     
-    <a href="{{ $link }}" class="w-full text-center px-6 py-3 text-white font-semibold rounded-lg transition-colors hover:opacity-90" style="background-color: {{ $color }};">
+    <a href="{{ $link }}" class="w-full text-center px-6 py-3 text-white font-semibold rounded-lg transition-all duration-200 hover:transform hover:scale-105" style="background-color: {{ $color }};">
         {{ $buttonText }}
     </a>
 </div>
