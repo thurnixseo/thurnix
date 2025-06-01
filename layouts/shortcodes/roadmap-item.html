@@ -1,0 +1,14 @@
+{{< define "shortcodes/roadmap-item.html" >}}
+<div class="roadmap-item">
+    <div class="flex items-center justify-between mb-2">
+        <span class="font-semibold">{{ .Get "title" }}</span>
+        <span class="text-sm text-{{ .Get "color" | default "blue" }}-600">{{ .Get "timeline" }}</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-gradient-to-r from-{{ .Get "color" | default "blue" }}-500 to-{{ .Get "color2" | default "purple" }}-500 h-2 rounded-full" style="width: {{ .Get "progress" | default "0" }}%;"></div>
+    </div>
+    {{ if .Get "description" }}
+    <p class="text-sm text-gray-600 mt-2">{{ .Get "description" }}</p>
+    {{ end }}
+</div>
+{{< /define >}}
