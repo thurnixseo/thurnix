@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     // Hide loader after page load
     window.addEventListener('load', function() {
         setTimeout(() => {
