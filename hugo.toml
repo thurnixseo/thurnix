@@ -175,22 +175,16 @@ paginatePath = "page"
         { name = "Thiết kế web chuẩn SEO", url = "/thiet-ke-web-chuan-seo" }
       ]
   [[menu.main]]
+    name = "Về Thurnix"
+    weight = 2
+  [[menu.main]]
     name = "Bảng giá dịch vụ"
     url = "/bang-gia"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Blog"
     url = "/blog"
-    weight = 3
-  [[menu.main]]
-    name = "Thurnix"
     weight = 4
-    [menu.main.params]
-      has_submenu = true
-      submenu = [
-        { name = "Về Thurnix", url = "/gioi-thieu/" },
-        { name = "Tuyển dụng", url = "/tuyen-dung/" }
-      ]
   [[menu.main]]
   name = "Liên hệ"
   url = "/lien-he"
