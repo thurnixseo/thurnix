@@ -398,15 +398,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Entry IDs mapping
     const ENTRY_IDS = {
-    fullName: 'entry.346726208'    // Họ & Tên
-    email: 'entry.1260921571'      // Email  
-    phone: 'entry.1396752945'      // Điện thoại
-    company: 'entry.333817062'     // Tên công ty
-    website: 'entry.66664326'      // Website hiện tại
-    service: 'entry.744138857'     // Dịch vụ quan tâm ⭐
-    budget: 'entry.1575637037'     // Ngân sách dự kiến ⭐
-    timeline: 'entry.1077511256'   // Thời gian mong muốn
-    message: 'entry.1009877940'    // Mô tả chi tiết
+    fullName: 'entry.346726208',
+    email: 'entry.1260921571',
+    phone: 'entry.1396752945',
+    company: 'entry.333817062',
+    website: 'entry.66664326',
+    service: 'entry.744138857',
+    budget: 'entry.1575637037',
+    timeline: 'entry.1077511256',
+    message: 'entry.1009877940'
     };
     
     form.addEventListener('submit', function(e) {
