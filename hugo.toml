@@ -176,6 +176,7 @@ paginatePath = "page"
       ]
   [[menu.main]]
     name = "Về Thurnix"
+    url = "/gioi-thieu"
     weight = 2
   [[menu.main]]
     name = "Bảng giá dịch vụ"
