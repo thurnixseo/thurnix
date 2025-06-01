@@ -5,7 +5,6 @@ keywords: ["Thurnix", "SEO Việt Nam", "thiết kế web", "dịch vụ SEO", "
 schemas:
   - "organization"
   - "local-business" 
-  - "website"
 client_logos:
   - name: "VinGroup"
     logo: "/images/logos/vingroup.webp"
