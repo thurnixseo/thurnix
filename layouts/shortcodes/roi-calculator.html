@@ -1,0 +1,146 @@
+<section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50" id="calculator">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">📊 Tính toán ROI từ dịch vụ SEO</h2>
+            <p class="text-xl text-gray-600">Xem dự báo lợi nhuận khi đầu tư SEO với Thurnix</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Calculator Form -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900">Thông tin doanh nghiệp của bạn</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Traffic website hiện tại/tháng</label>
+                            <input type="number" id="currentTraffic" placeholder="VD: 5000" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Tỷ lệ chuyển đổi hiện tại (%)</label>
+                            <input type="number" id="conversionRate" placeholder="VD: 2" step="0.1"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Giá trị đơn hàng trung bình (VNĐ)</label>
+                            <input type="number" id="averageOrderValue" placeholder="VD: 1000000"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Chọn gói SEO</label>
+                            <select id="seoPackage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="15000000">SEO Startup - 15 triệu/tháng</option>
+                                <option value="30000000" selected>SEO Professional - 30 triệu/tháng</option>
+                                <option value="60000000">SEO Enterprise - 60 triệu/tháng</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="calculateROI()" 
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">
+                            🧮 Tính toán ROI
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Results -->
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900">Dự báo kết quả sau 12 tháng</h3>
+                    
+                    <div id="results" class="space-y-6">
+                        <div class="text-center py-12">
+                            <div class="text-6xl mb-4">📈</div>
+                            <p class="text-gray-600">Nhập thông tin để xem dự báo ROI</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-white rounded-lg border-l-4 border-blue-500">
+                        <h4 class="font-bold text-gray-900 mb-2">📋 Giả định tính toán:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Traffic tăng 200-400% trong 12 tháng</li>
+                            <li>• Conversion rate cải thiện 20-30%</li>
+                            <li>• Chi phí SEO cố định hàng tháng</li>
+                            <li>• Không tính các chi phí khác (ads, content...)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function calculateROI() {
+    const currentTraffic = parseInt(document.getElementById('currentTraffic').value) || 0;
+    const conversionRate = parseFloat(document.getElementById('conversionRate').value) || 0;
+    const averageOrderValue = parseInt(document.getElementById('averageOrderValue').value) || 0;
+    const seoPackageCost = parseInt(document.getElementById('seoPackage').value) || 0;
+    
+    if (!currentTraffic || !conversionRate || !averageOrderValue) {
+        alert('Vui lòng nhập đầy đủ thông tin');
+        return;
+    }
+    
+    // Calculations
+    const currentMonthlyRevenue = currentTraffic * (conversionRate / 100) * averageOrderValue;
+    const trafficMultiplier = seoPackageCost <= 15000000 ? 2.5 : seoPackageCost <= 30000000 ? 3.5 : 4.5;
+    const conversionImprovement = 1.25; // 25% improvement
+    
+    const newTraffic = currentTraffic * trafficMultiplier;
+    const newConversionRate = conversionRate * conversionImprovement;
+    const newMonthlyRevenue = newTraffic * (newConversionRate / 100) * averageOrderValue;
+    
+    const monthlyProfit = newMonthlyRevenue - currentMonthlyRevenue - seoPackageCost;
+    const yearlyProfit = monthlyProfit * 12;
+    const totalInvestment = seoPackageCost * 12;
+    const roi = ((yearlyProfit / totalInvestment) * 100).toFixed(1);
+    
+    // Format numbers
+    const formatCurrency = (num) => new Intl.NumberFormat('vi-VN').format(num) + ' VNĐ';
+    const formatNumber = (num) => new Intl.NumberFormat('vi-VN').format(Math.round(num));
+    
+    document.getElementById('results').innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600 mb-2">${formatNumber(newTraffic)}</div>
+                <div class="text-sm text-gray-600">Traffic/tháng sau SEO</div>
+                <div class="text-xs text-green-600 mt-1">+${Math.round((trafficMultiplier - 1) * 100)}%</div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg text-center">
+                <div class="text-2xl font-bold text-green-600 mb-2">${newConversionRate.toFixed(1)}%</div>
+                <div class="text-sm text-gray-600">Tỷ lệ chuyển đổi mới</div>
+                <div class="text-xs text-green-600 mt-1">+${Math.round((conversionImprovement - 1) * 100)}%</div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg text-center">
+                <div class="text-2xl font-bold text-purple-600 mb-2">${formatCurrency(newMonthlyRevenue)}</div>
+                <div class="text-sm text-gray-600">Doanh thu/tháng mới</div>
+                <div class="text-xs text-green-600 mt-1">+${formatCurrency(newMonthlyRevenue - currentMonthlyRevenue)}</div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg text-center">
+                <div class="text-2xl font-bold text-orange-600 mb-2">${formatCurrency(monthlyProfit)}</div>
+                <div class="text-sm text-gray-600">Lợi nhuận/tháng</div>
+                <div class="text-xs text-gray-500 mt-1">Sau trừ chi phí SEO</div>
+            </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-400 to-blue-500 text-white p-8 rounded-xl text-center">
+            <div class="text-4xl font-bold mb-2">${roi}%</div>
+            <div class="text-xl mb-4">ROI sau 12 tháng</div>
+            <div class="text-lg">Lợi nhuận thuần: <span class="font-bold">${formatCurrency(yearlyProfit)}</span></div>
+            <div class="text-sm opacity-90 mt-2">Đầu tư: ${formatCurrency(totalInvestment)} → Thu về: ${formatCurrency(yearlyProfit + totalInvestment)}</div>
+        </div>
+        
+        <div class="text-center">
+            <a href="tel:0925604604" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                📞 Tư vấn chi tiết ngay
+            </a>
+        </div>
+    `;
+}
+</script>

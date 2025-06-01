@@ -1,0 +1,19 @@
+<section class="py-16 bg-white border-b">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {{ range .Page.Params.pricing_stats }}
+            <div class="p-6">
+                <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{{ .number }}</div>
+                <div class="text-lg font-semibold text-gray-800 mb-2">{{ .label }}</div>
+                <div class="text-sm text-gray-600">{{ .description }}</div>
+            </div>
+            {{ end }}
+        </div>
+        
+        <div class="text-center mt-12">
+            <div class="inline-block px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border">
+                <span class="text-gray-700 font-medium">🏆 Được tin tưởng bởi các doanh nghiệp hàng đầu Việt Nam</span>
+            </div>
+        </div>
+    </div>
+</section>
