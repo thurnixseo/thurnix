@@ -6,13 +6,13 @@
     <description>Recent content in Categories on Thurnix</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Sun, 01 Jun 2025 11:58:05 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jun 2025 21:43:37 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>News</title>
-      <link>http://localhost:1313/categories/news/</link>
+      <title>Thurnix News</title>
+      <link>http://localhost:1313/categories/thurnix-news/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/news/</guid>
+      <guid>http://localhost:1313/categories/thurnix-news/</guid>
       <description></description>
     </item>
   </channel>

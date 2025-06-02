@@ -1,4 +1,735 @@
-<div class="bg-gray-50 p-6 rounded-lg mb-8">
-    <h2 class="text-xl font-semibold mb-4">Table of Contents</h2>
-    {{ .Page.TableOfContents }}
+<!-- Fixed TOC Shortcode -->
+{{ $tocEnabled := .Get "enabled" | default "true" }}
+{{ $tocTitle := .Get "title" | default "Mục lục" }}
+{{ $tocPosition := .Get "position" | default "right" }}
+{{ $showOnScroll := .Get "show-on-scroll" | default "300" }}
+{{ $tocContent := .Page.TableOfContents }}
+
+{{ if and (eq $tocEnabled "true") $tocContent }}
+<!-- Fixed TOC Container -->
+<div id="fixed-toc-container" class="fixed-toc-container" data-position="{{ $tocPosition }}" data-show-scroll="{{ $showOnScroll }}">
+    <!-- Mobile TOC Toggle Button -->
+    <button id="mobile-toc-toggle" class="mobile-toc-toggle" aria-label="Toggle Table of Contents">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    
+    <!-- Desktop TOC Panel -->
+    <div id="desktop-toc-panel" class="desktop-toc-panel">
+        <div class="toc-header">
+            <h3 class="toc-title">{{ $tocTitle }}</h3>
+            <button id="toc-close-btn" class="toc-close-btn" aria-label="Close TOC">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="toc-content">
+            {{ $tocContent | safeHTML }}
+        </div>
+        <div class="toc-progress">
+            <div class="toc-progress-bar" id="toc-progress-bar"></div>
+        </div>
+    </div>
+    
+    <!-- Mobile TOC Overlay -->
+    <div id="mobile-toc-overlay" class="mobile-toc-overlay">
+        <div class="mobile-toc-panel">
+            <div class="toc-header">
+                <h3 class="toc-title">{{ $tocTitle }}</h3>
+                <button id="mobile-toc-close" class="toc-close-btn" aria-label="Close TOC">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="toc-content">
+                {{ $tocContent | safeHTML }}
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+/* ======================== */
+/* Fixed TOC Styles         */
+/* ======================== */
+
+.fixed-toc-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    z-index: 999;
+}
+
+/* ======================== */
+/* Mobile TOC Toggle Button */
+/* ======================== */
+
+.mobile-toc-toggle {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobile-toc-toggle:hover {
+    background: #2563eb;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.mobile-toc-toggle.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ======================== */
+/* Desktop TOC Panel        */
+/* ======================== */
+
+.desktop-toc-panel {
+    position: fixed;
+    top: 50%;
+    right: -320px;
+    transform: translateY(-50%);
+    width: 300px;
+    max-height: 70vh;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.desktop-toc-panel.show {
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktop-toc-panel[data-position="left"] {
+    right: auto;
+    left: -320px;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.desktop-toc-panel[data-position="left"].show {
+    left: 20px;
+}
+
+/* ======================== */
+/* TOC Header               */
+/* ======================== */
+
+.toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.toc-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.toc-close-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.toc-close-btn:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* ======================== */
+/* TOC Content              */
+/* ======================== */
+
+.toc-content {
+    padding: 16px 20px;
+    max-height: calc(70vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f3f4f6;
+}
+
+.toc-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.toc-content::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+}
+
+.toc-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.toc-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* TOC Navigation Styles */
+.toc-content nav {
+    margin: 0;
+}
+
+.toc-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc-content li {
+    margin: 0;
+    padding: 0;
+}
+
+.toc-content a {
+    display: block;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    border-left: 3px solid transparent;
+    padding-left: 12px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.toc-content a:hover {
+    color: #3b82f6;
+    background: #eff6ff;
+    border-left-color: #3b82f6;
+}
+
+.toc-content a.active {
+    color: #3b82f6;
+    background: #eff6ff;
+    border-left-color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Nested TOC Levels */
+.toc-content ul ul a {
+    padding-left: 24px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.toc-content ul ul ul a {
+    padding-left: 36px;
+    font-size: 12px;
+}
+
+.toc-content ul ul ul ul a {
+    padding-left: 48px;
+}
+
+/* ======================== */
+/* Progress Bar             */
+/* ======================== */
+
+.toc-progress {
+    height: 4px;
+    background: #f3f4f6;
+    overflow: hidden;
+}
+
+.toc-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ======================== */
+/* Mobile TOC Overlay       */
+/* ======================== */
+
+.mobile-toc-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-toc-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-toc-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================== */
+/* Responsive Design        */
+/* ======================== */
+
+@media (max-width: 1024px) {
+    .desktop-toc-panel {
+        width: 280px;
+    }
+    
+    .desktop-toc-panel.show {
+        right: 10px;
+    }
+    
+    .desktop-toc-panel[data-position="left"].show {
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-toc-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .desktop-toc-panel {
+        display: none;
+    }
+    
+    .mobile-toc-overlay {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-toc-toggle {
+        right: 15px;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .mobile-toc-panel {
+        width: 95%;
+        max-height: 85vh;
+    }
+}
+
+/* ======================== */
+/* Animation Classes        */
+/* ======================== */
+
+.toc-fade-in {
+    animation: tocFadeIn 0.3s ease-out;
+}
+
+.toc-fade-out {
+    animation: tocFadeOut 0.3s ease-out;
+}
+
+@keyframes tocFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes tocFadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+/* ======================== */
+/* Dark Mode Support        */
+/* ======================== */
+
+@media (prefers-color-scheme: dark) {
+    .desktop-toc-panel {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .toc-header {
+        background: #111827;
+        border-bottom-color: #374151;
+    }
+    
+    .toc-title {
+        color: #f9fafb;
+    }
+    
+    .toc-close-btn {
+        color: #9ca3af;
+    }
+    
+    .toc-close-btn:hover {
+        background: #374151;
+        color: #e5e7eb;
+    }
+    
+    .toc-content a {
+        color: #d1d5db;
+    }
+    
+    .toc-content a:hover,
+    .toc-content a.active {
+        color: #60a5fa;
+        background: #1e3a8a;
+    }
+    
+    .mobile-toc-panel {
+        background: #1f2937;
+    }
+    
+    .toc-progress {
+        background: #374151;
+    }
+}
+</style>
+
+<script>
+// ========================
+// Fixed TOC JavaScript
+// ========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tocContainer = document.getElementById('fixed-toc-container');
+    if (!tocContainer) return;
+    
+    const showOnScroll = parseInt(tocContainer.dataset.showScroll) || 300;
+    const desktopPanel = document.getElementById('desktop-toc-panel');
+    const mobileToggle = document.getElementById('mobile-toc-toggle');
+    const mobileOverlay = document.getElementById('mobile-toc-overlay');
+    const tocCloseBtn = document.getElementById('toc-close-btn');
+    const mobileTocClose = document.getElementById('mobile-toc-close');
+    const progressBar = document.getElementById('toc-progress-bar');
+    
+    let isDesktopTocVisible = false;
+    let isMobileTocVisible = false;
+    let currentActiveLink = null;
+    let headings = [];
+    let tocLinks = [];
+    
+    // Initialize TOC
+    init();
+    
+    function init() {
+        // Collect all headings and TOC links
+        collectHeadingsAndLinks();
+        
+        // Set up scroll listeners
+        setupScrollListeners();
+        
+        // Set up click handlers
+        setupClickHandlers();
+        
+        // Set up intersection observer for active link highlighting
+        setupIntersectionObserver();
+        
+        // Initial check for scroll position
+        handleScroll();
+    }
+    
+    function collectHeadingsAndLinks() {
+        // Get all headings with IDs
+        headings = Array.from(document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'))
+            .map(heading => ({
+                element: heading,
+                id: heading.id,
+                offsetTop: heading.offsetTop,
+                level: parseInt(heading.tagName.substring(1))
+            }));
+        
+        // Get all TOC links
+        tocLinks = Array.from(document.querySelectorAll('.toc-content a[href^="#"]'));
+        
+        // Add click handlers to TOC links
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Close mobile TOC if open
+                    if (isMobileTocVisible) {
+                        hideMobileToc();
+                    }
+                    
+                    // Smooth scroll to target
+                    const offsetTop = targetElement.offsetTop - 100; // Account for fixed header
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active link
+                    updateActiveLink(this);
+                }
+            });
+        });
+    }
+    
+    function setupScrollListeners() {
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
+    
+    function setupClickHandlers() {
+        // Mobile toggle button
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', toggleMobileToc);
+        }
+        
+        // Desktop close button
+        if (tocCloseBtn) {
+            tocCloseBtn.addEventListener('click', hideDesktopToc);
+        }
+        
+        // Mobile close button
+        if (mobileTocClose) {
+            mobileTocClose.addEventListener('click', hideMobileToc);
+        }
+        
+        // Mobile overlay click to close
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileOverlay) {
+                    hideMobileToc();
+                }
+            });
+        }
+        
+        // Escape key to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (isMobileTocVisible) {
+                    hideMobileToc();
+                } else if (isDesktopTocVisible) {
+                    hideDesktopToc();
+                }
+            }
+        });
+    }
+    
+    function setupIntersectionObserver() {
+        if (!headings.length) return;
+        
+        const observerOptions = {
+            rootMargin: '-100px 0px -66%',
+            threshold: 0
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetLink = tocLinks.find(link => 
+                        link.getAttribute('href') === `#${entry.target.id}`
+                    );
+                    if (targetLink) {
+                        updateActiveLink(targetLink);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        headings.forEach(heading => {
+            observer.observe(heading.element);
+        });
+    }
+    
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProgress = (scrollTop / documentHeight) * 100;
+        
+        // Update progress bar
+        if (progressBar) {
+            progressBar.style.width = scrollProgress + '%';
+        }
+        
+        // Show/hide TOC based on scroll position
+        if (scrollTop > showOnScroll) {
+            if (window.innerWidth >= 768) {
+                showDesktopToc();
+            } else {
+                showMobileToggle();
+            }
+        } else {
+            if (window.innerWidth >= 768) {
+                hideDesktopToc();
+            } else {
+                hideMobileToggle();
+            }
+        }
+    }
+    
+    function showDesktopToc() {
+        if (!isDesktopTocVisible && desktopPanel) {
+            desktopPanel.classList.add('show');
+            isDesktopTocVisible = true;
+        }
+    }
+    
+    function hideDesktopToc() {
+        if (isDesktopTocVisible && desktopPanel) {
+            desktopPanel.classList.remove('show');
+            isDesktopTocVisible = false;
+        }
+    }
+    
+    function showMobileToggle() {
+        if (mobileToggle) {
+            mobileToggle.classList.add('show');
+        }
+    }
+    
+    function hideMobileToggle() {
+        if (mobileToggle) {
+            mobileToggle.classList.remove('show');
+        }
+    }
+    
+    function toggleMobileToc() {
+        if (isMobileTocVisible) {
+            hideMobileToc();
+        } else {
+            showMobileToc();
+        }
+    }
+    
+    function showMobileToc() {
+        if (mobileOverlay) {
+            mobileOverlay.classList.add('show');
+            isMobileTocVisible = true;
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    function hideMobileToc() {
+        if (mobileOverlay) {
+            mobileOverlay.classList.remove('show');
+            isMobileTocVisible = false;
+            document.body.style.overflow = '';
+        }
+    }
+    
+    function updateActiveLink(link) {
+        // Remove active class from current active link
+        if (currentActiveLink) {
+            currentActiveLink.classList.remove('active');
+        }
+        
+        // Add active class to new link
+        if (link) {
+            link.classList.add('active');
+            currentActiveLink = link;
+            
+            // Scroll link into view in TOC
+            if (link.offsetParent) {
+                const tocContent = link.closest('.toc-content');
+                if (tocContent) {
+                    const linkTop = link.offsetTop;
+                    const linkHeight = link.offsetHeight;
+                    const tocHeight = tocContent.offsetHeight;
+                    const tocScrollTop = tocContent.scrollTop;
+                    
+                    if (linkTop < tocScrollTop || linkTop + linkHeight > tocScrollTop + tocHeight) {
+                        tocContent.scrollTo({
+                            top: linkTop - tocHeight / 2 + linkHeight / 2,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        }
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        // Debounce resize handler
+        clearTimeout(window.tocResizeTimeout);
+        window.tocResizeTimeout = setTimeout(function() {
+            // Recalculate heading positions
+            headings.forEach(heading => {
+                heading.offsetTop = heading.element.offsetTop;
+            });
+            
+            // Handle visibility based on new screen size
+            handleScroll();
+            
+            // Close mobile TOC if screen becomes desktop
+            if (window.innerWidth >= 768 && isMobileTocVisible) {
+                hideMobileToc();
+            }
+        }, 100);
+    });
+    
+    // Handle page unload
+    window.addEventListener('beforeunload', function() {
+        document.body.style.overflow = '';
+    });
+});
+</script>
+{{ end }}
