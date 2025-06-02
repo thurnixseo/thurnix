@@ -35,17 +35,17 @@ paginatePath = "page"
   # Global CTA Configuration
   [params.cta]
     enable = true
-    title = "Ready to Build Your SaaS Website?"
-    description = "Join companies already using our theme to create beautiful, high-performance websites."
+    title = "Bạn đã sẵn sàng để liên hệ với Thurnix chưa?"
+    description = "Tư vấn miễn phí - Bảo mật thông tin - Tư vấn chuyên sâu"
     gradient_from = "#2563eb"  # Indigo-600
     gradient_to = "#7c3aed"    # Purple-600
     gradient_angle = 30
     [params.cta.primary_button]
-      text = "Get Started Free"
-      url = "/get-started"
+      text = "Yêu cầu báo giá"
+      url = "/yeu-cau-bao-gia"
     [params.cta.secondary_button]
-      text = "Book Demo"
-      url = "/demo"
+      text = "Gọi ngay: 0925 604 604"
+      url = "tel:0925604604"
   
   # Social Media Links
   [params.social]
