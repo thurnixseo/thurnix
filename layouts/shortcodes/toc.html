@@ -1,4 +1,4 @@
-<!-- Fixed TOC Shortcode -->
+<!-- Fixed TOC Shortcode với Tab hiển thị khi đóng -->
 {{ $tocEnabled := .Get "enabled" | default "true" }}
 {{ $tocTitle := .Get "title" | default "Mục lục" }}
 {{ $tocPosition := .Get "position" | default "right" }}
@@ -14,6 +14,16 @@
             <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
+
+    <!-- Desktop TOC Tab (when minimized) -->
+    <div id="desktop-toc-tab" class="desktop-toc-tab">
+        <div class="toc-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="toc-tab-text">{{ $tocTitle }}</div>
+    </div>
     
     <!-- Desktop TOC Panel -->
     <div id="desktop-toc-panel" class="desktop-toc-panel">
@@ -93,6 +103,71 @@
 .mobile-toc-toggle.show {
     opacity: 1;
     visibility: visible;
+}
+
+/* ======================== */
+/* Desktop TOC Tab          */
+/* ======================== */
+
+.desktop-toc-tab {
+    position: fixed;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+    background: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.desktop-toc-tab:hover {
+    background: #2563eb;
+    right: -55px;
+}
+
+.desktop-toc-tab.show {
+    right: -40px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktop-toc-tab[data-position="left"] {
+    right: auto;
+    left: -60px;
+    transform: translateY(-50%) rotate(90deg);
+    border-radius: 0 0 8px 8px;
+}
+
+.desktop-toc-tab[data-position="left"]:hover {
+    left: -55px;
+}
+
+.desktop-toc-tab[data-position="left"].show {
+    left: -40px;
+}
+
+.toc-tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toc-tab-text {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 /* ======================== */
@@ -335,7 +410,8 @@
         justify-content: center;
     }
     
-    .desktop-toc-panel {
+    .desktop-toc-panel,
+    .desktop-toc-tab {
         display: none;
     }
     
@@ -401,6 +477,15 @@
         border-color: #374151;
     }
     
+    .desktop-toc-tab {
+        background: #374151;
+        color: #f9fafb;
+    }
+    
+    .desktop-toc-tab:hover {
+        background: #4b5563;
+    }
+    
     .toc-header {
         background: #111827;
         border-bottom-color: #374151;
@@ -449,7 +534,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!tocContainer) return;
     
     const showOnScroll = parseInt(tocContainer.dataset.showScroll) || 300;
+    const position = tocContainer.dataset.position || 'right';
     const desktopPanel = document.getElementById('desktop-toc-panel');
+    const desktopTab = document.getElementById('desktop-toc-tab');
     const mobileToggle = document.getElementById('mobile-toc-toggle');
     const mobileOverlay = document.getElementById('mobile-toc-overlay');
     const tocCloseBtn = document.getElementById('toc-close-btn');
@@ -457,7 +544,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressBar = document.getElementById('toc-progress-bar');
     
     let isDesktopTocVisible = false;
+    let isDesktopTabVisible = false;
     let isMobileTocVisible = false;
+    let hasUserClosedToc = false; // Track if user manually closed TOC
     let currentActiveLink = null;
     let headings = [];
     let tocLinks = [];
@@ -466,6 +555,14 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
     
     function init() {
+        // Set position attributes
+        if (desktopPanel) {
+            desktopPanel.setAttribute('data-position', position);
+        }
+        if (desktopTab) {
+            desktopTab.setAttribute('data-position', position);
+        }
+        
         // Collect all headings and TOC links
         collectHeadingsAndLinks();
         
@@ -537,6 +634,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function setupClickHandlers() {
+        // Desktop tab click to show TOC
+        if (desktopTab) {
+            desktopTab.addEventListener('click', function() {
+                showDesktopToc();
+                hasUserClosedToc = false; // Reset flag when user opens TOC
+            });
+        }
+        
         // Mobile toggle button
         if (mobileToggle) {
             mobileToggle.addEventListener('click', toggleMobileToc);
@@ -544,7 +649,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Desktop close button
         if (tocCloseBtn) {
-            tocCloseBtn.addEventListener('click', hideDesktopToc);
+            tocCloseBtn.addEventListener('click', function() {
+                hideDesktopToc();
+                showDesktopTab();
+                hasUserClosedToc = true; // User manually closed TOC
+            });
         }
         
         // Mobile close button
@@ -568,6 +677,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     hideMobileToc();
                 } else if (isDesktopTocVisible) {
                     hideDesktopToc();
+                    showDesktopTab();
+                    hasUserClosedToc = true;
                 }
             }
         });
@@ -612,13 +723,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show/hide TOC based on scroll position
         if (scrollTop > showOnScroll) {
             if (window.innerWidth >= 768) {
-                showDesktopToc();
+                // Only auto-show TOC if user hasn't manually closed it
+                if (!hasUserClosedToc && !isDesktopTocVisible) {
+                    showDesktopToc();
+                } else if (hasUserClosedToc && !isDesktopTabVisible) {
+                    showDesktopTab();
+                }
             } else {
                 showMobileToggle();
             }
         } else {
             if (window.innerWidth >= 768) {
                 hideDesktopToc();
+                hideDesktopTab();
+                hasUserClosedToc = false; // Reset when scrolling back to top
             } else {
                 hideMobileToggle();
             }
@@ -629,6 +747,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isDesktopTocVisible && desktopPanel) {
             desktopPanel.classList.add('show');
             isDesktopTocVisible = true;
+            hideDesktopTab(); // Hide tab when TOC is shown
         }
     }
     
@@ -636,6 +755,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isDesktopTocVisible && desktopPanel) {
             desktopPanel.classList.remove('show');
             isDesktopTocVisible = false;
+        }
+    }
+    
+    function showDesktopTab() {
+        if (!isDesktopTabVisible && desktopTab && window.innerWidth >= 768) {
+            desktopTab.classList.add('show');
+            isDesktopTabVisible = true;
+        }
+    }
+    
+    function hideDesktopTab() {
+        if (isDesktopTabVisible && desktopTab) {
+            desktopTab.classList.remove('show');
+            isDesktopTabVisible = false;
         }
     }
     
@@ -722,6 +855,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Close mobile TOC if screen becomes desktop
             if (window.innerWidth >= 768 && isMobileTocVisible) {
                 hideMobileToc();
+            }
+            
+            // Hide desktop tab if screen becomes mobile
+            if (window.innerWidth < 768) {
+                hideDesktopTab();
             }
         }, 100);
     });
