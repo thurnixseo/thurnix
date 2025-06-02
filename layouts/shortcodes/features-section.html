@@ -1,74 +1,17 @@
-{{/* Features Section Wrapper Shortcode - Mobile Optimized */}}
+{{/* Features Section Wrapper Shortcode */}}
 {{ $title := .Get "title" | default "Powerful Features for Modern Teams" }}
 {{ $description := .Get "description" | default "Discover how our platform helps you understand and optimize every aspect of your user experience." }}
 
 <section class="section">
     <div class="container">
-        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">{{ $title }}</h2>
-            <p class="text-lg md:text-xl text-gray-600">{{ $description }}</p>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">{{ $title }}</h2>
+            <p class="text-xl text-gray-600">{{ $description }}</p>
         </div>
 
-        <!-- Feature Grid - MAIN FIX: Thay space-y-32 thành responsive spacing -->
-        <!-- Mobile: space-y-12 (3rem), Tablet: space-y-20 (5rem), Desktop: space-y-32 (8rem) -->
-        <div class="space-y-12 md:space-y-20 lg:space-y-32">
+        <!-- Feature Grid -->
+        <div class="space-y-16 md:space-y-32">
             {{ .Inner }}
         </div>
     </div>
 </section>
-
-<!-- Additional CSS for mobile optimization -->
-<style>
-/* Mobile-specific optimizations for features section */
-@media (max-width: 768px) {
-    .section {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    
-    /* Reduce image heights on mobile */
-    .features-section img,
-    section img {
-        max-height: 250px !important;
-        object-fit: cover;
-        width: 100%;
-    }
-    
-    /* Optimize typography spacing */
-    .features-section h3,
-    section h3 {
-        line-height: 1.3 !important;
-    }
-    
-    .features-section p,
-    section p {
-        line-height: 1.5 !important;
-    }
-    
-    /* Optimize button spacing */
-    .btn-primary {
-        margin-top: 1rem !important;
-        padding: 0.75rem 1.5rem !important;
-        font-size: 0.875rem !important;
-    }
-}
-
-/* Tablet optimization */
-@media (min-width: 769px) and (max-width: 1023px) {
-    .space-y-20 > * + * {
-        margin-top: 5rem !important;
-    }
-}
-
-/* Ensure proper spacing on all screen sizes */
-@media (max-width: 640px) {
-    .space-y-12 > * + * {
-        margin-top: 2.5rem !important;
-    }
-    
-    .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-}
-</style>
