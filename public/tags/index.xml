@@ -5,126 +5,42 @@
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Thurnix</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 30 May 2025 16:30:27 +0700</lastBuildDate>
+    <language>vi-VN</language>
+    <lastBuildDate>Sun, 01 Jun 2025 11:58:05 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Content-Management</title>
-      <link>http://localhost:1313/tags/content-management/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/content-management/</guid>
+      <title>Dịch Vụ Seo Tphcm</title>
+      <link>http://localhost:1313/tags/d%E1%BB%8Bch-v%E1%BB%A5-seo-tphcm/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/d%E1%BB%8Bch-v%E1%BB%A5-seo-tphcm/</guid>
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <title>Digital Marketing</title>
+      <link>http://localhost:1313/tags/digital-marketing/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/digital-marketing/</guid>
       <description></description>
     </item>
     <item>
-      <title>Organization</title>
-      <link>http://localhost:1313/tags/organization/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/organization/</guid>
+      <title>Google Ranking</title>
+      <link>http://localhost:1313/tags/google-ranking/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/google-ranking/</guid>
       <description></description>
     </item>
     <item>
-      <title>Workflow</title>
-      <link>http://localhost:1313/tags/workflow/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/workflow/</guid>
+      <title>Seo Hcm</title>
+      <link>http://localhost:1313/tags/seo-hcm/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/seo-hcm/</guid>
       <description></description>
     </item>
     <item>
-      <title>Optimization</title>
-      <link>http://localhost:1313/tags/optimization/</link>
-      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/optimization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Performance</title>
-      <link>http://localhost:1313/tags/performance/</link>
-      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/performance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Seo</title>
-      <link>http://localhost:1313/tags/seo/</link>
-      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/seo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Deployment</title>
-      <link>http://localhost:1313/tags/deployment/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/deployment/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Github-Pages</title>
-      <link>http://localhost:1313/tags/github-pages/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Netlify</title>
-      <link>http://localhost:1313/tags/netlify/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/netlify/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vercel</title>
-      <link>http://localhost:1313/tags/vercel/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vercel/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Customization</title>
-      <link>http://localhost:1313/tags/customization/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/customization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Themes</title>
-      <link>http://localhost:1313/tags/themes/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/themes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web-Design</title>
-      <link>http://localhost:1313/tags/web-design/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Beginners</title>
-      <link>http://localhost:1313/tags/beginners/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/beginners/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Static-Site</title>
-      <link>http://localhost:1313/tags/static-site/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/static-site/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web-Development</title>
-      <link>http://localhost:1313/tags/web-development/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-development/</guid>
+      <title>Seo Website</title>
+      <link>http://localhost:1313/tags/seo-website/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/seo-website/</guid>
       <description></description>
     </item>
   </channel>

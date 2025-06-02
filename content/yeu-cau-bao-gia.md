@@ -1024,63 +1024,103 @@ document.head.appendChild(style);
         <h2 class="text-3xl font-bold mb-6">So sánh bảng giá các dịch vụ</h2>
         <p class="text-xl text-gray-600">Tham khảo mức giá để có cái nhìn tổng quan trước khi nhận báo giá chi tiết</p>
     </div>
-    
-    <div class="overflow-x-auto">
-        <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-            <thead class="bg-gradient-to-r from-blue-600 to-green-600 text-white">
-                <tr>
-                    <th class="px-6 py-4 text-left text-sm font-medium">Dịch vụ</th>
-                    <th class="px-6 py-4 text-center text-sm font-medium">Gói cơ bản</th>
-                    <th class="px-6 py-4 text-center text-sm font-medium">Gói chuyên nghiệp</th>
-                    <th class="px-6 py-4 text-center text-sm font-medium">Gói cao cấp</th>
-                    <th class="px-6 py-4 text-center text-sm font-medium">Thời gian</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-                <tr class="hover:bg-blue-50">
-                    <td class="px-6 py-4 font-semibold">🔍 Dịch vụ SEO</td>
-                    <td class="px-6 py-4 text-center">15 triệu VNĐ/tháng</td>
-                    <td class="px-6 py-4 text-center"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">30 triệu VNĐ/tháng</span></td>
-                    <td class="px-6 py-4 text-center">60 triệu VNĐ/tháng</td>
-                    <td class="px-6 py-4 text-center text-sm">6-12 tháng</td>
-                </tr>
-                <tr class="hover:bg-purple-50">
-                    <td class="px-6 py-4 font-semibold">🤖 Dịch vụ AEO</td>
-                    <td class="px-6 py-4 text-center">25 triệu VNĐ/tháng</td>
-                    <td class="px-6 py-4 text-center"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">45 triệu VNĐ/tháng</span></td>
-                    <td class="px-6 py-4 text-center">80 triệu VNĐ/tháng</td>
-                    <td class="px-6 py-4 text-center text-sm">3-6 tháng</td>
-                </tr>
-                <tr class="hover:bg-green-50">
-                    <td class="px-6 py-4 font-semibold">🎨 Thiết kế Web SEO</td>
-                    <td class="px-6 py-4 text-center">25 triệu VNĐ</td>
-                    <td class="px-6 py-4 text-center"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">45 triệu VNĐ</span></td>
-                    <td class="px-6 py-4 text-center">80 triệu VNĐ</td>
-                    <td class="px-6 py-4 text-center text-sm">3-5 tuần</td>
-                </tr>
-                <tr class="hover:bg-orange-50">
-                    <td class="px-6 py-4 font-semibold">📦 Combo SEO + Web</td>
-                    <td class="px-6 py-4 text-center">35 triệu VNĐ</td>
-                    <td class="px-6 py-4 text-center"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">65 triệu VNĐ</span></td>
-                    <td class="px-6 py-4 text-center">120 triệu VNĐ</td>
-                    <td class="px-6 py-4 text-center text-sm">1-2 tháng</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
-    <div class="mt-8 text-center">
-        <p class="text-gray-600 mb-4">💡 <strong>Lưu ý:</strong> Giá cuối cùng có thể thay đổi tùy theo độ phức tạp và yêu cầu cụ thể của dự án</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#form-bao-gia" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                📋 Yêu cầu báo giá chính xác
-            </a>
-            <a href="/lien-he/" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                💬 Tư vấn trực tiếp
-            </a>
-        </div>
+<div class="overflow-x-auto">
+    <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+        <thead class="bg-gradient-to-r from-blue-600 to-green-600 text-white">
+            <tr>
+                <th class="px-6 py-4 text-left text-sm font-medium">Dịch vụ</th>
+                <th class="px-6 py-4 text-center text-sm font-medium">Gói cơ bản</th>
+                <th class="px-6 py-4 text-center text-sm font-medium">Gói chuyên nghiệp</th>
+                <th class="px-6 py-4 text-center text-sm font-medium">Gói cao cấp</th>
+                <th class="px-6 py-4 text-center text-sm font-medium">Thời gian</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-blue-50">
+                <td class="px-6 py-4 font-semibold">🔍 Dịch vụ SEO</td>
+                <td class="px-6 py-4 text-center">15 triệu VNĐ/tháng</td>
+                <td class="px-6 py-4 text-center"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">30 triệu VNĐ/tháng</span></td>
+                <td class="px-6 py-4 text-center">60 triệu VNĐ/tháng</td>
+                <td class="px-6 py-4 text-center text-sm">6-12 tháng</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+                <td class="px-6 py-4 font-semibold">🤖 Dịch vụ AEO</td>
+                <td class="px-6 py-4 text-center">25 triệu VNĐ/tháng</td>
+                <td class="px-6 py-4 text-center"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">45 triệu VNĐ/tháng</span></td>
+                <td class="px-6 py-4 text-center">80 triệu VNĐ/tháng</td>
+                <td class="px-6 py-4 text-center text-sm">3-6 tháng</td>
+            </tr>
+            <tr class="hover:bg-green-50">
+                <td class="px-6 py-4 font-semibold">🎨 Thiết kế Web SEO</td>
+                <td class="px-6 py-4 text-center">25 triệu VNĐ</td>
+                <td class="px-6 py-4 text-center"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">45 triệu VNĐ</span></td>
+                <td class="px-6 py-4 text-center">80 triệu VNĐ</td>
+                <td class="px-6 py-4 text-center text-sm">3-5 tuần</td>
+            </tr>
+            <tr class="hover:bg-orange-50">
+                <td class="px-6 py-4 font-semibold">📦 Combo SEO + Web</td>
+                <td class="px-6 py-4 text-center">35 triệu VNĐ</td>
+                <td class="px-6 py-4 text-center"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">65 triệu VNĐ</span></td>
+                <td class="px-6 py-4 text-center">120 triệu VNĐ</td>
+                <td class="px-6 py-4 text-center text-sm">1-2 tháng</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-8 text-center">
+    <p class="text-gray-600 mb-4">💡 <strong>Lưu ý:</strong> Giá cuối cùng có thể thay đổi tùy theo độ phức tạp và yêu cầu cụ thể của dự án</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#form-bao-gia" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            📋 Yêu cầu báo giá chính xác
+        </a>
+        <a href="/lien-he/" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+            💬 Tư vấn trực tiếp
+        </a>
     </div>
 </div>
+</div>
+<style>
+/* Mobile optimizations for comparison table */
+@media (max-width: 768px) {
+    .overflow-x-auto table {
+        font-size: 11px;
+        min-width: 100%;
+    }
+    
+    .overflow-x-auto th,
+    .overflow-x-auto td {
+        padding: 8px 6px !important;
+        line-height: 1.3;
+    }
+    
+    .overflow-x-auto .text-xs {
+        font-size: 10px !important;
+    }
+    
+    .overflow-x-auto .rounded-full {
+        padding: 2px 6px !important;
+        font-size: 9px !important;
+    }
+}
+
+/* Ensure table doesn't overflow on very small screens */
+@media (max-width: 480px) {
+    .overflow-x-auto {
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+    
+    .overflow-x-auto table {
+        font-size: 10px;
+    }
+    
+    .overflow-x-auto th,
+    .overflow-x-auto td {
+        padding: 6px 4px !important;
+    }
+}
+</style>
 {{< /section-container >}}
 
 {{< section-container class="py-20 bg-gray-50" >}}
