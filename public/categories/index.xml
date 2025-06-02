@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 01 Jun 2025 11:58:05 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tin Dịch Vụ</title>
-      <link>http://localhost:1313/categories/tin-d%E1%BB%8Bch-v%E1%BB%A5/</link>
+      <title>News</title>
+      <link>http://localhost:1313/categories/news/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tin-d%E1%BB%8Bch-v%E1%BB%A5/</guid>
+      <guid>http://localhost:1313/categories/news/</guid>
       <description></description>
     </item>
   </channel>

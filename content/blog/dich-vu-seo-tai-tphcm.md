@@ -3,8 +3,8 @@ title: "Dịch Vụ SEO Tại TP.HCM: Đưa Website Lên TOP Google"
 date: 2024-12-15
 author: "Chuyên Gia SEO"
 description: "Dịch vụ SEO chuyên nghiệp tại TP.HCM với đội ngũ 5+ năm kinh nghiệm. Cam kết đưa website lên TOP Google, tăng traffic và doanh số bán hàng hiệu quả."
-categories: ["Tin dịch vụ"]
-tags: ["dịch vụ seo tphcm", "seo hcm", "seo website", "digital marketing", "google ranking"]
+categories: ["News"]
+tags: ["dich vu seo tphcm", "seo hcm", "seo website", "digital marketing", "google ranking"]
 featured_image: "/images/blog/blog-5.jpg"
 type: "service"
 draft: false
