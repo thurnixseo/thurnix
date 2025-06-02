@@ -41,7 +41,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                                 <time datetime="{{ .Date.Format "2006-01-02" }}">
-                                    {{ .Date.Format "2 Jan 2006" }}
+                                    {{ partial "date-format.html" (dict "date" .Date "format" "short") }}
                                 </time>
                             </div>
                         </a>
@@ -56,12 +56,23 @@
         <div class="bg-white rounded-lg shadow-md p-6">
             <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.categories.title | default "Danh mục" }}</h3>
             <div class="space-y-2">
-                {{ range .Site.Taxonomies.categories.ByCount }}
-                    <a href="{{ .Page.RelPermalink }}"
-                       class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors group">
-                        <span class="text-gray-700 group-hover:text-primary-600">{{ .Page.Title }}</span>
-                        <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full group-hover:bg-primary-100 group-hover:text-primary-700">{{ .Count }}</span>
-                    </a>
+                {{ if .Site.Taxonomies.categories }}
+                    {{ range .Site.Taxonomies.categories.ByCount }}
+                        {{ $categoryPage := site.GetPage (printf "/categories/%s" .Name) }}
+                        <a href="{{ $categoryPage.RelPermalink }}"
+                           class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors group">
+                            <span class="text-gray-700 group-hover:text-blue-600">
+                                {{ if $categoryPage }}
+                                    {{ $categoryPage.Title }}
+                                {{ else }}
+                                    {{ .Name | title }}
+                                {{ end }}
+                            </span>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full group-hover:bg-blue-100 group-hover:text-blue-700">{{ .Count }}</span>
+                        </a>
+                    {{ end }}
+                {{ else }}
+                    <p class="text-gray-500 text-sm">Chưa có danh mục nào.</p>
                 {{ end }}
             </div>
         </div>
@@ -71,20 +82,25 @@
     {{ if .Site.Params.blog.sidebar.tags.enable }}
         <div class="bg-white rounded-lg shadow-md p-6">
             <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.tags.title | default "Tags phổ biến" }}</h3>
-            <div class="flex flex-wrap gap-2">
-                {{ $tagCount := .Site.Params.blog.sidebar.tags.count | default 20 }}
-                {{ range first $tagCount .Site.Taxonomies.tags.ByCount }}
-                    <a href="{{ .Page.RelPermalink }}"
-                       class="inline-block px-3 py-1 text-sm text-gray-600 bg-gray-100 hover:bg-primary-100 hover:text-primary-700 rounded-full transition-colors">
-                        #{{ .Name }}
-                        <span class="text-xs text-gray-500 ml-1">({{ .Count }})</span>
-                    </a>
-                {{ end }}
-            </div>
+            {{ if .Site.Taxonomies.tags }}
+                <div class="flex flex-wrap gap-2">
+                    {{ $tagCount := .Site.Params.blog.sidebar.tags.count | default 20 }}
+                    {{ $allTags := .Site.Taxonomies.tags.ByCount }}
+                    {{ range first $tagCount $allTags }}
+                        {{ $tagPage := site.GetPage (printf "/tags/%s" .Name) }}
+                        <a href="{{ $tagPage.RelPermalink }}"
+                           class="inline-block px-3 py-1 text-sm text-gray-600 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 rounded-full transition-colors">
+                            #{{ if $tagPage }}{{ $tagPage.Title }}{{ else }}{{ .Name }}{{ end }}
+                            <span class="text-xs text-gray-500 ml-1">({{ .Count }})</span>
+                        </a>
+                    {{ end }}
+                </div>
+            {{ else }}
+                <p class="text-gray-500 text-sm">Chưa có tags nào.</p>
+            {{ end }}
         </div>
     {{ end }}
 
-    <!-- Phần còn lại giữ nguyên... -->
     <!-- CTA Widget cho Thurnix -->
     <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-md p-6 text-white">
         <div class="text-center">
@@ -167,7 +183,7 @@
         </div>
     </div>
 
-   <!-- Social Media Widget -->
+    <!-- Social Media Widget -->
     <div class="bg-white rounded-lg shadow-md p-6">
         <h3 class="text-lg font-bold mb-4">🌐 Theo dõi Thurnix</h3>
         <div class="flex flex-wrap gap-3">

@@ -1,0 +1,53 @@
+{{/* 
+  Date formatting in Vietnamese
+  Usage: {{ partial "date-format.html" .Date }}
+  Usage with format: {{ partial "date-format.html" (dict "date" .Date "format" "short") }}
+*/}}
+
+{{ $date := . }}
+{{ $format := "full" }}
+
+{{/* Check if it's a dict with date and format */}}
+{{ if reflect.IsMap . }}
+  {{ $date = .date }}
+  {{ $format = .format | default "full" }}
+{{ end }}
+
+{{ $day := $date.Format "2" }}
+{{ $month := $date.Format "1" }}
+{{ $year := $date.Format "2006" }}
+
+{{/* Vietnamese month names */}}
+{{ $monthNames := slice "Tháng 1" "Tháng 2" "Tháng 3" "Tháng 4" "Tháng 5" "Tháng 6" "Tháng 7" "Tháng 8" "Tháng 9" "Tháng 10" "Tháng 11" "Tháng 12" }}
+{{ $monthName := index $monthNames (sub (int $month) 1) }}
+
+{{/* Vietnamese day names */}}
+{{ $dayOfWeek := $date.Format "Monday" }}
+{{ $dayNames := dict 
+  "Monday" "Thứ Hai"
+  "Tuesday" "Thứ Ba" 
+  "Wednesday" "Thứ Tư"
+  "Thursday" "Thứ Năm"
+  "Friday" "Thứ Sáu"
+  "Saturday" "Thứ Bảy"
+  "Sunday" "Chủ Nhật"
+}}
+{{ $viDay := index $dayNames $dayOfWeek }}
+
+{{/* Different format options */}}
+{{ if eq $format "short" }}
+  {{/* Output: 15/12/2024 */}}
+  {{ printf "%s/%s/%s" $day $month $year }}
+{{ else if eq $format "medium" }}
+  {{/* Output: 15 Tháng 12, 2024 */}}
+  {{ printf "%s %s, %s" $day $monthName $year }}
+{{ else if eq $format "long" }}
+  {{/* Output: 15 Tháng 12 năm 2024 */}}
+  {{ printf "%s %s năm %s" $day $monthName $year }}
+{{ else if eq $format "full" }}
+  {{/* Output: Thứ Hai, 15 Tháng 12 năm 2024 */}}
+  {{ printf "%s, %s %s năm %s" $viDay $day $monthName $year }}
+{{ else }}
+  {{/* Default: medium format */}}
+  {{ printf "%s %s, %s" $day $monthName $year }}
+{{ end }}
