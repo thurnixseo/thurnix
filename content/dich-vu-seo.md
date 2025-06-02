@@ -1,7 +1,7 @@
 ---
 title: "Dịch vụ SEO uy tín, chuyên nghiệp 2025"
 layout: "dich-vu"
-description: "Dịch vụ SEO chuyên nghiệp của Thurnix. Tăng thứ hạng Google, tăng traffic và doanh số với giải pháp SEO hiệu quả."
+description: "Dịch vụ SEO chuyên nghiệp của Thurnix giúp tăng thứ hạng Google, tăng traffic và doanh số với giải pháp SEO hiệu quả."
 keywords: ["dịch vụ SEO", "SEO chuyên nghiệp", "tăng thứ hạng Google", "SEO website", "Thurnix", "SEO tổng thể", "SEO từ khóa", "công ty SEO uy tín"]
 schemas:
   - "seo-service"
