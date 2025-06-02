@@ -174,37 +174,43 @@ testimonials:
 
         <div class="space-y-12">
             {{< case-study-card
-                "#10b981"
-                "E-commerce Fashion"
-                "Tăng 380% doanh thu từ SEO trong 8 tháng"
-                "Website thời trang với 2000+ sản phẩm đạt traffic 240K/tháng và conversion rate 3.8% nhờ tối ưu SEO tổng thể."
-                "Xem chi tiết →"
-                "/case-studies/ecommerce-fashion/"
-                "/images/case-study-ecommerce.webp"
-                "E-commerce Fashion Case Study"
-            >}}
+    "#10b981"
+    "E-commerce Fashion"
+    "Tăng 380% doanh thu từ SEO trong 8 tháng"
+    "Website thời trang với 2000+ sản phẩm đạt traffic 240K/tháng và conversion rate 3.8% nhờ tối ưu SEO tổng thể."
+    "Xem chi tiết →"
+    "/case-studies/ecommerce-fashion/"
+    "/images/case-study-ecommerce.webp"
+    "E-commerce Fashion Case Study"
+    "fashionstore.thurnix.com"
+    "Traffic|+380%|Revenue|+240%"
+>}}
 
-            {{< case-study-card
-                "#3b82f6"
-                "B2B SaaS Platform"
-                "95% từ khóa đạt Top 3, leads tăng 450%"
-                "Platform SaaS B2B từ 8K lên 85K organic traffic/tháng với domain authority tăng từ 25 lên 68 điểm."
-                "Xem chi tiết →"
-                "/case-studies/saas-platform/"
-                "/images/case-study-saas.webp"
-                "B2B SaaS Platform Case Study"
-            >}}
+{{< case-study-card
+    "#3b82f6"
+    "B2B SaaS Platform"
+    "95% từ khóa đạt Top 3, leads tăng 450%"
+    "Platform SaaS B2B từ 8K lên 85K organic traffic/tháng với domain authority tăng từ 25 lên 68 điểm."
+    "Xem chi tiết →"
+    "/case-studies/saas-platform/"
+    "/images/case-study-saas.webp"
+    "B2B SaaS Platform Case Study"
+    "saasplatform.thurnix.com"
+    "Leads|+450%|Authority|68 DA"
+>}}
 
-            {{< case-study-card
-                "#f59e0b"
-                "Local Restaurant Chain"
-                "Local SEO tăng 320% đặt bàn online"
-                "Chuỗi nhà hàng 3 chi nhánh đều top 3 Google Maps với 95K Google Maps views và 500% tăng direction requests."
-                "Xem chi tiết →"
-                "/case-studies/restaurant-chain/"
-                "/images/case-study-restaurant.webp"
-                "Restaurant Chain Case Study"
-            >}}
+{{< case-study-card
+    "#f59e0b"
+    "Local Restaurant Chain"
+    "Local SEO tăng 320% đặt bàn online"
+    "Chuỗi nhà hàng 3 chi nhánh đều top 3 Google Maps với 95K Google Maps views và 500% tăng direction requests."
+    "Xem chi tiết →"
+    "/case-studies/restaurant-chain/"
+    "/images/case-study-restaurant.webp"
+    "Restaurant Chain Case Study"
+    "restaurantchain.thurnix.com"
+    "Bookings|+320%|Maps Views|95K"
+>}}
         </div>
 
         <div class="text-center mt-12">
