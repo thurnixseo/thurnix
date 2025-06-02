@@ -1,6 +1,7 @@
 ---
-title: "Dịch Vụ SEO Tại TPHCM: Top 1 Google Cho Website Của Bạn"
+title: "Dịch Vụ SEO Tại TPHCM Uy Tín 2025"
 date: 2024-12-02
+update: 2025-01-05
 author: "Cường Phan"
 description: "Dịch vụ SEO tại TPHCM của Thurnix cam kết đưa website khách hàng lên TOP Google, tăng hơn 200% traffic organic trong thời gian 3-6 tháng."
 categories: ["Thurnix News"]
