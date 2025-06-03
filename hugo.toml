@@ -21,6 +21,8 @@ enableGitInfo = true
   category = 'categories'
   tag = 'tags'
 
+removePathAccents = true
+
 # Pagination
 paginate = 6
 paginatePath = "page"
