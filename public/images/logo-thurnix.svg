@@ -71,8 +71,8 @@
           fill="url(#darkTextShine)"
           filter="url(#subtleShadow)">Thurnix</text>
     
-    <!-- Registered symbol ® - sát góc phải trên -->
-    <text x="255" y="20" 
+    <!-- Registered symbol ® - RA NGOÀI CHỮ X VÀ LÊN CAO -->
+    <text x="250" y="25" 
           text-anchor="start" 
           font-family="Arial, sans-serif" 
           font-size="20" 
