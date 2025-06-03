@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Thurnix</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Tue, 03 Jun 2025 03:30:41 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 09:01:26 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tin Dịch Vụ</title>
@@ -34,13 +34,6 @@
       <link>http://localhost:1313/kien-thuc-website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/kien-thuc-website/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tin Tức</title>
-      <link>http://localhost:1313/categories/tin-t%E1%BB%A9c/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tin-t%E1%BB%A9c/</guid>
       <description></description>
     </item>
   </channel>
