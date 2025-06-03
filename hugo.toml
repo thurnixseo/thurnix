@@ -30,7 +30,7 @@ paginatePath = "page"
 [params]
   description = "Thurnix là công ty SEO uy tín tại Việt Nam, cung cấp các giải pháp tối ưu công cụ tìm kiếm chuyên nghiệp, giúp website doanh nghiệp tăng traffic nhanh."
   author = "Thurnix SEO"
-  logo = "/images/thurnix.webp"
+  logo = "/images/logo-thurnix.svg"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
 
@@ -71,7 +71,7 @@ paginatePath = "page"
     
     # Logo configuration
     [params.header.logo]
-      src = "/images/thurnix.webp"
+      src = "/images/logo-thurnix.svg"
     
     # Menu configuration
     [params.header.menu]
