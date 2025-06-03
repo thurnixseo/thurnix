@@ -13,19 +13,19 @@
     <div class="p-6">
         <!-- Category -->
         {{ with .Params.categories }}
-            <div class="mb-4">
-                {{ range first 1 . }}
-                    {{ $categoryPage := site.GetPage (printf "/categories/%s" (urlize .)) }}
-                    <a href="{{ $categoryPage.RelPermalink }}" 
-                       class="inline-block px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full hover:bg-blue-100">
-                        {{ if $categoryPage }}
-                            {{ $categoryPage.Title }}
-                        {{ else }}
-                            {{ . | title }}
-                        {{ end }}
-                    </a>
+    <div class="mb-4">
+        {{ range first 1 . }}
+            {{ $categoryPage := site.GetPage "taxonomy" "categories" . }}
+            <a href="{{ if $categoryPage }}{{ $categoryPage.RelPermalink }}{{ else }}/categories/{{ urlize . }}/{{ end }}" 
+               class="inline-block px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full hover:bg-blue-100">
+                {{ if $categoryPage }}
+                    {{ $categoryPage.Title }}
+                {{ else }}
+                    {{ . | title }}
                 {{ end }}
-            </div>
+            </a>
+        {{ end }}
+    </div>
         {{ end }}
 
         <!-- Title -->
