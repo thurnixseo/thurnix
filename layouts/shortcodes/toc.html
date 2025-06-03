@@ -468,10 +468,69 @@
 }
 
 /* ======================== */
+/* Mobile TOC Force White   */
+/* ======================== */
+
+/* Force mobile TOC to always be white background with dark text */
+@media (max-width: 768px) {
+    .mobile-toc-panel {
+        background: #ffffff !important;
+        color: #1f2937 !important;
+    }
+    
+    .mobile-toc-panel .toc-header {
+        background: #f8fafc !important;
+        border-bottom-color: #e5e7eb !important;
+    }
+    
+    .mobile-toc-panel .toc-title {
+        color: #1f2937 !important;
+    }
+    
+    .mobile-toc-panel .toc-close-btn {
+        color: #6b7280 !important;
+    }
+    
+    .mobile-toc-panel .toc-close-btn:hover {
+        background: #e5e7eb !important;
+        color: #374151 !important;
+    }
+    
+    .mobile-toc-panel .toc-content a {
+        color: #4b5563 !important;
+    }
+    
+    .mobile-toc-panel .toc-content a:hover,
+    .mobile-toc-panel .toc-content a.active {
+        color: #3b82f6 !important;
+        background: #eff6ff !important;
+        border-left-color: #3b82f6 !important;
+    }
+    
+    /* Force scrollbar colors on mobile */
+    .mobile-toc-panel .toc-content {
+        scrollbar-color: #d1d5db #f3f4f6 !important;
+    }
+    
+    .mobile-toc-panel .toc-content::-webkit-scrollbar-track {
+        background: #f3f4f6 !important;
+    }
+    
+    .mobile-toc-panel .toc-content::-webkit-scrollbar-thumb {
+        background: #d1d5db !important;
+    }
+    
+    .mobile-toc-panel .toc-content::-webkit-scrollbar-thumb:hover {
+        background: #9ca3af !important;
+    }
+}
+
+/* ======================== */
 /* Dark Mode Support        */
 /* ======================== */
 
 @media (prefers-color-scheme: dark) {
+    /* Only apply dark mode to desktop elements */
     .desktop-toc-panel {
         background: #1f2937;
         border-color: #374151;
@@ -486,40 +545,71 @@
         background: #4b5563;
     }
     
-    .toc-header {
+    /* Desktop TOC header and content dark mode */
+    .desktop-toc-panel .toc-header {
         background: #111827;
         border-bottom-color: #374151;
     }
     
-    .toc-title {
+    .desktop-toc-panel .toc-title {
         color: #f9fafb;
     }
     
-    .toc-close-btn {
+    .desktop-toc-panel .toc-close-btn {
         color: #9ca3af;
     }
     
-    .toc-close-btn:hover {
+    .desktop-toc-panel .toc-close-btn:hover {
         background: #374151;
         color: #e5e7eb;
     }
     
-    .toc-content a {
+    .desktop-toc-panel .toc-content a {
         color: #d1d5db;
     }
     
-    .toc-content a:hover,
-    .toc-content a.active {
+    .desktop-toc-panel .toc-content a:hover,
+    .desktop-toc-panel .toc-content a.active {
         color: #60a5fa;
         background: #1e3a8a;
     }
     
-    .mobile-toc-panel {
-        background: #1f2937;
+    .desktop-toc-panel .toc-progress {
+        background: #374151;
     }
     
-    .toc-progress {
-        background: #374151;
+    /* Mobile TOC stays white even in dark mode */
+    .mobile-toc-panel {
+        background: #ffffff !important;
+    }
+    
+    .mobile-toc-panel .toc-header {
+        background: #f8fafc !important;
+        border-bottom-color: #e5e7eb !important;
+    }
+    
+    .mobile-toc-panel .toc-title {
+        color: #1f2937 !important;
+    }
+    
+    .mobile-toc-panel .toc-close-btn {
+        color: #6b7280 !important;
+    }
+    
+    .mobile-toc-panel .toc-close-btn:hover {
+        background: #e5e7eb !important;
+        color: #374151 !important;
+    }
+    
+    .mobile-toc-panel .toc-content a {
+        color: #4b5563 !important;
+    }
+    
+    .mobile-toc-panel .toc-content a:hover,
+    .mobile-toc-panel .toc-content a.active {
+        color: #3b82f6 !important;
+        background: #eff6ff !important;
+        border-left-color: #3b82f6 !important;
     }
 }
 </style>
