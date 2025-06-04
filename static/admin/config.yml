@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: thurnixseo/thurnix
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: static/images
 public_folder: /images
