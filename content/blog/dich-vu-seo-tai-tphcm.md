@@ -1,15 +1,23 @@
 ---
-title: "Dịch Vụ SEO Tại TPHCM Uy Tín 2025"
-date: 2024-12-02
-update: 2025-01-05
-author: "Cường Phan"
-description: "Dịch vụ SEO tại TPHCM của Thurnix cam kết đưa website khách hàng lên TOP Google, tăng hơn 200% traffic organic trong thời gian 3-6 tháng."
-categories: ["Tin Dịch Vụ"]
-tags: ["dich vu seo tphcm", "cong ty seo tphcm", "seo tai tphcm", "cong ty seo tphcm uy tin", "dich vu seo tphcm uy tin"]
-featured_image: "/images/news/2025/06/dich-vu-seo-tai-tphcm-chuyen-nghiep.webp"
-type: "article"
 draft: false
+update: 2025-01-05
+featured_image: /images/news/2025/06/dich-vu-seo-tai-tphcm-chuyen-nghiep.webp
+author: Cường Phan
+date: 2024-12-02
 url: /dich-vu-seo-tai-tphcm/
+title: Dịch Vụ SEO Tại TPHCM Uy Tín 2025
+tags:
+  - dich vu seo tphcm
+  - cong ty seo tphcm
+  - seo tai tphcm
+  - cong ty seo tphcm uy tin
+  - dich vu seo tphcm uy tin
+  - seo tphcm
+type: article
+categories:
+  - Tin Dịch Vụ
+description: Dịch vụ SEO tại TPHCM của Thurnix cam kết đưa website khách hàng
+  lên TOP Google, tăng hơn 200% traffic organic trong thời gian 3-6 tháng.
 ---
 {{< toc >}}
 
