@@ -6,9 +6,9 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: "posts"
-    label: "Bài viết"
-    folder: "content/posts"
+  - name: "blog"
+    label: "📝 Bài viết Blog"
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -21,11 +21,90 @@ collections:
       - {label: "Nội dung", name: "body", widget: "markdown"}
 
   - name: "pages"
-    label: "Trang tĩnh"
+    label: "📄 Trang chính"
     files:
-      - label: "Trang giới thiệu"
+      - label: "🏠 Trang chủ"
+        name: "home"
+        file: "content/_index.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "ℹ️ Giới thiệu"
         name: "about"
-        file: "content/about/_index.md"
+        file: "content/gioi-thieu.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "📞 Liên hệ"
+        name: "contact"
+        file: "content/lien-he.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "services"
+    label: "🛠️ Dịch vụ"
+    files:
+      - label: "SEO Services"
+        name: "seo"
+        file: "content/dich-vu-seo.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "AEO Services"
+        name: "aeo"
+        file: "content/dich-vu-aeo.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "Thiết kế Web chuẩn SEO"
+        name: "web-design"
+        file: "content/thiet-ke-web-chuan-seo.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "business"
+    label: "💼 Kinh doanh"
+    files:
+      - label: "💰 Bảng giá"
+        name: "pricing"
+        file: "content/bang-gia.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "📋 Yêu cầu báo giá"
+        name: "quote"
+        file: "content/yeu-cau-bao-gia.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "👥 Tuyển dụng"
+        name: "recruitment"
+        file: "content/tuyen-dung.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "legal"
+    label: "⚖️ Pháp lý"
+    files:
+      - label: "🔒 Chính sách bảo mật"
+        name: "privacy"
+        file: "content/chinh-sach-bao-mat.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      
+      - label: "📜 Điều khoản điều kiện"
+        name: "terms"
+        file: "content/dieu-khoan-dieu-kien.md"
         fields:
           - {label: "Tiêu đề", name: "title", widget: "string"}
           - {label: "Nội dung", name: "body", widget: "markdown"}
