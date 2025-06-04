@@ -1,3 +1,23 @@
+{{ if eq .Type "tags" }}
+  {{ $tagSlug := .Title | urlize }}
+  {{ $displayName := replace .Title "-" " " | title }}
+  {{ range first 1 .Pages }}
+    {{ $currentPage := . }}
+    {{ if and $currentPage.Params.tags $currentPage.Params.tag_display }}
+      {{ range $i, $tag := $currentPage.Params.tags }}
+        {{ if eq ($tag | urlize) $tagSlug }}
+          {{ if lt $i (len $currentPage.Params.tag_display) }}
+            {{ $displayName = index $currentPage.Params.tag_display $i }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $.Scratch.Set "breadcrumbTitle" $displayName }}
+{{ else }}
+  {{ $.Scratch.Set "breadcrumbTitle" .Title }}
+{{ end }}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -13,7 +33,7 @@
     ,{
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ .Title }}",
+      "name": "{{ $.Scratch.Get "breadcrumbTitle" }}",
       "item": "{{ .Permalink }}"
     }
     {{ end }}
