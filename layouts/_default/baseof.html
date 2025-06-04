@@ -11,7 +11,7 @@
     {{ partial "google-analytics" . }}
     
     <!-- Title -->
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
     
     <!-- Breadcrumb luôn có -->
     {{ partial "schemas/breadcrumb.html" . }}

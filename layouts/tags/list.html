@@ -1,0 +1,50 @@
+{{ define "title" }}
+{{ $tagSlug := .Title | urlize }}
+{{ $displayName := replace .Title "-" " " | title }}
+{{ range first 1 .Pages }}
+    {{ $currentPage := . }}
+    {{ if and $currentPage.Params.tags $currentPage.Params.tag_display }}
+        {{ range $i, $tag := $currentPage.Params.tags }}
+            {{ if eq ($tag | urlize) $tagSlug }}
+                {{ if lt $i (len $currentPage.Params.tag_display) }}
+                    {{ $displayName = index $currentPage.Params.tag_display $i }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $displayName }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12">
+    <div class="mb-12">
+        {{ $tagSlug := .Title | urlize }}
+        {{ $displayName := replace .Title "-" " " | title }}
+        {{ range first 1 .Pages }}
+            {{ $currentPage := . }}
+            {{ if and $currentPage.Params.tags $currentPage.Params.tag_display }}
+                {{ range $i, $tag := $currentPage.Params.tags }}
+                    {{ if eq ($tag | urlize) $tagSlug }}
+                        {{ if lt $i (len $currentPage.Params.tag_display) }}
+                            {{ $displayName = index $currentPage.Params.tag_display $i }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        
+        <h1 class="text-4xl font-bold text-center mb-4">{{ $displayName }}</h1>
+        <p class="text-center text-gray-600">
+            {{ len .Pages }} bài viết với tag "{{ $displayName }}"
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range .Pages }}
+            {{ partial "post-card.html" . }}
+        {{ end }}
+    </div>
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

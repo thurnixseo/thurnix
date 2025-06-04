@@ -19,6 +19,7 @@ enableGitInfo = true
 # Enable taxonomies
 [taxonomies]
   category = 'categories'
+  tag_display = "tag_displays"
   tag = 'tags'
 
 removePathAccents = true
@@ -26,6 +27,11 @@ removePathAccents = true
 # Pagination
 paginate = 6
 paginatePath = "page"
+
+# Change Links
+[permalinks]
+  categories = "/danh-muc/:slug/"
+  tags = "/tag/:slug/"
 
 [params]
   description = "Thurnix là công ty SEO uy tín tại Việt Nam, cung cấp các giải pháp tối ưu công cụ tìm kiếm chuyên nghiệp, giúp website doanh nghiệp tăng traffic nhanh."

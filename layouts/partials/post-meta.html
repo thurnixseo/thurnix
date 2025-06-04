@@ -30,15 +30,15 @@
     </div>
 
     <!-- Tags -->
-    {{ with .Params.tags }}
-        <div class="flex items-center flex-wrap gap-2">
-            {{ range . }}
-                {{ $tagPage := site.GetPage (printf "/tags/%s" .) }}
-                <a href="{{ $tagPage.RelPermalink }}" 
-                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
-                    #{{ if $tagPage }}{{ $tagPage.Title }}{{ else }}{{ . }}{{ end }}
-                </a>
-            {{ end }}
-        </div>
+   {{ with .Params.tag_display }}
+    <div class="flex items-center flex-wrap gap-2">
+        {{ range $index, $displayTag := . }}
+            {{ $urlTag := index $.Params.tags $index }}
+            <a href="{{ "/tag/" | relLangURL }}{{ $urlTag | urlize }}/" 
+                class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                #{{ $displayTag }}
+            </a>
+        {{ end }}
+    </div>
     {{ end }}
 </div>

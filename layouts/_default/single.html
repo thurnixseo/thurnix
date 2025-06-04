@@ -6,8 +6,25 @@
         <article class="flex-1">
             <header class="mb-8">
                 {{ with .Params.categories }}
-                    
-                {{ end }}
+    <div class="mb-4">
+        {{ range . }}
+            {{ $categoryName := . }}
+            {{ $categoryPage := $.Site.GetPage (printf "/categories/%s" (. | urlize)) }}
+            {{ if $categoryPage }}
+                <a href="{{ $categoryPage.RelPermalink }}" 
+                   class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100 mr-2">
+                    {{ $categoryPage.Title }}
+                </a>
+            {{ else }}
+                <!-- Fallback nếu không tìm thấy category page -->
+                <a href="{{ "/danh-muc/" | relLangURL }}{{ . | urlize }}/" 
+                   class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100 mr-2">
+                    {{ . }}
+                </a>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}
 
                 <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
                 

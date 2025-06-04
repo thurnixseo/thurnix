@@ -78,7 +78,7 @@
         </div>
     {{ end }}
 
-    <!-- Tags Cloud -->
+<!-- Tags Cloud -->
     {{ if .Site.Params.blog.sidebar.tags.enable }}
         <div class="bg-white rounded-lg shadow-md p-6">
             <h3 class="text-lg font-bold mb-4">{{ .Site.Params.blog.sidebar.tags.title | default "Tags phổ biến" }}</h3>
@@ -87,10 +87,34 @@
                     {{ $tagCount := .Site.Params.blog.sidebar.tags.count | default 20 }}
                     {{ $allTags := .Site.Taxonomies.tags.ByCount }}
                     {{ range first $tagCount $allTags }}
+                        {{ $tagSlug := .Name | urlize }}
+                        {{ $displayName := .Name }}
+                        
+                        <!-- Tìm display name từ bài viết có tag này -->
+                        {{ range first 1 .Pages }}
+                            {{ $currentPage := . }}
+                            {{ if $currentPage.Params.tags }}
+                                {{ if $currentPage.Params.tag_display }}
+                                    {{ range $i, $tag := $currentPage.Params.tags }}
+                                        {{ if eq ($tag | urlize) $tagSlug }}
+                                            {{ if and $currentPage.Params.tag_display (lt $i (len $currentPage.Params.tag_display)) }}
+                                                {{ $displayName = index $currentPage.Params.tag_display $i }}
+                                            {{ end }}
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        <!-- Fallback: format slug nếu không tìm thấy -->
+                        {{ if eq $displayName .Name }}
+                            {{ $displayName = replace .Name "-" " " | title }}
+                        {{ end }}
+                        
                         {{ $tagPage := site.GetPage (printf "/tags/%s" .Name) }}
                         <a href="{{ $tagPage.RelPermalink }}"
                            class="inline-block px-3 py-1 text-sm text-gray-600 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 rounded-full transition-colors">
-                            #{{ if $tagPage }}{{ $tagPage.Title }}{{ else }}{{ .Name }}{{ end }}
+                            #{{ $displayName }}
                             <span class="text-xs text-gray-500 ml-1">({{ .Count }})</span>
                         </a>
                     {{ end }}

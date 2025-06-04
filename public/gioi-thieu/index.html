@@ -62,9 +62,9 @@
     "@id": "http:\/\/localhost:1313\/#organization",
     "logo": {
       "@type": "ImageObject",
-      "url": "http:\/\/localhost:1313\//images/thurnix-logo.webp",
-      "width": 600,
-      "height": 60
+      "url": "http:\/\/localhost:1313\//images/thurnix.webp",
+      "width": 979,
+      "height": 212
     }
   },
   "copyrightHolder": {
@@ -251,9 +251,9 @@
   "url": "http:\/\/localhost:1313\/",
   "logo": {
     "@type": "ImageObject",
-    "url": "http:\/\/localhost:1313\//images/thurnix-logo.webp",
-    "width": 600,
-    "height": 60
+    "url": "http:\/\/localhost:1313\//images/thurnix.webp",
+    "width": 972,
+    "height": 212
   },
   "image": [
     "http:\/\/localhost:1313\//images/thurnix-cover.webp",
@@ -299,8 +299,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 10.8231,
-    "longitude": 106.6297
+    "latitude": 10.8458049,
+    "longitude": 106.6528169
   },
   "contactPoint": [
     {
@@ -347,7 +347,7 @@
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/thurnixseo",
+    "https://www.facebook.com/thurnix",
     "https://www.linkedin.com/company/thurnixseo",
     "https://twitter.com/thurnixseo",
     "https://www.youtube.com/@thurnixseo",
@@ -500,6 +500,7 @@
 
     
     
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="min-h-screen flex flex-col">
     
@@ -1477,7 +1478,7 @@
 </div>
                 <div class="flex space-x-3 p-2">
                     
-                    <a href="https://linkedin.com/in/thurnixseo" class="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/company/thurnix" class="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
                         <span class="sr-only">LinkedIn</span>
                         <img src="/images/social/linkedin.svg" alt="LinkedIn" class="h-5 w-5">
                     </a>
@@ -1495,7 +1496,7 @@
                     </a>
                     
                     
-                    <a href="https://facebook.com/thurnixseo" class="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
+                    <a href="https://facebook.com/thurnix" class="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
                         <span class="sr-only">Facebook</span>
                         <img src="/images/social/facebook.svg" alt="Facebook" class="h-5 w-5">
                     </a>
@@ -1564,9 +1565,6 @@
                 <p class="text-gray-600 text-sm">
                     © 2025 Thurnix. All rights reserved.
                 </p>
-                <a href="https://thurnix.com" class="text-sm text-gray-600 hover:text-primary-600" target="_blank" rel="noopener noreferrer">
-                    Phát triển bởi Thurnix
-                </a>
             </div>
         </div>
     </div>
@@ -1585,5 +1583,16 @@
             });
         }
     </script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
