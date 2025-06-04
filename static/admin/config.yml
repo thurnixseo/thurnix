@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "posts"
+    label: "Bài viết"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Tiêu đề", name: "title", widget: "string"}
+      - {label: "Ngày đăng", name: "date", widget: "datetime"}
+      - {label: "Bản nháp", name: "draft", widget: "boolean", default: false}
+      - {label: "Mô tả ngắn", name: "description", widget: "string", required: false}
+      - {label: "Ảnh đại diện", name: "image", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Trang tĩnh"
+    files:
+      - label: "Trang giới thiệu"
+        name: "about"
+        file: "content/about/_index.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
