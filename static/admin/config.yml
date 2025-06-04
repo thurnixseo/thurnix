@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: thurnixseo/thurnix
   branch: main
+  auth_type: pkce # Enable Proof Key for Code Exchange
 
 media_folder: static/images
 public_folder: /images
