@@ -1192,28 +1192,28 @@ schemas:
                 name="Thương Phạm"
                 title="CEO & AEO Pioneer"
                 image="/images/thuong-pham.webp"
-                linkedin="https://linkedin.com/in/thuongpham"
+                linkedin="https://linkedin.com/in/thuong-pham-thurnix"
             >}}
             
             {{< team-member
                 name="An Nguyễn"
                 title="AI Research Lead"
                 image="/images/an-nguyen.webp"
-                linkedin="https://linkedin.com/in/annguyen"
+                linkedin="https://linkedin.com/in/an-nguyen-thurnix"
             >}}
             
             {{< team-member
                 name="Linh Trần"
                 title="Conversational AI Specialist"
                 image="/images/linh-tran.webp"
-                linkedin="https://linkedin.com/in/linhtran"
+                linkedin="https://linkedin.com/in/linh-tran-thurnix"
             >}}
             
             {{< team-member
                 name="Khoa Lê"
                 title="Knowledge Graph Engineer"
                 image="/images/khoa-le.webp"
-                linkedin="https://linkedin.com/in/khoale"
+                linkedin="https://linkedin.com/in/khoa-le-thurnix"
             >}}
         </div>
         
