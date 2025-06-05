@@ -10,6 +10,8 @@ tags: ["dich-vu-seo-tphcm", "cong-ty-seo-tphcm", "seo-tai-tphcm", "cong-ty-seo-t
 featured_image: "/images/news/2025/06/dich-vu-seo-tai-tphcm-chuyen-nghiep.webp" 
 type: "article" 
 url: "/dich-vu-seo-tai-tphcm/" 
+schemas:
+  - "dvseohcm"
 ---
 {{< toc >}}
 
