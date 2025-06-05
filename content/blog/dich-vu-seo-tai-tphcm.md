@@ -559,7 +559,7 @@ Dù bạn lựa chọn gói dịch vụ nào, Thurnix luôn cam kết mang đế
         </div>
     </div>
     <div class="mt-8">
-        <p class="text-gray-700 mb-2 text-lg">💡 <strong>Tư vấn miễn phí giải pháp SEO TPHCM tối ưu</strong>: <strong>Nhận ngay bản phân tích website sơ bộ</strong> và lộ trình SEO chi tiết được cá nhân hóa cho doanh nghiệp của bạn!</p>
+        <p class="text-gray-700 mb-2 text-lg">💡 <strong>Tư vấn miễn phí giải pháp SEO TPHCM tối ưu</strong>: Nhận ngay bản phân tích website sơ bộ và lộ trình SEO chi tiết được cá nhân hóa cho doanh nghiệp của bạn!</p>
         <p class="text-gray-700 text-lg">📞<strong>Hotline Tư Vấn 24/7</strong>: <a href="tel:0925604604" class="text-blue-600 font-semibold">0925 604 604</a> | 📧<strong>Email</strong>: <a href="mailto:seo@thurnix.com" class="text-blue-600 font-semibold">seo@thurnix.com</a></p>
     </div>
 </div>
