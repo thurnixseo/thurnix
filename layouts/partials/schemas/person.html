@@ -1,4 +1,3 @@
-<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -8,6 +7,10 @@
   "familyName": "Phạm",
   "alternateName": ["CEO Thurnix", "Founder Thurnix"],
   "description": "CEO và Founder của Thurnix - Công ty dịch vụ SEO hàng đầu Việt Nam. Chuyên gia SEO với hơn 8 năm kinh nghiệm trong lĩnh vực Digital Marketing và Answer Engine Optimization.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Site.BaseURL }}/gioi-thieu/"
+  },
   "image": {
     "@type": "ImageObject",
     "url": "{{ .Site.BaseURL }}/images/thuong-pham-ceo.webp",
@@ -23,6 +26,15 @@
     "occupationLocation": {
       "@type": "City",
       "name": "Ho Chi Minh City"
+    },
+    "estimatedSalary": {
+      "@type": "MonetaryAmountDistribution",
+      "name": "base",
+      "currency": "VND",
+      "duration": "P1Y",
+      "minValue": 500000000,
+      "maxValue": 1000000000,
+      "median": 750000000
     },
     "skills": [
       "Search Engine Optimization",
@@ -79,9 +91,9 @@
     "contactType": "business"
   },
   "sameAs": [
-    "https://www.linkedin.com/in/thuongpham-thurnix",
-    "https://www.facebook.com/thuongpham-thurnix",
-    "https://twitter.com/thuongpham-thurnix"
+    "https://www.linkedin.com/in/thuong-pham-thurnix",
+    "https://www.facebook.com/thuong-pham-thurnix",
+    "https://twitter.com/thuong-pham-thurnix"
   ],
   "award": [
     "SEO Expert of the Year Vietnam 2023",
@@ -125,4 +137,3 @@
     }
   }
 }
-</script>
