@@ -1090,7 +1090,7 @@ Thay vì đưa ra những lời hứa hẹn thiếu cơ sở và phi thực tế
 ### 5. Làm thế nào để SEO có thể kết hợp hiệu quả với các hoạt động marketing khác của doanh nghiệp tôi tại Hà Nội (ví dụ: quảng cáo Google Ads, Social Media Marketing)?
 <p>SEO không nên được xem là một hoạt động độc lập mà cần được tích hợp một cách thông minh vào chiến lược marketing tổng thể (Integrated Marketing) của doanh nghiệp tại Hà Nội để tạo ra hiệu ứng cộng hưởng và tối đa hóa hiệu quả. Dưới đây là một số cách kết hợp phổ biến:</p>
 <ul>
-    <li><strong>SEO và Quảng cáo Google Ads (PPC):**
+    <li><strong>SEO và Quảng cáo Google Ads (PPC):</strong>
         <ul>
             <li>Dữ liệu từ khóa từ Google Ads (những từ khóa mang lại chuyển đổi cao) có thể cung cấp thông tin đầu vào quý giá cho việc lựa chọn từ khóa SEO.</li>
             <li>SEO giúp xây dựng sự hiện diện bền vững, trong khi Google Ads có thể được sử dụng để nhanh chóng tiếp cận khách hàng cho các chiến dịch ngắn hạn, sản phẩm mới, hoặc các từ khóa siêu cạnh tranh mà SEO cần nhiều thời gian hơn.</li>
@@ -1098,7 +1098,7 @@ Thay vì đưa ra những lời hứa hẹn thiếu cơ sở và phi thực tế
             <li>Remarketing trong Google Ads có thể nhắm lại những người dùng đã truy cập website của bạn thông qua kênh SEO nhưng chưa thực hiện chuyển đổi.</li>
         </ul>
     </li>
-    <li><strong>SEO và Social Media Marketing (SMM):**
+    <li><strong>SEO và Social Media Marketing (SMM):</strong>
         <ul>
             <li>Nội dung chất lượng cao được tạo ra cho SEO (bài blog, infographics, video...) có thể được chia sẻ rộng rãi trên các kênh mạng xã hội phổ biến với người dùng Hà Nội (Facebook, Zalo, Instagram, TikTok, LinkedIn...) để tăng phạm vi tiếp cận, thu hút traffic và tạo ra các tín hiệu xã hội (social signals) tích cực.</li>
             <li>Tương tác và sự lan truyền trên mạng xã hội có thể gián tiếp dẫn đến việc nội dung của bạn được các website khác biết đến và tạo backlink tự nhiên.</li>
