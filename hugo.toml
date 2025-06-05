@@ -44,7 +44,7 @@ paginatePath = "page"
   [params.cta]
     enable = true
     title = "Bạn đã sẵn sàng để liên hệ với Thurnix chưa?"
-    description = "Tư vấn miễn phí - Bảo mật thông tin - Tư vấn chuyên sâu"
+    description = "Tư vấn miễn phí - Bảo mật thông tin"
     gradient_from = "#2563eb"  # Indigo-600
     gradient_to = "#7c3aed"    # Purple-600
     gradient_angle = 30
