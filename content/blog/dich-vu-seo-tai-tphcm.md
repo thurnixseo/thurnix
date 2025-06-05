@@ -527,7 +527,7 @@ Dù bạn lựa chọn gói dịch vụ nào, Thurnix luôn cam kết mang đế
 * **Không phát sinh chi phí ẩn:** Mọi chi phí đều được thỏa thuận rõ ràng và minh bạch ngay từ đầu trong hợp đồng **dịch vụ SEO TPHCM**.
 * **Hỗ trợ kỹ thuật và tư vấn tận tâm:** Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc của bạn trong suốt quá trình hợp tác.
 * **Chính sách hoàn tiền (tùy theo điều khoản hợp đồng):** Trong một số trường hợp, nếu không đạt được các cam kết KPI cốt lõi sau một khoảng thời gian nhất định, chúng tôi có thể có chính sách hoàn lại một phần chi phí dịch vụ.
-
+{{< section-container class="py-16 bg-white" >}}
 <div class="text-center mt-12">
     <div class="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">
         <h3 class="text-2xl font-bold mb-4 text-blue-700">🎯 Cam Kết Vàng Từ Thurnix Cho Dịch Vụ SEO TPHCM</h3>
@@ -563,7 +563,7 @@ Dù bạn lựa chọn gói dịch vụ nào, Thurnix luôn cam kết mang đế
         <p class="text-gray-700 text-lg">📞 **Hotline Tư Vấn 24/7:** <a href="tel:0925604604" class="text-blue-600 font-semibold">0925 604 604</a> | 📧 **Email:** <a href="mailto:seo@thurnix.com" class="text-blue-600 font-semibold">seo@thurnix.com</a></p>
     </div>
 </div>
-
+{{< /section-container >}}
 ## Case Studies Thành Công Từ Các Chiến Dịch Dịch Vụ SEO Tại TPHCM Của Chúng Tôi
 
 Trong suốt nhiều năm hoạt động và cung cấp **dịch vụ SEO TPHCM** cho hàng trăm khách hàng thuộc đa dạng ngành nghề, Thurnix tự hào đã đồng hành và góp phần vào sự tăng trưởng vượt bậc của nhiều doanh nghiệp tại thị trường năng động này. Mỗi dự án là một câu chuyện thành công, minh chứng cho năng lực, sự tận tâm và phương pháp tiếp cận SEO dựa trên dữ liệu của chúng tôi.
