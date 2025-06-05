@@ -37,6 +37,7 @@ paginatePath = "page"
   description = "Thurnix là công ty SEO uy tín tại Việt Nam, cung cấp các giải pháp tối ưu công cụ tìm kiếm chuyên nghiệp, giúp website doanh nghiệp tăng traffic nhanh."
   author = "Thurnix SEO"
   logo = "/images/logo-thurnix.svg"
+   image = "/images/thurnix-og.webp" 
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
   # googleAnalytics = "G-XXXXXXXXXX"
 
