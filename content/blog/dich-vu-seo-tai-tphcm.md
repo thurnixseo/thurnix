@@ -1147,9 +1147,9 @@ Thurnix hiểu rằng việc quyết định đầu tư vào một chiến dịc
 5.  Bạn sẽ nhận được bản Báo cáo Audit Sơ bộ qua email trong vòng 3-5 ngày làm việc, sau đó chúng ta sẽ sắp xếp buổi tư vấn chiến lược.
 6.  Dựa trên kết quả Audit và buổi tư vấn, nếu bạn có nhu cầu, chúng tôi sẽ xây dựng một Đề xuất (Proposal) **dịch vụ SEO TPHCM** chi tiết, bao gồm lộ trình, hạng mục công việc, KPIs cam kết và báo giá cụ thể.
 
-### Ưu Đãi Đặc Biệt Dành Cho Khách Hàng TPHCM Trong Tháng Hiện Tại (Ví dụ: Tháng 6/2025)
+### Ưu Đãi Đặc Biệt Dành Cho Khách Hàng TPHCM Trong Quý Hiện Tại
 
-Để tri ân sự quan tâm và tin tưởng của quý khách hàng tại thị trường Thành phố Hồ Chí Minh, Thurnix xin dành tặng những ưu đãi đặc biệt cho **10 doanh nghiệp đầu tiên** đăng ký triển khai **dịch vụ SEO TPHCM** trong tháng này (ví dụ: tháng 6 năm 2025 – vui lòng liên hệ để biết ưu đãi cụ thể của tháng hiện tại):
+Để tri ân sự quan tâm và tin tưởng của quý khách hàng tại thị trường Thành phố Hồ Chí Minh, Thurnix xin dành tặng những ưu đãi đặc biệt cho **10 doanh nghiệp đầu tiên** đăng ký triển khai **dịch vụ SEO TPHCM** trong quý này:
 
 * ✅ **Giảm ngay 25% chi phí thiết lập (setup fee) ban đầu cho chiến dịch SEO.**
 * ✅ **Tặng kèm 02 tháng sử dụng dịch vụ hosting chất lượng cao, tốc độ nhanh.**
@@ -1157,7 +1157,7 @@ Thurnix hiểu rằng việc quyết định đầu tư vào một chiến dịc
 * ✅ **Hỗ trợ thiết kế một bộ nhận diện thương hiệu cơ bản (logo, namecard) cho các doanh nghiệp startup tại TPHCM.** (Áp dụng cho gói Professional trở lên)
 * ✅ **Gia hạn thời gian bảo hành kết quả SEO thêm 03 tháng so với hợp đồng tiêu chuẩn.**
 
-**Lưu ý:** Chương trình ưu đãi có giới hạn về số lượng và thời gian. Vui lòng liên hệ sớm nhất với Thurnix để không bỏ lỡ những cơ hội giá trị này cho chiến dịch **SEO tại TPHCM** của bạn! Thời gian áp dụng ưu đãi có thể kết thúc vào ngày cuối cùng của tháng hiện tại (ví dụ: 30/06/2025).
+**Lưu ý:** Chương trình ưu đãi có giới hạn về số lượng và thời gian. Vui lòng liên hệ sớm nhất với Thurnix để không bỏ lỡ những cơ hội giá trị này cho chiến dịch **SEO tại TPHCM** của bạn! Thời gian áp dụng ưu đãi có thể kết thúc sớm nếu 10 slot đầu tiên đạt đủ số lượng".
 
 ![Thurnix dành tặng ưu đãi đặc biệt cho dịch vụ SEO TPHCM](/images/news/2025/06/lien-he-seo-tphcm.webp)
 
