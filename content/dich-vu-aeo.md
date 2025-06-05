@@ -1244,47 +1244,47 @@ schemas:
 {{< faq >}}
 {
   "title": "Câu hỏi thường gặp về dịch vụ AEO",
-  "description": "Những thắc mắc phổ biến nhất về Answer Engine Optimization",
+  "description": "Những thắc mắc phổ biến nhất về Tối ưu hóa cho Công cụ Trả lời (AEO)",
   "questions": [
     {
       "question": "AEO khác gì so với SEO truyền thống?",
-      "answer": "**AEO (Answer Engine Optimization)** tập trung vào việc tối ưu cho **AI-powered search engines** như ChatGPT, Bard, thay vì chỉ Google search truyền thống. AEO require **conversational content structure**, **semantic understanding** và **knowledge graph optimization** để AI có thể hiểu và trích dẫn thông tin chính xác."
+      "answer": "**AEO (Tối ưu hóa cho Công cụ Trả lời)** tập trung vào việc tối ưu cho **các công cụ tìm kiếm AI** như ChatGPT, Bard, thay vì chỉ Google Search truyền thống. AEO đòi hỏi **cấu trúc nội dung dạng hội thoại**, **hiểu biết về ngữ nghĩa** và **tối ưu hóa đồ thị tri thức** để AI có thể hiểu và trích dẫn thông tin chính xác."
     },
     {
       "question": "Bao lâu để thấy kết quả từ AEO?",
-      "answer": "**AEO results xuất hiện nhanh hơn SEO** do AI engines update content real-time. Thường thấy **first mentions sau 4-6 tuần**, **consistent visibility sau 3-4 tháng**. Tuy nhiên, để đạt **dominant position** trong AI responses cần **6-12 tháng** optimization liên tục."
+      "answer": "**Kết quả AEO xuất hiện nhanh hơn SEO** do các công cụ AI cập nhật nội dung theo thời gian thực. Thường thấy **những đề cập đầu tiên sau 4-6 tuần**, **khả năng hiển thị nhất quán sau 3-4 tháng**. Tuy nhiên, để đạt **vị trí dẫn đầu** trong các phản hồi của AI cần **6-12 tháng** tối ưu hóa liên tục."
     },
     {
-      "question": "Website tôi có cần rebuild để làm AEO không?",
-      "answer": "**Không cần rebuild hoàn toàn**. AEO chủ yếu require **content structure optimization**, **schema markup enhancement** và **semantic improvements**. Chúng tôi sẽ **audit existing content** và implement **AI-friendly modifications** mà không làm gián đoạn website operations."
+      "question": "Website tôi có cần xây dựng lại để làm AEO không?",
+      "answer": "**Không cần xây dựng lại hoàn toàn**. AEO chủ yếu đòi hỏi **tối ưu hóa cấu trúc nội dung**, **cải thiện đánh dấu schema** và **cải thiện về ngữ nghĩa**. Chúng tôi sẽ **đánh giá nội dung hiện có** và triển khai **các chỉnh sửa thân thiện với AI** mà không làm gián đoạn hoạt động của website."
     },
     {
       "question": "AEO có rủi ro gì không?",
-      "answer": "**AEO rủi ro thấp hơn SEO** vì không depend on search algorithm changes. Tuy nhiên cần **avoid AI hallucination risks** và ensure **content accuracy**. Thurnix sử dụng **white-hat AEO methods** và **continuous monitoring** để protect brand reputation trong AI responses."
+      "answer": "**AEO có rủi ro thấp hơn SEO** vì không phụ thuộc vào thay đổi thuật toán tìm kiếm. Tuy nhiên cần **tránh rủi ro AI tạo ra thông tin không chính xác (ảo giác AI)** và đảm bảo **tính chính xác của nội dung**. Thurnix sử dụng **phương pháp AEO mũ trắng** và **theo dõi liên tục** để bảo vệ uy tín thương hiệu trong các phản hồi của AI."
     },
     {
       "question": "Làm sao đo lường ROI của AEO?",
-      "answer": "Chúng tôi track **AI mention frequency**, **response quality scores**, **voice search traffic**, **conversational conversion rates** và **brand authority metrics**. Advanced **AI analytics dashboard** cung cấp **real-time insights** về performance across multiple AI platforms."
+      "answer": "Chúng tôi theo dõi **tần suất AI đề cập**, **điểm chất lượng phản hồi**, **lưu lượng truy cập từ tìm kiếm bằng giọng nói**, **tỷ lệ chuyển đổi từ hội thoại** và **các chỉ số uy tín thương hiệu**. **Bảng điều khiển phân tích AI nâng cao** cung cấp **thông tin chuyên sâu theo thời gian thực** về hiệu suất trên nhiều nền tảng AI."
     },
     {
       "question": "AEO có phù hợp với mọi ngành nghề không?",
-      "answer": "**Có**, AEO particularly effective cho **knowledge-based industries**: healthcare, education, finance, technology, consulting. **E-commerce** và **local businesses** cũng benefit from **voice commerce** và **local AI search optimization**. B2B companies đặc biệt gain from **expert positioning** trong AI responses."
+      "answer": "**Có**, AEO đặc biệt hiệu quả cho **các ngành dựa trên tri thức** như: y tế, giáo dục, tài chính, công nghệ, tư vấn. **E-commerce** và **doanh nghiệp địa phương** cũng hưởng lợi từ **thương mại bằng giọng nói (voice commerce)** và **tối ưu hóa tìm kiếm AI địa phương**. Các công ty B2B đặc biệt hưởng lợi từ **định vị chuyên gia** trong các phản hồi của AI."
     },
     {
       "question": "Chi phí AEO có đắt hơn SEO không?",
-      "answer": "**AEO investment cao hơn SEO** do require **specialized expertise** và **advanced monitoring tools**. Tuy nhiên **ROI potentially higher** vì **first-mover advantage** và **future-proof strategy**. Early adopters often dominate AI search results trong industry của họ."
+      "answer": "**Chi phí đầu tư AEO cao hơn SEO** do đòi hỏi **chuyên môn hóa cao** và **công cụ theo dõi tiên tiến**. Tuy nhiên, **ROI có tiềm năng cao hơn** nhờ **lợi thế của người tiên phong** và **chiến lược cho tương lai**. Những người áp dụng sớm thường thống trị kết quả tìm kiếm AI trong ngành của họ."
     },
     {
-      "question": "Thurnix có guarantee kết quả AEO không?",
-      "answer": "Chúng tôi **cam kết tăng AI visibility ít nhất 200%** trong 6 tháng. **First-mover advantage guarantee** cho ngành của bạn. Nếu không achieve target metrics, chúng tôi provide **extended optimization** hoặc **partial refund** theo agreement."
+      "question": "Thurnix có đảm bảo kết quả AEO không?",
+      "answer": "Chúng tôi **cam kết tăng khả năng hiển thị trên AI ít nhất 200%** trong 6 tháng. **Đảm bảo lợi thế người tiên phong** cho ngành của bạn. Nếu không đạt được các chỉ số mục tiêu, chúng tôi sẽ cung cấp **gói tối ưu hóa mở rộng** hoặc **hoàn tiền một phần** theo thỏa thuận."
     },
     {
-      "question": "AEO có conflict với SEO strategy hiện tại không?",
-      "answer": "**Không conflict**, AEO actually **complement và enhance SEO**. AI engines often reference **high-authority content** đã được SEO optimize. Chúng tôi ensure **synergy between SEO và AEO** strategies cho **maximum visibility** across both traditional và AI search."
+      "question": "AEO có xung đột với chiến lược SEO hiện tại không?",
+      "answer": "**Không xung đột**, AEO thực sự **bổ sung và nâng cao hiệu quả SEO**. Các công cụ AI thường tham chiếu **nội dung có uy tín cao** đã được tối ưu SEO. Chúng tôi đảm bảo **sự cộng hưởng giữa chiến lược SEO và AEO** để đạt **khả năng hiển thị tối đa** trên cả tìm kiếm truyền thống và tìm kiếm AI."
     },
     {
       "question": "Tương lai của AEO như thế nào?",
-      "answer": "**AEO là future of search optimization**. Với **85% Gen Z sử dụng AI search**, **multimodal AI development** và **voice-first interactions** growing rapidly, **early AEO adoption critical** cho long-term digital marketing success. Businesses delay AEO risk losing **significant market share** cho AI-optimized competitors."
+      "answer": "**AEO là tương lai của tối ưu hóa tìm kiếm**. Với **85% Gen Z sử dụng tìm kiếm AI**, **sự phát triển của AI đa phương thức** và **tương tác ưu tiên giọng nói đang phát triển nhanh chóng**, việc **áp dụng AEO sớm là rất quan trọng** cho thành công marketing kỹ thuật số dài hạn. Doanh nghiệp trì hoãn AEO có nguy cơ mất **thị phần đáng kể** vào tay các đối thủ cạnh tranh đã tối ưu cho AI."
     }
   ]
 }

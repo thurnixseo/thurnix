@@ -6,15 +6,7 @@
     <description>Recent content in Danh mục Blog on Thurnix</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Wed, 04 Jun 2025 15:34:56 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/danh-muc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tin Dịch Vụ</title>
-      <link>http://localhost:1313/tin-dich-vu/</link>
-      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tin-dich-vu/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Kiến thức AEO</title>
       <link>http://localhost:1313/kien-thuc-aeo/</link>
@@ -34,6 +26,13 @@
       <link>http://localhost:1313/kien-thuc-website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/kien-thuc-website/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tin Dịch Vụ</title>
+      <link>http://localhost:1313/tin-dich-vu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tin-dich-vu/</guid>
       <description></description>
     </item>
   </channel>
