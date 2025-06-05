@@ -16,6 +16,10 @@
   },
   "url": "{{ .Site.BaseURL }}/gioi-thieu/",
   "jobTitle": "CEO & Founder",
+  "mainEntityOfPage": { // 
+    "@type": "WebPage",
+    "@id": "{{ .Site.BaseURL }}/gioi-thieu/"
+  },
   "hasOccupation": {
     "@type": "Occupation",
     "name": "Chief Executive Officer",
@@ -31,7 +35,11 @@
       "duration": "P1Y",
       "minValue": 500000000,
       "maxValue": 1000000000,
-      "median": 750000000
+      "median": 750000000,
+      "percentile10": "600000000", 
+      "percentile25": "650000000", 
+      "percentile75": "850000000", 
+      "percentile90": "950000000"  
     },
     "skills": [
       "Search Engine Optimization",
@@ -88,7 +96,7 @@
     "contactType": "business"
   },
   "sameAs": [
-    "https://www.linkedin.com/in/thuon-gpham-thurnix",
+    "https://www.linkedin.com/in/thuong-pham-thurnix",
     "https://www.facebook.com/thuong-pham-thurnix",
     "https://twitter.com/thuong-pham-thurnix"
   ],
@@ -111,7 +119,7 @@
       "name": "Google Analytics Certified"
     },
     {
-      "@type": "EducationalOccupationalCredential", 
+      "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Certification",
       "recognizedBy": {
         "@type": "Organization",
