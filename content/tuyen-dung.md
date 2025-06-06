@@ -3,7 +3,6 @@ title: "Tuyển dụng - Gia nhập đội ngũ Thurnix SEO"
 layout: "career"
 description: "Cơ hội nghề nghiệp tại Thurnix - công ty SEO hàng đầu Việt Nam. Môi trường làm việc chuyên nghiệp, đội ngũ expert và cơ hội phát triển không giới hạn."
 keywords: ["tuyển dụng Thurnix", "việc làm SEO", "career opportunity", "SEO jobs Vietnam", "digital marketing jobs", "web design jobs"]
----
 culture_section:
   title: "Văn hóa doanh nghiệp Thurnix"
   image: "/images/thurnix-team-culture.webp"
