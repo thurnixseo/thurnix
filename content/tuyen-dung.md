@@ -1256,3 +1256,17 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 </script>
+<script>
+// Fix Hugo security issue with tel: links
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all broken phone links and fix them
+    document.querySelectorAll('a').forEach(link => {
+        if (link.href.includes('ZgotmplZ') || 
+            link.textContent.includes('📞') || 
+            link.textContent.includes('Liên hệ HR') ||
+            link.textContent.includes('Gọi ngay')) {
+            link.href = 'tel:0925604604';
+        }
+    });
+});
+</script>
