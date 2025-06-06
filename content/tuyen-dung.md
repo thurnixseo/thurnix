@@ -926,18 +926,15 @@ positions_section:
     </div>
     
     <div class="relative">
-        <!-- Timeline Line -->
         <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200 hidden lg:block"></div>
         
-        <!-- Timeline Items -->
         <div class="space-y-12">
-            <!-- Step 1 -->
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3">📄 1. Application Review</h3>
-                        <p class="text-gray-600 mb-4">HR team review CV và application form. Chúng tôi đánh giá dựa trên skills, experience và cultural fit.</p>
-                        <div class="text-sm text-blue-600 font-semibold">⏱️ Thời gian: 24-48 giờ</div>
+                        <h3 class="text-xl font-bold mb-3">📄 1. Duyệt Hồ Sơ</h3>
+                        <p class="text-gray-600 mb-4">Đội ngũ Nhân sự (HR) sẽ xem xét CV và đơn ứng tuyển của bạn. Chúng tôi đánh giá dựa trên kỹ năng, kinh nghiệm và sự phù hợp về văn hóa.</p>
+                        <div class="text-sm text-blue-600 font-semibold">⏱️ Thời gian phản hồi: 24-48 giờ</div>
                     </div>
                 </div>
                 <div class="lg:w-8 lg:h-8 bg-blue-500 rounded-full flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 mb-8 lg:mb-0">
@@ -945,22 +942,21 @@ positions_section:
                 </div>
                 <div class="lg:w-1/2 lg:pl-8">
                     <div class="bg-blue-50 p-6 rounded-xl">
-                        <h4 class="font-bold mb-2">💡 Tips cho ứng viên:</h4>
+                        <h4 class="font-bold mb-2">💡 Mẹo cho ứng viên:</h4>
                         <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• CV format rõ ràng, highlight key achievements</li>
-                            <li>• Cover letter specific cho Thurnix</li>
-                            <li>• Portfolio showcase relevant projects</li>
+                            <li>• CV có định dạng rõ ràng, làm nổi bật các thành tựu quan trọng.</li>
+                            <li>• Thư xin việc (Cover letter) nên viết riêng cho Thurnix.</li>
+                            <li>• Portfolio thể hiện được các dự án, sản phẩm liên quan.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Step 2 -->
             <div class="flex flex-col lg:flex-row-reverse items-center">
                 <div class="lg:w-1/2 lg:pl-8 mb-8 lg:mb-0">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3">📞 2. Phone Screening</h3>
-                        <p class="text-gray-600 mb-4">HR call để tìm hiểu về background, motivation và basic questions về technical skills.</p>
+                        <h3 class="text-xl font-bold mb-3">📞 2. Phỏng vấn qua điện thoại</h3>
+                        <p class="text-gray-600 mb-4">Nhân sự sẽ gọi điện để trao đổi sơ bộ về kinh nghiệm, động lực ứng tuyển và một số câu hỏi cơ bản về chuyên môn.</p>
                         <div class="text-sm text-green-600 font-semibold">⏱️ Thời gian: 15-20 phút</div>
                     </div>
                 </div>
@@ -969,22 +965,21 @@ positions_section:
                 </div>
                 <div class="lg:w-1/2 lg:pr-8">
                     <div class="bg-green-50 p-6 rounded-xl">
-                        <h4 class="font-bold mb-2">🎯 Chuẩn bị cho phone screen:</h4>
+                        <h4 class="font-bold mb-2">🎯 Để chuẩn bị tốt nhất:</h4>
                         <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Research về Thurnix và services</li>
-                            <li>• Prepare elevator pitch (2-3 phút)</li>
-                            <li>• Questions about role & company culture</li>
+                            <li>• Tìm hiểu về Thurnix, các sản phẩm và dịch vụ.</li>
+                            <li>• Chuẩn bị một đoạn giới thiệu ngắn (2-3 phút) về bản thân.</li>
+                            <li>• Soạn sẵn các câu hỏi về vị trí và văn hóa công ty.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Step 3 -->
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3">💻 3. Technical Interview</h3>
-                        <p class="text-gray-600 mb-4">Deep dive vào technical skills với hiring manager. Có thể bao gồm practical test hoặc case study.</p>
+                        <h3 class="text-xl font-bold mb-3">💻 3. Phỏng vấn Chuyên môn</h3>
+                        <p class="text-gray-600 mb-4">Trao đổi chuyên sâu về kỹ năng kỹ thuật với Trưởng bộ phận. Vòng này có thể bao gồm bài kiểm tra thực hành hoặc giải quyết một tình huống (case study).</p>
                         <div class="text-sm text-purple-600 font-semibold">⏱️ Thời gian: 45-60 phút</div>
                     </div>
                 </div>
@@ -993,22 +988,21 @@ positions_section:
                 </div>
                 <div class="lg:w-1/2 lg:pl-8">
                     <div class="bg-purple-50 p-6 rounded-xl">
-                        <h4 class="font-bold mb-2">📚 Chuẩn bị technical interview:</h4>
+                        <h4 class="font-bold mb-2">📚 Chuẩn bị cho vòng chuyên môn:</h4>
                         <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Review job description requirements</li>
-                            <li>• Practice explaining past projects</li>
-                            <li>• Be ready for hands-on demonstration</li>
+                            <li>• Đọc kỹ lại các yêu cầu trong mô tả công việc.</li>
+                            <li>• Luyện tập cách trình bày về các dự án bạn đã thực hiện.</li>
+                            <li>• Sẵn sàng cho các câu hỏi tình huống hoặc kiểm tra trực tiếp.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Step 4 -->
             <div class="flex flex-col lg:flex-row-reverse items-center">
                 <div class="lg:w-1/2 lg:pl-8 mb-8 lg:mb-0">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3">👥 4. Culture Fit Interview</h3>
-                        <p class="text-gray-600 mb-4">Meet with team members và leadership để assess cultural fit và team dynamics.</p>
+                        <h3 class="text-xl font-bold mb-3">👥 4. Phỏng vấn Văn hóa</h3>
+                        <p class="text-gray-600 mb-4">Gặp gỡ các thành viên trong đội nhóm và ban lãnh đạo để đánh giá sự phù hợp về văn hóa và khả năng làm việc nhóm.</p>
                         <div class="text-sm text-orange-600 font-semibold">⏱️ Thời gian: 30-45 phút</div>
                     </div>
                 </div>
@@ -1017,23 +1011,22 @@ positions_section:
                 </div>
                 <div class="lg:w-1/2 lg:pr-8">
                     <div class="bg-orange-50 p-6 rounded-xl">
-                        <h4 class="font-bold mb-2">🤝 Tips cho culture fit:</h4>
+                        <h4 class="font-bold mb-2">🤝 Gợi ý cho vòng phỏng vấn văn hóa:</h4>
                         <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Be authentic và genuine</li>
-                            <li>• Share stories about teamwork</li>
-                            <li>• Ask about team dynamics</li>
+                            <li>• Hãy là chính mình, thể hiện con người thật của bạn.</li>
+                            <li>• Chia sẻ những câu chuyện cụ thể về quá trình làm việc nhóm.</li>
+                            <li>• Chủ động hỏi về cách đội nhóm làm việc và tương tác.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Step 5 -->
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3">✅ 5. Final Decision & Offer</h3>
-                        <p class="text-gray-600 mb-4">Team discussion và final decision. Nếu successful, chúng tôi sẽ extend offer với compensation package chi tiết.</p>
-                        <div class="text-sm text-red-600 font-semibold">⏱️ Thời gian: 24-48 giờ</div>
+                        <h3 class="text-xl font-bold mb-3">✅ 5. Gửi Thư mời nhận việc (Offer)</h3>
+                        <p class="text-gray-600 mb-4">Đội ngũ sẽ thảo luận và đưa ra quyết định cuối cùng. Nếu thành công, chúng tôi sẽ gửi thư mời nhận việc với gói đãi ngộ chi tiết.</p>
+                        <div class="text-sm text-red-600 font-semibold">⏱️ Thời gian phản hồi: 24-48 giờ</div>
                     </div>
                 </div>
                 <div class="lg:w-8 lg:h-8 bg-red-500 rounded-full flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 mb-8 lg:mb-0">
@@ -1041,11 +1034,11 @@ positions_section:
                 </div>
                 <div class="lg:w-1/2 lg:pl-8">
                     <div class="bg-red-50 p-6 rounded-xl">
-                        <h4 class="font-bold mb-2">🎉 Offer package bao gồm:</h4>
+                        <h4 class="font-bold mb-2">🎉 Thư mời nhận việc sẽ bao gồm:</h4>
                         <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Detailed compensation breakdown</li>
-                            <li>• Benefits & perks overview</li>
-                            <li>• Start date negotiation</li>
+                            <li>• Chi tiết các khoản lương, thưởng và phụ cấp.</li>
+                            <li>• Tổng quan về các quyền lợi và phúc lợi.</li>
+                            <li>• Thỏa thuận về ngày bắt đầu làm việc.</li>
                         </ul>
                     </div>
                 </div>
@@ -1056,11 +1049,11 @@ positions_section:
     <div class="text-center mt-16">
         <div class="bg-white p-8 rounded-xl shadow-lg inline-block">
             <h3 class="text-2xl font-bold mb-4">⏱️ Tổng thời gian quy trình</h3>
-            <div class="text-4xl font-bold text-blue-600 mb-2">5-7 ngày</div>
-            <p class="text-gray-600">Từ application đến final offer</p>
+            <div class="text-4xl font-bold text-blue-600 mb-2">5-7 ngày làm việc</div>
+            <p class="text-gray-600">Từ lúc nộp hồ sơ đến khi nhận thư mời</p>
             <div class="mt-4 text-sm text-gray-500">
-                <p>🚀 Fast-track cho exceptional candidates</p>
-                <p>🤝 Transparent communication throughout process</p>
+                <p>🚀 Quy trình có thể rút ngắn với các ứng viên xuất sắc</p>
+                <p>🤝 Chúng tôi cam kết trao đổi minh bạch trong suốt quy trình</p>
             </div>
         </div>
     </div>
@@ -1070,47 +1063,47 @@ positions_section:
 {{< faq >}}
 {
   "title": "Câu hỏi thường gặp về tuyển dụng",
-  "description": "Những thắc mắc phổ biến của ứng viên về career opportunities tại Thurnix",
+  "description": "Những thắc mắc phổ biến của ứng viên về cơ hội nghề nghiệp tại Thurnix",
   "questions": [
     {
       "question": "Thurnix có tuyển fresher/người mới ra trường không?",
-      "answer": "**Có!** Chúng tôi có chương trình **Fresher Development Program** dành riêng cho fresh graduates. Bao gồm **3 tháng training intensive**, **mentorship 1-on-1** với senior members, và **career development path** rõ ràng. **Starting salary competitive** và **growth opportunities** nhanh chóng cho những ai có **passion** và **learning attitude** tốt."
+      "answer": "**Có!** Chúng tôi có chương trình **Fresher Development Program** dành riêng cho các bạn mới ra trường. Chương trình bao gồm **3 tháng đào tạo chuyên sâu**, **chương trình mentorship 1-1** với các thành viên dày dặn kinh nghiệm, và **lộ trình phát triển sự nghiệp** rõ ràng. Mức **lương khởi điểm cạnh tranh** và **cơ hội phát triển** nhanh chóng cho những ứng viên có **đam mê** và **tinh thần ham học hỏi**."
     },
     {
       "question": "Cơ hội thăng tiến tại Thurnix như thế nào?",
-      "answer": "**Career growth rất rõ ràng** tại Thurnix: **Junior (6 tháng - 2 năm)** → **Mid-level (2-4 năm)** → **Senior (4+ năm)** → **Lead/Manager**. **Review performance 6 tháng/lần**, **promotion opportunities** based on merit, và **budget training 20 triệu/năm** để support skill development. Nhiều members đã **promoted trong 1-2 năm**."
+      "answer": "**Lộ trình thăng tiến rất rõ ràng** tại Thurnix: **Junior (6 tháng - 2 năm)** → **Mid-level (2-4 năm)** → **Senior (4+ năm)** → **Lead/Manager**. Chúng tôi **đánh giá hiệu suất 6 tháng/lần**, cơ hội **thăng tiến** dựa trên **năng lực thực tế**, và có **ngân sách đào tạo 20 triệu/năm** để hỗ trợ bạn phát triển kỹ năng. Nhiều thành viên đã được **thăng chức** chỉ sau 1-2 năm."
     },
     {
-      "question": "Work from home policy như thế nào?",
-      "answer": "**Hybrid working model**: **WFH 2 ngày/tuần**, **flexible hours** (8 tiếng/ngày), và **unlimited annual leave** sau 1 năm. **Core hours 10AM-3PM** để ensure collaboration, còn lại **flexible**. **Full remote** available cho **senior positions** và **special circumstances**. **Work-life balance** là priority của company."
+      "question": "Chính sách làm việc tại nhà (Work From Home) như thế nào?",
+      "answer": "Chúng tôi áp dụng mô hình làm việc **Hybrid**: làm việc tại nhà **(WFH) 2 ngày/tuần**, **giờ giấc linh hoạt** (đủ 8 tiếng/ngày), và **ngày nghỉ phép không giới hạn** (sau 1 năm làm việc). **Giờ làm việc cốt lõi là từ 10:00 - 15:00** để đảm bảo tương tác đội nhóm, thời gian còn lại bạn có thể **linh hoạt sắp xếp**. Chính sách làm việc từ xa **Full-remote** được áp dụng cho các vị trí **Senior** và các **trường hợp đặc biệt**. **Work-life balance** (cân bằng công việc - cuộc sống) là ưu tiên hàng đầu của công ty."
     },
     {
-      "question": "Lương thưởng và benefits cụ thể ra sao?",
-      "answer": "**Compensation package competitive**: **Base salary** theo market rate + **Performance bonus 3-5 tháng lương/năm** + **13th month salary**. **Benefits**: Healthcare cho **gia đình**, **gym membership**, **training budget 20M/năm**, **company trip**, **premium tools access**. **Review lương 6 tháng/lần** và **merit-based increases**."
+      "question": "Lương thưởng và phúc lợi cụ thể ra sao?",
+      "answer": "**Chế độ đãi ngộ cạnh tranh**: **Lương cứng** theo năng lực và thị trường + **Thưởng hiệu suất (Performance bonus) từ 3-5 tháng lương/năm** + **Lương tháng 13**. **Phúc lợi hấp dẫn**: Bảo hiểm sức khỏe cho **cả gia đình**, tài trợ **gói tập gym**, **ngân sách đào tạo 20 triệu/năm**, **du lịch công ty**, và được cấp quyền truy cập các **công cụ premium**. **Xét duyệt tăng lương 6 tháng/lần** dựa trên đóng góp và năng lực."
     },
     {
-      "question": "Có cần kinh nghiệm SEO trước đó không?",
-      "answer": "**Không nhất thiết!** Chúng tôi value **potential** và **learning attitude** hơn experience. Có **training program comprehensive** cho newcomers. **Digital marketing background**, **content writing**, hoặc **web development** experience là **plus points**. **Passion for learning** và **analytical mindset** quan trọng hơn specific SEO experience."
+      "question": "Ứng tuyển có cần kinh nghiệm SEO trước đó không?",
+      "answer": "**Không bắt buộc!** Chúng tôi đánh giá cao **tiềm năng** và **tinh thần ham học hỏi** hơn kinh nghiệm. Công ty có **chương trình đào tạo bài bản** cho người mới. Nền tảng về **digital marketing**, **content writing**, hoặc **web development** là một **điểm cộng lớn**. **Đam mê học hỏi** và **tư duy phân tích** là những yếu tố quan trọng nhất."
     },
     {
-      "question": "Tools và công nghệ nào sẽ được sử dụng?",
-      "answer": "**Premium SEO tools**: **Ahrefs**, **SEMrush**, **Screaming Frog**, **Google Analytics**, **Search Console**. **Development**: **React**, **Next.js**, **WordPress**, **Hugo**. **Design**: **Figma**, **Adobe Creative Suite**. **Collaboration**: **Slack**, **Notion**, **Jira**. **Hardware**: **MacBook Pro** + **dual monitors** cho mọi developer."
+      "question": "Những công cụ và công nghệ nào sẽ được sử dụng?",
+      "answer": "**Công cụ SEO premium**: **Ahrefs**, **SEMrush**, **Screaming Frog**, **Google Analytics**, **Search Console**. **Lập trình**: **React**, **Next.js**, **WordPress**, **Hugo**. **Thiết kế**: **Figma**, **Adobe Creative Suite**. **Công cụ làm việc nhóm**: **Slack**, **Notion**, **Jira**. **Thiết bị**: **MacBook Pro** và **màn hình đôi** cho mọi lập trình viên."
     },
     {
-      "question": "Môi trường làm việc tại office như thế nào?",
-      "answer": "**Modern workspace** tại **Cityland Park Hills, Gò Vấp** với **open-space design**, **meeting rooms**, **relaxation area**, và **game room**. **Free coffee/tea/snacks**, **free parking**, **green environment**. **Team activities** regular, **birthday celebrations**, và **comfortable working atmosphere**. **No toxic culture** - **supportive** và **collaborative**."
+      "question": "Môi trường làm việc tại văn phòng như thế nào?",
+      "answer": "Không gian làm việc **hiện đại** tại **Cityland Park Hills, Gò Vấp** với **thiết kế mở**, đầy đủ **phòng họp**, **khu vực thư giãn** và **phòng giải trí**. Công ty phục vụ **cà phê/trà/đồ ăn nhẹ miễn phí**, có **chỗ để xe miễn phí** trong một **không gian xanh**. Các **hoạt động đội nhóm** diễn ra thường xuyên, có **tổ chức sinh nhật** cho nhân viên, tạo nên một **không khí làm việc thoải mái**. Chúng tôi nói không với **văn hóa độc hại** - luôn **hỗ trợ** và **hợp tác**."
     },
     {
-      "question": "Training và development opportunities ra sao?",
-      "answer": "**Comprehensive training program**: **Weekly knowledge sharing sessions**, **monthly workshops**, **quarterly conferences**. **Budget training 20M/năm/person** cho **courses**, **certifications**, **conferences**. **Mentorship program** với **senior experts**, **cross-team learning**, và **internal tech talks**. **English classes** available cho team members."
+      "question": "Cơ hội đào tạo và phát triển ra sao?",
+      "answer": "**Chương trình đào tạo toàn diện**: Các buổi **chia sẻ kiến thức hàng tuần**, **workshop chuyên môn hàng tháng**, và cơ hội tham dự **hội thảo hàng quý**. **Ngân sách đào tạo 20 triệu/năm/người** để tham gia các **khóa học, thi chứng chỉ, hội thảo**. **Chương trình mentorship** với các **chuyên gia nhiều kinh nghiệm**, khuyến khích **học hỏi chéo giữa các team**, và có các buổi **chia sẻ kỹ thuật nội bộ**. Công ty có **lớp học tiếng Anh** để nâng cao trình độ cho nhân viên."
     },
     {
-      "question": "Quy trình onboarding cho new joiners như thế nào?",
-      "answer": "**Structured onboarding program**: **Week 1**: **Company orientation**, **tools setup**, **team introductions**. **Week 2-4**: **Department-specific training**, **project assignments**, **buddy system**. **Month 2-3**: **Gradual responsibility increase**, **regular check-ins**, **performance feedback**. **3-month review** để assess fit và **development plan**."
+      "question": "Quy trình hội nhập (onboarding) cho nhân viên mới như thế nào?",
+      "answer": "**Quy trình onboarding bài bản**: **Tuần 1**: **Giới thiệu về công ty**, **cài đặt công cụ**, **làm quen với đội nhóm**. **Tuần 2-4**: **Đào tạo chuyên môn theo phòng ban**, **nhận dự án đầu tiên**, và có **người đồng hành (buddy)** hỗ trợ. **Tháng 2-3**: **Tăng dần trách nhiệm trong công việc**, **trao đổi thường xuyên** với quản lý, và nhận **phản hồi về hiệu suất**. **Đánh giá sau 3 tháng** để xem xét sự phù hợp và xây dựng **kế hoạch phát triển**."
     },
     {
-      "question": "Có cơ hội làm việc với international clients không?",
-      "answer": "**Có!** Thurnix có **international clients** từ **Singapore**, **Australia**, **US**. **English skills** sẽ được **developed** thông qua **real projects**. **Exposure** với **global best practices**, **cross-cultural communication**, và **international SEO strategies**. **Great opportunity** để **expand horizon** và **build global network**."
+      "question": "Có cơ hội làm việc với khách hàng quốc tế không?",
+      "answer": "**Có!** Thurnix có nhiều **khách hàng quốc tế** từ **Singapore, Úc, Mỹ**. **Kỹ năng tiếng Anh** của bạn sẽ được cải thiện và ứng dụng qua các **dự án thực tế**. Bạn sẽ được **tiếp xúc** với các **phương pháp làm việc chuẩn quốc tế**, rèn luyện **kỹ năng giao tiếp đa văn hóa** và các **chiến lược SEO toàn cầu**. Đây là **cơ hội tuyệt vời** để **mở rộng tầm nhìn** và **xây dựng mạng lưới quan hệ quốc tế**."
     }
   ]
 }
