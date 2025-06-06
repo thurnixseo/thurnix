@@ -8,7 +8,6 @@ categories: ["tin-dich-vu"]
 tag_display: ["dịch vụ seo hà nội", "công ty seo hà nội", "seo tại hà nội", "công ty seo hà nội uy tín", "dịch vụ seo hà nội uy tín", "seo hà nội", "tối ưu seo hà nội", "chiến lược seo hà nội"]
 tags: ["dich-vu-seo-ha-noi", "cong-ty-seo-ha-noi", "seo-tai-ha-noi", "cong-ty-seo-ha-noi-uy-tin", "dich-vu-seo-ha-noi-uy-tin", "seo-ha-noi", "toi-uu-seo-ha-noi", "chien-luoc-seo-ha-noi"]
 featured_image: "/images/news/2025/06/dich-vu-seo-tai-ha-noi-tong-the.webp"
-type: "article"
 url: "/dich-vu-seo-tai-ha-noi/"
 schemas:
   - "dvseohanoi"
