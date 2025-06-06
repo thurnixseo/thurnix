@@ -9,7 +9,7 @@ tag_display: ["dịch vụ seo tphcm", "công ty seo tphcm", "seo tại tphcm", 
 tags: ["dich-vu-seo-tphcm", "cong-ty-seo-tphcm", "seo-tai-tphcm", "cong-ty-seo-tphcm-uy-tin", "dich-vu-seo-tphcm-uy-tin", "seo-tphcm", "cong-ty-seo-google-tphcm", "toi-uu-seo-tphcm", "chien-luoc-seo-tphcm"]
 featured_image: "/images/news/2025/06/dich-vu-seo-tai-tphcm-chuyen-nghiep.webp" 
 type: "article" 
-url: "/dich-vu-seo-tai-tphcm/" 
+url: "/blog/dich-vu-seo-tai-tphcm/" 
 schemas:
   - "dvseohcm"
 ---
