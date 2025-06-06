@@ -3,7 +3,7 @@ title: "Tuyển dụng - Gia nhập đội ngũ Thurnix SEO"
 layout: "career"
 description: "Cơ hội nghề nghiệp tại Thurnix - công ty SEO hàng đầu Việt Nam. Môi trường làm việc chuyên nghiệp, đội ngũ expert và cơ hội phát triển không giới hạn."
 keywords: ["tuyển dụng Thurnix", "việc làm SEO", "career opportunity", "SEO jobs Vietnam", "digital marketing jobs", "web design jobs"]
-
+---
 culture_section:
   title: "Văn hóa doanh nghiệp Thurnix"
   image: "/images/thurnix-team-culture.webp"
@@ -1264,16 +1264,3 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 </script>
-
----
-
-Trang tuyển dụng này được thiết kế để:
-
-1. **Attract top talent** với value proposition rõ ràng
-2. **Showcase company culture** và benefits package
-3. **Transparent hiring process** để build trust
-4. **User-friendly application form** với multiple contact methods
-5. **Mobile-responsive design** cho candidates
-6. **SEO-optimized** để attract organic candidates
-
-Nội dung tập trung vào những điểm mạnh của Thurnix như innovation, work-life balance, competitive compensation và growth opportunities trong lĩnh vực SEO hot nhất hiện nay.
